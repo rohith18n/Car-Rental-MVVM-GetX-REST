@@ -1,19 +1,12 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/wallet/topup.dart';
-import 'package:car_rental/view/wallet/transfer1.dart';
-import 'package:car_rental/view/wallet/wallet1.dart';
-import 'package:car_rental/view/wallet/withdrawal.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 import '../settings/settings_screen.dart';
 
 class HelpAndSupportScreen extends StatefulWidget {
+  const HelpAndSupportScreen({super.key});
+
   @override
   _HelpAndSupportScreenState createState() => _HelpAndSupportScreenState();
 }
@@ -26,18 +19,18 @@ class _HelpAndSupportScreenState extends State<HelpAndSupportScreen> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () async {},
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFFEDB31B),
+              backgroundColor: const Color(0xFFEDB31B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'Submit',
                 style: TextStyle(
@@ -62,13 +55,13 @@ class _HelpAndSupportScreenState extends State<HelpAndSupportScreen> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => SettingsScreen(),
+                          builder: (context) => const SettingsScreen(),
                         ),
                       );
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,

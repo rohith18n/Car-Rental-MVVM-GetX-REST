@@ -1,13 +1,11 @@
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/location_details/confirm_location_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class LocationDetailsScreen2 extends StatefulWidget {
+  const LocationDetailsScreen2({super.key});
+
   @override
   _LocationDetailsScreen2State createState() => _LocationDetailsScreen2State();
 }
@@ -18,7 +16,7 @@ class _LocationDetailsScreen2State extends State<LocationDetailsScreen2> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
@@ -31,13 +29,13 @@ class _LocationDetailsScreen2State extends State<LocationDetailsScreen2> {
               );
             },
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFFEDB31B),
+              backgroundColor: const Color(0xFFEDB31B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'ADD NEW ADDRESS',
                 style: TextStyle(
@@ -64,7 +62,7 @@ class _LocationDetailsScreen2State extends State<LocationDetailsScreen2> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -91,7 +89,7 @@ class _LocationDetailsScreen2State extends State<LocationDetailsScreen2> {
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: buildCustomTextField1(
                   suffixIcon:
-                      GestureDetector(onTap: () {}, child: Icon(Icons.edit))),
+                      GestureDetector(onTap: () {}, child: const Icon(Icons.edit))),
             ),
             _buildText(title: 'Location Name'),
             Padding(
@@ -115,7 +113,7 @@ class _LocationDetailsScreen2State extends State<LocationDetailsScreen2> {
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Container(
                 height: 50,
-                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(8.0),

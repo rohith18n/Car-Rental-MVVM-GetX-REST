@@ -1,19 +1,19 @@
 import 'package:car_rental/view/add_new_car/upload_car_images.dart';
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/add_new_car/car_kyc.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class CarAddedScreen extends StatefulWidget {
+  const CarAddedScreen({super.key});
+
   @override
   _CarAddedScreenState createState() => _CarAddedScreenState();
 }
 
 class _CarAddedScreenState extends State<CarAddedScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +34,14 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                   Flexible(
                     child: Text(
                       'Car Added',
@@ -80,7 +80,7 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                     ],
                   ),
                 ),
-                Image(
+                const Image(
                   image: AssetImage('assets/car.png'),
                   width: 200, // Set your desired width
                   height: 150, // Set your desired height
@@ -93,7 +93,7 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
                   child: Row(
                     children: [
-                      Image(
+                      const Image(
                         image: AssetImage('assets/camera.png'),
                       ),
                       _buildTextHeader(title: 'Add Images'),
@@ -105,7 +105,7 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
                   child: Row(
                     children: [
-                      Image(
+                      const Image(
                         image: AssetImage('assets/timer.png'),
                       ),
                       _buildTextHeader(
@@ -118,7 +118,7 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
                   child: Row(
                     children: [
-                      Image(
+                      const Image(
                         image: AssetImage('assets/money.png'),
                       ),
                       _buildTextHeader(title: 'Get bokings and start earning'),
@@ -128,24 +128,24 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                 buildVSpacer(70),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => CarKycScreen(),
+                            builder: (context) => const CarKycScreen(),
                           ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFEDB31B),
+                        backgroundColor: const Color(0xFFEDB31B),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(2.0),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(12.0),
                         child: Text(
                           'Car KYC',
                           style: TextStyle(
@@ -161,24 +161,24 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                 buildVSpacer(20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => UploadCarImages(),
+                            builder: (context) => const UploadCarImages(),
                           ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFEDB31B),
+                        backgroundColor: const Color(0xFFEDB31B),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(2.0),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(12.0),
                         child: Text(
                           'Upload Car Images',
                           style: TextStyle(
@@ -194,7 +194,7 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                 buildVSpacer(20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
@@ -207,13 +207,13 @@ class _CarAddedScreenState extends State<CarAddedScreen> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFEDB31B),
+                        backgroundColor: const Color(0xFFEDB31B),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(2.0),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(12.0),
                         child: Text(
                           'Home',
                           style: TextStyle(

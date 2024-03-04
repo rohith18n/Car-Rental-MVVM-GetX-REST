@@ -1,18 +1,13 @@
 import 'dart:async';
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/language_selection/widget/custom_language.dart';
-import 'package:car_rental/view/splash/SplashScreen_2.dart';
-import 'package:car_rental/view/wallet/wallet.dart';
-import 'package:car_rental/view/wallet/withdrawal3.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:car_rental/view/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:otp_text_field/otp_text_field.dart';
-import 'package:otp_text_field/style.dart';
 
 class TripSucessfullScreen extends StatefulWidget {
+  const TripSucessfullScreen({super.key});
+
   @override
   State createState() => _TripSucessfullScreenState();
 }
@@ -23,7 +18,7 @@ class _TripSucessfullScreenState extends State<TripSucessfullScreen> {
     super.initState();
 
     // Delay for 2 seconds and then navigate to the home screen
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(

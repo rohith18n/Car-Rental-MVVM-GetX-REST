@@ -1,14 +1,13 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/car_setting/fastag_setting_screen.dart';
 import 'package:car_rental/view/car_setting/invoice_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class CarSettingScreen extends StatefulWidget {
+  const CarSettingScreen({super.key});
+
   @override
   _CarSettingScreenState createState() => _CarSettingScreenState();
 }
@@ -24,7 +23,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -35,7 +34,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -63,7 +62,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => FastagSettingScreen(),
+                    builder: (context) => const FastagSettingScreen(),
                   ),
                 );
               },
@@ -87,7 +86,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
                                 horizontal: 18.0, vertical: 15),
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage('assets/Group.png'),
                                 ),
                                 _buildTextHeader(title: 'Fastag Setting'),
@@ -101,7 +100,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
                           buildVSpacer(20)
                         ],
                       ),
-                      Icon(Icons.arrow_forward_ios)
+                      const Icon(Icons.arrow_forward_ios)
                     ],
                   ),
                 ),
@@ -112,7 +111,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => InvoiceScreen(),
+                    builder: (context) => const InvoiceScreen(),
                   ),
                 );
               },
@@ -136,7 +135,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
                                 horizontal: 18.0, vertical: 15),
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage('assets/Group.png'),
                                 ),
                                 _buildTextHeader(title: 'Invoice'),
@@ -150,7 +149,7 @@ class _CarSettingScreenState extends State<CarSettingScreen> {
                           buildVSpacer(20)
                         ],
                       ),
-                      Icon(Icons.arrow_forward_ios)
+                      const Icon(Icons.arrow_forward_ios)
                     ],
                   ),
                 ),

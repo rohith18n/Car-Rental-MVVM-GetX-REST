@@ -1,7 +1,3 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/user_kyc/aadhar_card_details_screen.dart';
 import 'package:car_rental/view/user_kyc/address_proof_screen.dart';
 import 'package:car_rental/view/user_kyc/bank_details_screen.dart';
@@ -9,9 +5,10 @@ import 'package:car_rental/view/user_kyc/pan_card_details_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class UserKycScreen extends StatefulWidget {
+  const UserKycScreen({super.key});
+
   @override
   _UserKycScreenState createState() => _UserKycScreenState();
 }
@@ -36,7 +33,7 @@ class _UserKycScreenState extends State<UserKycScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -63,7 +60,7 @@ class _UserKycScreenState extends State<UserKycScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image(
+                const Image(
                   image: AssetImage('assets/scanner.png'),
                   width: 200, // Set your desired width
                   height: 150, // Set your desired height
@@ -104,7 +101,7 @@ class _UserKycScreenState extends State<UserKycScreen> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 16, vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(
+                            color: const Color(
                                 0xff245196), // Add your desired background color here
                             borderRadius: BorderRadius.circular(4),
                           ),
@@ -112,7 +109,7 @@ class _UserKycScreenState extends State<UserKycScreen> {
                             children: [
                               Column(
                                 children: [
-                                  Image(
+                                  const Image(
                                       image:
                                           AssetImage('assets/Group 116.png')),
                                   Text(
@@ -126,10 +123,10 @@ class _UserKycScreenState extends State<UserKycScreen> {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Column(
                                 children: [
-                                  Image(
+                                  const Image(
                                       image:
                                           AssetImage('assets/Group 116.png')),
                                   Text(
@@ -143,10 +140,10 @@ class _UserKycScreenState extends State<UserKycScreen> {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Column(
                                 children: [
-                                  Image(
+                                  const Image(
                                       image:
                                           AssetImage('assets/Group 116.png')),
                                   Text(
@@ -174,11 +171,11 @@ class _UserKycScreenState extends State<UserKycScreen> {
                     elevation: 5.0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                      side: BorderSide(color: Colors.white, width: 1.0),
+                      side: const BorderSide(color: Colors.white, width: 1.0),
                     ),
                     child: Container(
                       color: Colors.white,
-                      padding: EdgeInsets.all(25.0),
+                      padding: const EdgeInsets.all(25.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -188,13 +185,13 @@ class _UserKycScreenState extends State<UserKycScreen> {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      AadharCardDetailsScreen(),
+                                      const AadharCardDetailsScreen(),
                                 ),
                               );
                             },
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                     image: AssetImage('assets/Group 114.png')),
                                 buildHSpacer(10),
                                 Column(
@@ -220,8 +217,8 @@ class _UserKycScreenState extends State<UserKycScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15,
                                 )
@@ -233,13 +230,13 @@ class _UserKycScreenState extends State<UserKycScreen> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => PanCardDetailsScreen(),
+                                  builder: (context) => const PanCardDetailsScreen(),
                                 ),
                               );
                             },
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                     image: AssetImage('assets/Group 112.png')),
                                 buildHSpacer(10),
                                 Column(
@@ -265,8 +262,8 @@ class _UserKycScreenState extends State<UserKycScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15,
                                 )
@@ -278,13 +275,13 @@ class _UserKycScreenState extends State<UserKycScreen> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => AddressProofScreen(),
+                                  builder: (context) => const AddressProofScreen(),
                                 ),
                               );
                             },
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                     image: AssetImage('assets/Group 115.png')),
                                 buildHSpacer(10),
                                 Column(
@@ -310,8 +307,8 @@ class _UserKycScreenState extends State<UserKycScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15,
                                 )
@@ -323,13 +320,13 @@ class _UserKycScreenState extends State<UserKycScreen> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => BankDetailsScreen(),
+                                  builder: (context) => const BankDetailsScreen(),
                                 ),
                               );
                             },
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                     image: AssetImage('assets/bankcheque.png')),
                                 buildHSpacer(10),
                                 Column(
@@ -355,8 +352,8 @@ class _UserKycScreenState extends State<UserKycScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15,
                                 )

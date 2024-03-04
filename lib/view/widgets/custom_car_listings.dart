@@ -8,7 +8,7 @@ class CustomCarListings extends StatelessWidget {
   final String text4;
   final String text5;
 
-  CustomCarListings({
+  const CustomCarListings({super.key, 
     required this.imagePath,
     required this.text1,
     required this.text2,
@@ -23,7 +23,7 @@ class CustomCarListings extends StatelessWidget {
 
     return Container(
       color: Colors.white,
-      margin: EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(10.0),
       child: Card(
         color: Colors.white,
         elevation: 5.0,
@@ -32,7 +32,7 @@ class CustomCarListings extends StatelessWidget {
         ),
         child: Container(
           color: Colors.white,
-          padding: EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(15.0),
           child: Expanded(
             child: Row(
               children: [
@@ -45,7 +45,7 @@ class CustomCarListings extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(width: 15.0),
+                const SizedBox(width: 15.0),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +57,7 @@ class CustomCarListings extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: 5.0),
+                      const SizedBox(height: 5.0),
                       Text(
                         text2,
                         style: TextStyle(
@@ -65,7 +65,7 @@ class CustomCarListings extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(height: 10.0),
+                      const SizedBox(height: 10.0),
                       Row(
                         children: [
                           BulletPoint(text3),
@@ -76,7 +76,7 @@ class CustomCarListings extends StatelessWidget {
                     ],
                   ),
                 ),
-                Icon(Icons.arrow_forward_ios),
+                const Icon(Icons.arrow_forward_ios),
               ],
             ),
           ),
@@ -89,23 +89,23 @@ class CustomCarListings extends StatelessWidget {
 class BulletPoint extends StatelessWidget {
   final String text;
 
-  BulletPoint(this.text);
+  const BulletPoint(this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.circle,
           size: 5.0,
           color: Colors.black,
         ),
-        SizedBox(width: 5.0),
+        const SizedBox(width: 5.0),
         Text(
           text,
-          style: TextStyle(fontSize:11), // Adjust text size based on screen width
+          style: const TextStyle(fontSize:11), // Adjust text size based on screen width
         ),
-        SizedBox(width: 10.0),
+        const SizedBox(width: 10.0),
       ],
     );
   }

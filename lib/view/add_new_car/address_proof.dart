@@ -1,11 +1,11 @@
 import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class AddressProof extends StatefulWidget {
+  const AddressProof({super.key});
+
   @override
   _AddressProofState createState() => _AddressProofState();
 }
@@ -28,7 +28,7 @@ class _AddressProofState extends State<AddressProof> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -50,7 +50,7 @@ class _AddressProofState extends State<AddressProof> {
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 850,
               child: Column(
@@ -65,7 +65,7 @@ class _AddressProofState extends State<AddressProof> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -98,7 +98,7 @@ class _AddressProofState extends State<AddressProof> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -131,7 +131,7 @@ class _AddressProofState extends State<AddressProof> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -164,7 +164,7 @@ class _AddressProofState extends State<AddressProof> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -199,7 +199,7 @@ class _AddressProofState extends State<AddressProof> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -231,7 +231,7 @@ class _AddressProofState extends State<AddressProof> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -268,7 +268,7 @@ class _AddressProofState extends State<AddressProof> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -300,7 +300,7 @@ class _AddressProofState extends State<AddressProof> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -335,7 +335,7 @@ class _AddressProofState extends State<AddressProof> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -370,7 +370,7 @@ class _AddressProofState extends State<AddressProof> {
                       ),
                     ),
                   ),
-                  Image(
+                  const Image(
                     image: AssetImage('assets/upload2.png'),
                   ),
                   Padding(
@@ -379,7 +379,7 @@ class _AddressProofState extends State<AddressProof> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/info.png'),
                         ),
                         buildHSpacer(5),
@@ -399,24 +399,24 @@ class _AddressProofState extends State<AddressProof> {
                   buildVSpacer(80),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                    child: Container(
+                    child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CarKycScreen(),
+                              builder: (context) => const CarKycScreen(),
                             ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF245196),
+                          backgroundColor: const Color(0xFF245196),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(2.0),
                           ),
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(12.0),
                           child: Text(
                             'Save Details',
                             style: TextStyle(

@@ -1,22 +1,15 @@
 import 'package:car_rental/view/about_app/about_app_screen.dart';
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/frequently_asked_questions/faq_screen.dart';
 import 'package:car_rental/view/help_and_support/help_and_support_screen.dart';
 import 'package:car_rental/view/terms_and_conditions/terms_and_conditions_screen.dart';
-import 'package:car_rental/view/wallet/topup.dart';
-import 'package:car_rental/view/wallet/transfer1.dart';
-import 'package:car_rental/view/wallet/wallet1.dart';
-import 'package:car_rental/view/wallet/withdrawal.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class SettingsScreen extends StatefulWidget {
+  const SettingsScreen({super.key});
+
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
 }
@@ -47,7 +40,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -74,7 +67,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => HelpAndSupportScreen(),
+                    builder: (context) => const HelpAndSupportScreen(),
                   ),
                 );
               },
@@ -87,7 +80,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     height: 66,
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                        side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
@@ -99,9 +92,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                         _buildTextHeader(
                             title: 'Contact Us', fontWeight: FontWeight.w500),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
+                        const Spacer(),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 10.0),
                           child: Icon(
                             Icons.arrow_forward_ios,
                             size: 15,
@@ -116,7 +109,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => TermsAndConditionScreen(),
+                    builder: (context) => const TermsAndConditionScreen(),
                   ),
                 );
               },
@@ -129,7 +122,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     height: 66,
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                        side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
@@ -142,9 +135,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         _buildTextHeader(
                             title: 'Terms & Condition',
                             fontWeight: FontWeight.w500),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
+                        const Spacer(),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 10.0),
                           child: Icon(
                             Icons.arrow_forward_ios,
                             size: 15,
@@ -159,7 +152,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => FAQScreen(),
+                    builder: (context) => const FAQScreen(),
                   ),
                 );
               },
@@ -172,7 +165,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     height: 66,
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                        side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
@@ -184,9 +177,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                         _buildTextHeader(
                             title: 'FAQ', fontWeight: FontWeight.w500),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
+                        const Spacer(),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 10.0),
                           child: Icon(
                             Icons.arrow_forward_ios,
                             size: 15,
@@ -201,7 +194,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => AboutAppScreen(),
+                    builder: (context) => const AboutAppScreen(),
                   ),
                 );
               },
@@ -214,7 +207,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     height: 66,
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                        side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
@@ -226,9 +219,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                         _buildTextHeader(
                             title: 'About App', fontWeight: FontWeight.w500),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
+                        const Spacer(),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 10.0),
                           child: Icon(
                             Icons.arrow_forward_ios,
                             size: 15,

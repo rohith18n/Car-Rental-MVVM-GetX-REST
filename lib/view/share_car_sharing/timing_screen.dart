@@ -1,13 +1,11 @@
 import 'package:car_rental/view/share_car_sharing/comfort_screen.dart';
-import 'package:car_rental/view/share_car_sharing/drop_off_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
-import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
-import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class TimingScreen extends StatefulWidget {
+  const TimingScreen({super.key});
+
   @override
   _TimingScreenState createState() => _TimingScreenState();
 }
@@ -17,25 +15,25 @@ class _TimingScreenState extends State<TimingScreen> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 60,
         child: Padding(
           padding: const EdgeInsets.only(bottom: 10.0, right: 10),
           child: Align(
             alignment: Alignment.bottomRight,
-            child: Container(
+            child: SizedBox(
               width: 120,
               height: 45,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => ComfortScreen(),
+                      builder: (context) => const ComfortScreen(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Go',
@@ -63,14 +61,14 @@ class _TimingScreenState extends State<TimingScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
@@ -86,7 +84,7 @@ class _TimingScreenState extends State<TimingScreen> {
                 height: 74,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(width: 1),
+                    side: const BorderSide(width: 1),
                     borderRadius: BorderRadius.circular(50),
                   ),
                 ),
@@ -94,7 +92,7 @@ class _TimingScreenState extends State<TimingScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       '17:00 ',
                       style: TextStyle(
                         color: Colors.black,
@@ -104,7 +102,7 @@ class _TimingScreenState extends State<TimingScreen> {
                       ),
                     ),
                     buildHSpacer(20),
-                    Icon(Icons.arrow_drop_down_sharp)
+                    const Icon(Icons.arrow_drop_down_sharp)
                   ],
                 ),
               ),

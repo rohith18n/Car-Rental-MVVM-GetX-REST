@@ -1,14 +1,12 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/add_new_car/add_new_car_screen.dart';
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class YourCarScreen extends StatefulWidget {
+  const YourCarScreen({super.key});
+
   @override
   _YourCarScreenState createState() => _YourCarScreenState();
 }
@@ -24,7 +22,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -35,7 +33,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -71,25 +69,25 @@ class _YourCarScreenState extends State<YourCarScreen> {
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 100.0, vertical: 20),
-              child: Container(
+              child: SizedBox(
                 width: 160,
                 height: 40,
                 child: ElevatedButton(
                   onPressed: () async {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => AddNewCar(),
+                        builder: (context) => const AddNewCar(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFEDB31B),
+                    backgroundColor: const Color(0xFFEDB31B),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Add a New Car',
                       style: TextStyle(
@@ -113,7 +111,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage(
                               'assets/white_car.png'), // Set your desired height
                         ),
@@ -128,11 +126,11 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 6),
                               decoration: ShapeDecoration(
-                                color: Color(0xFF245196),
+                                color: const Color(0xFF245196),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Listed from 30 Oct - 29 Nov',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -144,12 +142,12 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               ),
                             ),
                             buildVSpacer(10),
-                            Container(
+                            SizedBox(
                               width: 54,
                               height: 13,
                               child: Stack(
                                 children: [
-                                  Positioned(
+                                  const Positioned(
                                     left: 17,
                                     top: 0,
                                     child: Text(
@@ -169,7 +167,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                                     child: Container(
                                       width: 13,
                                       height: 13,
-                                      decoration: ShapeDecoration(
+                                      decoration: const ShapeDecoration(
                                         color: Color(0xFFEDB31B),
                                         shape: StarBorder(
                                           points: 5,
@@ -205,7 +203,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage(
                               'assets/white_car.png'), // Set your desired height
                         ),
@@ -220,11 +218,11 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 6),
                               decoration: ShapeDecoration(
-                                color: Color(0xFF245196),
+                                color: const Color(0xFF245196),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Listed from 30 Oct - 29 Nov',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -236,12 +234,12 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               ),
                             ),
                             buildVSpacer(10),
-                            Container(
+                            SizedBox(
                               width: 54,
                               height: 13,
                               child: Stack(
                                 children: [
-                                  Positioned(
+                                  const Positioned(
                                     left: 17,
                                     top: 0,
                                     child: Text(
@@ -261,7 +259,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                                     child: Container(
                                       width: 13,
                                       height: 13,
-                                      decoration: ShapeDecoration(
+                                      decoration: const ShapeDecoration(
                                         color: Color(0xFFEDB31B),
                                         shape: StarBorder(
                                           points: 5,
@@ -297,7 +295,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage(
                               'assets/white_car.png'), // Set your desired height
                         ),
@@ -312,11 +310,11 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 6),
                               decoration: ShapeDecoration(
-                                color: Color(0xFF245196),
+                                color: const Color(0xFF245196),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Listed from 30 Oct - 29 Nov',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -328,12 +326,12 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               ),
                             ),
                             buildVSpacer(10),
-                            Container(
+                            SizedBox(
                               width: 54,
                               height: 13,
                               child: Stack(
                                 children: [
-                                  Positioned(
+                                  const Positioned(
                                     left: 17,
                                     top: 0,
                                     child: Text(
@@ -353,7 +351,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                                     child: Container(
                                       width: 13,
                                       height: 13,
-                                      decoration: ShapeDecoration(
+                                      decoration: const ShapeDecoration(
                                         color: Color(0xFFEDB31B),
                                         shape: StarBorder(
                                           points: 5,
@@ -389,7 +387,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage(
                               'assets/white_car.png'), // Set your desired height
                         ),
@@ -404,11 +402,11 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 6),
                               decoration: ShapeDecoration(
-                                color: Color(0xFF245196),
+                                color: const Color(0xFF245196),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Listed from 30 Oct - 29 Nov',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -420,12 +418,12 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               ),
                             ),
                             buildVSpacer(10),
-                            Container(
+                            SizedBox(
                               width: 54,
                               height: 13,
                               child: Stack(
                                 children: [
-                                  Positioned(
+                                  const Positioned(
                                     left: 17,
                                     top: 0,
                                     child: Text(
@@ -445,7 +443,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                                     child: Container(
                                       width: 13,
                                       height: 13,
-                                      decoration: ShapeDecoration(
+                                      decoration: const ShapeDecoration(
                                         color: Color(0xFFEDB31B),
                                         shape: StarBorder(
                                           points: 5,
@@ -481,7 +479,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage(
                               'assets/white_car.png'), // Set your desired height
                         ),
@@ -496,11 +494,11 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 6),
                               decoration: ShapeDecoration(
-                                color: Color(0xFF245196),
+                                color: const Color(0xFF245196),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Listed from 30 Oct - 29 Nov',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -512,12 +510,12 @@ class _YourCarScreenState extends State<YourCarScreen> {
                               ),
                             ),
                             buildVSpacer(10),
-                            Container(
+                            SizedBox(
                               width: 54,
                               height: 13,
                               child: Stack(
                                 children: [
-                                  Positioned(
+                                  const Positioned(
                                     left: 17,
                                     top: 0,
                                     child: Text(
@@ -537,7 +535,7 @@ class _YourCarScreenState extends State<YourCarScreen> {
                                     child: Container(
                                       width: 13,
                                       height: 13,
-                                      decoration: ShapeDecoration(
+                                      decoration: const ShapeDecoration(
                                         color: Color(0xFFEDB31B),
                                         shape: StarBorder(
                                           points: 5,

@@ -6,15 +6,16 @@ import 'package:car_rental/view/share_car_subscription/subscription1.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class ShareCarScreen extends StatefulWidget {
+  const ShareCarScreen({super.key});
+
   @override
   _ShareCarScreenState createState() => _ShareCarScreenState();
 }
 
 class _ShareCarScreenState extends State<ShareCarScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -41,14 +42,14 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                   Flexible(
                     child: Text(
                       'Share Car',
@@ -64,7 +65,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => RentalScreen(),
+                    builder: (context) => const RentalScreen(),
                   ),
                 );
               },
@@ -73,8 +74,8 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
                 child: Row(
                   children: [
                     _buildTextHeader(title: "Rental"),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_right,
                       size: 25,
                     )
@@ -86,7 +87,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               height: 1.0,
               color: Colors
                   .grey, // Change the color to your desired underline color
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: 20.0), // Adjust the horizontal margin as needed
             ),
             buildVSpacer(40),
@@ -94,7 +95,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => PickUpScreen(),
+                    builder: (context) => const PickUpScreen(),
                   ),
                 );
               },
@@ -103,8 +104,8 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
                 child: Row(
                   children: [
                     _buildTextHeader(title: "Sharing"),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_right,
                       size: 25,
                     )
@@ -116,7 +117,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               height: 1.0,
               color: Colors
                   .grey, // Change the color to your desired underline color
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: 20.0), // Adjust the horizontal margin as needed
             ),
             buildVSpacer(40),
@@ -124,7 +125,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => SubscriptionScreen1(),
+                    builder: (context) => const SubscriptionScreen1(),
                   ),
                 );
               },
@@ -133,8 +134,8 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
                 child: Row(
                   children: [
                     _buildTextHeader(title: "Subscription"),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_right,
                       size: 25,
                     )
@@ -146,7 +147,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               height: 1.0,
               color: Colors
                   .grey, // Change the color to your desired underline color
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: 20.0), // Adjust the horizontal margin as needed
             ),
             buildVSpacer(40),
@@ -154,7 +155,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => GovernmentTendor1(),
+                    builder: (context) => const GovernmentTendor1(),
                   ),
                 );
               },
@@ -163,8 +164,8 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
                 child: Row(
                   children: [
                     _buildTextHeader(title: "Government Tendor"),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_right,
                       size: 25,
                     )
@@ -176,7 +177,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               height: 1.0,
               color: Colors
                   .grey, // Change the color to your desired underline color
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: 20.0), // Adjust the horizontal margin as needed
             ),
             buildVSpacer(90),
@@ -187,8 +188,8 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               child: Row(
                 children: [
                   _buildTextHeader(title: "Tractor Rental"),
-                  Spacer(),
-                  Icon(
+                  const Spacer(),
+                  const Icon(
                     Icons.arrow_right,
                     size: 25,
                   )
@@ -199,7 +200,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               height: 1.0,
               color: Colors
                   .grey, // Change the color to your desired underline color
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: 20.0), // Adjust the horizontal margin as needed
             ),
             buildVSpacer(40),
@@ -208,8 +209,8 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               child: Row(
                 children: [
                   _buildTextHeader(title: "Bike Rental"),
-                  Spacer(),
-                  Icon(
+                  const Spacer(),
+                  const Icon(
                     Icons.arrow_right,
                     size: 25,
                   )
@@ -220,7 +221,7 @@ class _ShareCarScreenState extends State<ShareCarScreen> {
               height: 1.0,
               color: Colors
                   .grey, // Change the color to your desired underline color
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: 20.0), // Adjust the horizontal margin as needed
             ),
           ],

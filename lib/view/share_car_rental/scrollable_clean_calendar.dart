@@ -34,7 +34,7 @@ class ScrollableCleanCalendar extends StatefulWidget {
   final Widget Function(BuildContext context, DayValues values)? dayBuilder;
   final CleanCalendarController calendarController;
 
-  const ScrollableCleanCalendar({
+  const ScrollableCleanCalendar({super.key, 
     this.locale = 'en',
     this.scrollController,
     this.showWeekdays = true,

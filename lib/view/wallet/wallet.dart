@@ -1,7 +1,3 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/wallet/topup.dart';
 import 'package:car_rental/view/wallet/transfer1.dart';
 import 'package:car_rental/view/wallet/wallet1.dart';
@@ -9,9 +5,10 @@ import 'package:car_rental/view/wallet/withdrawal.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class WalletScreen1 extends StatefulWidget {
+  const WalletScreen1({super.key});
+
   @override
   _WalletScreen1State createState() => _WalletScreen1State();
 }
@@ -36,7 +33,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -67,7 +64,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => WalletScreen1(),
+                        builder: (context) => const WalletScreen1(),
                       ),
                     );
                   },
@@ -76,11 +73,11 @@ class _WalletScreen1State extends State<WalletScreen1> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 46, vertical: 10),
                     decoration: ShapeDecoration(
-                      color: Color(0xFF245196),
+                      color: const Color(0xFF245196),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4)),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Main Wallet',
                       style: TextStyle(
                         color: Colors.white,
@@ -97,7 +94,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => WalletScreen2(),
+                        builder: (context) => const WalletScreen2(),
                       ),
                     );
                   },
@@ -109,10 +106,10 @@ class _WalletScreen1State extends State<WalletScreen1> {
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
-                        side: BorderSide(color: Color(0xFF245196), width: 1.0),
+                        side: const BorderSide(color: Color(0xFF245196), width: 1.0),
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Refer Wallet',
                       style: TextStyle(
                         color: Colors.black,
@@ -133,7 +130,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
                 decoration: ShapeDecoration(
-                  color: Color(0xFF245196),
+                  color: const Color(0xFF245196),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -142,7 +139,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Main balance',
                       style: TextStyle(
                         color: Colors.white,
@@ -153,7 +150,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                       ),
                     ),
                     buildVSpacer(30),
-                    Text.rich(
+                    const Text.rich(
                       TextSpan(
                         children: [
                           TextSpan(
@@ -181,7 +178,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                       textAlign: TextAlign.center,
                     ),
                     buildVSpacer(40),
-                    Container(
+                    SizedBox(
                       width: double.infinity,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -191,7 +188,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => TopUpScreen(),
+                                  builder: (context) => const TopUpScreen(),
                                 ),
                               );
                             },
@@ -203,7 +200,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                                   'assets/topup.png',
                                 ),
                                 buildVSpacer(10),
-                                Text(
+                                const Text(
                                   'Top up',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -225,7 +222,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => WithdrawalScreen(),
+                                  builder: (context) => const WithdrawalScreen(),
                                 ),
                               );
                             },
@@ -237,7 +234,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                                   'assets/withdraw.png',
                                 ),
                                 buildVSpacer(10),
-                                Text(
+                                const Text(
                                   'Withdraw',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -259,7 +256,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => TransferScreen1(),
+                                  builder: (context) => const TransferScreen1(),
                                 ),
                               );
                             },
@@ -271,7 +268,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
                                   'assets/transfer.png',
                                 ),
                                 buildVSpacer(10),
-                                Text(
+                                const Text(
                                   'Transfer',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -313,8 +310,8 @@ class _WalletScreen1State extends State<WalletScreen1> {
                             height: 70, // Adjust the height as needed
                             width: 70, // Adjust the width as needed
                           ),
-                          SizedBox(height: 8),
-                          Text(
+                          const SizedBox(height: 8),
+                          const Text(
                             'Ali',
                             style: TextStyle(fontSize: 12),
                           ),
@@ -331,7 +328,7 @@ class _WalletScreen1State extends State<WalletScreen1> {
               child: Row(
                 children: [
                   _buildTextHeader(title: 'Latest Transactions'),
-                  Spacer(),
+                  const Spacer(),
                   _buildTextHeader(
                       title: 'View All', fontWeight: FontWeight.w400, size: 13),
                 ],
@@ -355,11 +352,11 @@ class _WalletScreen1State extends State<WalletScreen1> {
                           title: 'Today 12:32', fontWeight: FontWeight.w400),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     children: [
                       _buildTextHeader(title: '-₹35.23', color: Colors.red),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward_ios,
                         size: 13,
                       )
@@ -394,11 +391,11 @@ class _WalletScreen1State extends State<WalletScreen1> {
                           fontWeight: FontWeight.w400),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     children: [
                       _buildTextHeader(title: '+₹430.00', color: Colors.green),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward_ios,
                         size: 13,
                       )
@@ -432,11 +429,11 @@ class _WalletScreen1State extends State<WalletScreen1> {
                           title: 'Dec 24 12:32', fontWeight: FontWeight.w400),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     children: [
                       _buildTextHeader(title: '-₹13.00', color: Colors.red),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward_ios,
                         size: 13,
                       )
@@ -455,20 +452,20 @@ class _WalletScreen1State extends State<WalletScreen1> {
             buildVSpacer(15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF245196),
+                    backgroundColor: const Color(0xFF245196),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Back',
                       style: TextStyle(

@@ -1,14 +1,10 @@
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/share_car_sharing/drop_off_screen.dart';
-import 'package:car_rental/view/share_car_sharing/passengers_screen1.dart';
-import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
-import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
-import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class PassengerScreen6 extends StatefulWidget {
+  const PassengerScreen6({super.key});
+
   @override
   _PassengerScreen6State createState() => _PassengerScreen6State();
 }
@@ -18,14 +14,14 @@ class _PassengerScreen6State extends State<PassengerScreen6> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 70,
         width: 150,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Align(
             alignment: Alignment.center,
-            child: Container(
+            child: SizedBox(
               width: 250,
               height: 65,
               child: ElevatedButton(
@@ -39,7 +35,7 @@ class _PassengerScreen6State extends State<PassengerScreen6> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Home',
@@ -67,14 +63,14 @@ class _PassengerScreen6State extends State<PassengerScreen6> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),

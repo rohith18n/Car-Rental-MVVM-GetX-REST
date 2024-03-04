@@ -40,13 +40,13 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => EditProfileScreen(),
+                          builder: (context) => const EditProfileScreen(),
                         ),
                       );
                     },
                     child: Container(
                       height: 180,
-                      color: Color(0xff245196),
+                      color: const Color(0xff245196),
                       child: Padding(
                         padding: const EdgeInsets.only(
                             top: 30, bottom: 20, left: 20),
@@ -55,7 +55,7 @@ class _AppDrawerState extends State<AppDrawer> {
                             Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 0.0),
-                              child: Container(
+                              child: SizedBox(
                                   width: 80,
                                   height: 80,
                                   child:
@@ -101,12 +101,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 15, vertical: 8),
                                     decoration: ShapeDecoration(
-                                      color: Color(0xFFEDB31B),
+                                      color: const Color(0xFFEDB31B),
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                     ),
-                                    child: Row(
+                                    child: const Row(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -134,12 +134,12 @@ class _AppDrawerState extends State<AppDrawer> {
                               child: GestureDetector(
                                 onTap: () => Navigator.pop(context),
                                 child: Container(
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors
                                         .white, // Set the background color to white
                                   ),
-                                  padding: EdgeInsets.only(
+                                  padding: const EdgeInsets.only(
                                       left: 5.0,
                                       right: 5), // Adjust the padding as needed
                                   child: const Icon(
@@ -163,7 +163,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => YourCarScreen(),
+                          builder: (context) => const YourCarScreen(),
                         ),
                       );
                     },
@@ -174,7 +174,7 @@ class _AppDrawerState extends State<AppDrawer> {
                           fontWeight: FontWeight.w500,
                           size: 15,
                         ),
-                        Icon(Icons.arrow_drop_down),
+                        const Icon(Icons.arrow_drop_down),
                       ],
                     ),
                   ),
@@ -183,7 +183,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => ModifyListingScreen(
+                          builder: (context) => const ModifyListingScreen(
                             initialTabIndex: 0,
                           ),
                         ),
@@ -205,7 +205,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => WalletScreen1(),
+                          builder: (context) => const WalletScreen1(),
                         ),
                       );
                     },
@@ -225,7 +225,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => UploadCarImages(),
+                          builder: (context) => const UploadCarImages(),
                         ),
                       );
                     },
@@ -246,7 +246,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => AddCarFeatureScreen(),
+                          builder: (context) => const AddCarFeatureScreen(),
                         ),
                       );
                     },
@@ -277,7 +277,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => AddNewCar(),
+                          builder: (context) => const AddNewCar(),
                         ),
                       );
                     },
@@ -308,8 +308,8 @@ class _AppDrawerState extends State<AppDrawer> {
                           _buildTextHeader(
                               title: 'Share Your car\non Multiple Platforms',
                               size: 16),
-                          Spacer(),
-                          Icon(Icons.arrow_drop_down)
+                          const Spacer(),
+                          const Icon(Icons.arrow_drop_down)
                         ],
                       ),
                     ),
@@ -336,8 +336,8 @@ class _AppDrawerState extends State<AppDrawer> {
                                   const EdgeInsets.symmetric(horizontal: 5.0),
                               child: Row(
                                 children: [
-                                  Text('Rental'),
-                                  Spacer(),
+                                  const Text('Rental'),
+                                  const Spacer(),
                                   Transform.scale(
                                     scale:
                                         0.8, // Adjust the scale factor as needed
@@ -352,7 +352,7 @@ class _AppDrawerState extends State<AppDrawer> {
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                               color: Colors.grey, // Divider color
                               thickness: 1.0, // Divider thickness
                             ),
@@ -361,8 +361,8 @@ class _AppDrawerState extends State<AppDrawer> {
                                   const EdgeInsets.symmetric(horizontal: 5.0),
                               child: Row(
                                 children: [
-                                  Text('Subscription'),
-                                  Spacer(),
+                                  const Text('Subscription'),
+                                  const Spacer(),
                                   Transform.scale(
                                     scale:
                                         0.8, // Adjust the scale factor as needed
@@ -377,7 +377,7 @@ class _AppDrawerState extends State<AppDrawer> {
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                               color: Colors.grey, // Divider color
                               thickness: 1.0, // Divider thickness
                             ),
@@ -386,8 +386,8 @@ class _AppDrawerState extends State<AppDrawer> {
                                   const EdgeInsets.symmetric(horizontal: 5.0),
                               child: Row(
                                 children: [
-                                  Text('Sharing'),
-                                  Spacer(),
+                                  const Text('Sharing'),
+                                  const Spacer(),
                                   Transform.scale(
                                     scale:
                                         0.8, // Adjust the scale factor as needed
@@ -402,7 +402,7 @@ class _AppDrawerState extends State<AppDrawer> {
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                               color: Colors.grey, // Divider color
                               thickness: 1.0, // Divider thickness
                             ),
@@ -411,8 +411,8 @@ class _AppDrawerState extends State<AppDrawer> {
                                   const EdgeInsets.symmetric(horizontal: 5.0),
                               child: Row(
                                 children: [
-                                  Text('Government Tender'),
-                                  Spacer(),
+                                  const Text('Government Tender'),
+                                  const Spacer(),
                                   Transform.scale(
                                     scale:
                                         0.8, // Adjust the scale factor as needed
@@ -445,8 +445,8 @@ class _AppDrawerState extends State<AppDrawer> {
                           Image.asset('assets/tickcar.png'),
                           buildHSpacer(5),
                           _buildTextHeader(title: 'Other Services', size: 16),
-                          Spacer(),
-                          Icon(Icons.arrow_drop_down)
+                          const Spacer(),
+                          const Icon(Icons.arrow_drop_down)
                         ],
                       ),
                     ),
@@ -465,12 +465,12 @@ class _AppDrawerState extends State<AppDrawer> {
                           borderRadius: BorderRadius.circular(
                               0.0), // Adjust border radius as needed
                         ),
-                        child: Column(
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
+                                  EdgeInsets.symmetric(horizontal: 5.0),
                               child: Row(
                                 children: [
                                   Text('Fastag Service'),
@@ -493,7 +493,7 @@ class _AppDrawerState extends State<AppDrawer> {
                             ),
                             Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
+                                  EdgeInsets.symmetric(horizontal: 5.0),
                               child: Row(
                                 children: [
                                   Text('Car Insurance'),
@@ -516,7 +516,7 @@ class _AppDrawerState extends State<AppDrawer> {
                             ),
                             Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
+                                  EdgeInsets.symmetric(horizontal: 5.0),
                               child: Row(
                                 children: [
                                   Text('Accessories'),
@@ -542,7 +542,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => PolicyScreen(),
+                          builder: (context) => const PolicyScreen(),
                         ),
                       );
                     },
@@ -562,7 +562,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => LanguageSection(),
+                          builder: (context) => const LanguageSection(),
                         ),
                       );
                     },
@@ -582,7 +582,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => FAQScreen(),
+                          builder: (context) => const FAQScreen(),
                         ),
                       );
                     },
@@ -603,7 +603,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => HelpAndSupportScreen(),
+                          builder: (context) => const HelpAndSupportScreen(),
                         ),
                       );
                     },

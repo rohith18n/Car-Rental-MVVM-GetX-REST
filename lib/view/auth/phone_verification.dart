@@ -1,7 +1,4 @@
-import 'dart:async';
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/language_selection/widget/custom_language.dart';
-import 'package:car_rental/view/splash/SplashScreen_2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:car_rental/view/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +7,8 @@ import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 
 class PhoneVerificationScreen extends StatefulWidget {
+  const PhoneVerificationScreen({super.key});
+
   @override
   State createState() => _PhoneVerificationScreenState();
 }
@@ -91,7 +90,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen>
                     buildVSpacer(30),
                     OTPTextField(
                         otpFieldStyle: OtpFieldStyle(
-                          backgroundColor: Color(0xFFDDDDDD),
+                          backgroundColor: const Color(0xFFDDDDDD),
                         ),
                         controller: otpController,
                         length: 4,
@@ -100,13 +99,13 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen>
                         fieldWidth: 50,
                         fieldStyle: FieldStyle.box,
                         outlineBorderRadius: 8,
-                        style: TextStyle(fontSize: 17),
+                        style: const TextStyle(fontSize: 17),
                         onChanged: (pin) {
                           otps = pin;
-                          print("Changed: " + otps);
+                          print("Changed: $otps");
                         },
                         onCompleted: (pin) {
-                          print("Completed: " + pin);
+                          print("Completed: $pin");
                         }),
                     Padding(
                       padding: const EdgeInsets.only(top: 18.0),

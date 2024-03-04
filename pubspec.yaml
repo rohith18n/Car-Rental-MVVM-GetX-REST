@@ -49,6 +49,8 @@ dependencies:
   cached_network_image: ^3.3.0
 
 
+  intl: any
+  scrollable_positioned_list: any
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:

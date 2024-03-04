@@ -4,7 +4,6 @@ import 'package:car_rental/view/share_car/share_car_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:car_rental/view/widgets/custom_car_listings.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
@@ -27,11 +26,11 @@ class _HomeState extends State<Home> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => ShareCarScreen(),
+                  builder: (context) => const ShareCarScreen(),
                 ),
               );
             },
-            backgroundColor: Color(0xffEDB31B),
+            backgroundColor: const Color(0xffEDB31B),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
             ),
@@ -60,7 +59,7 @@ class _HomeState extends State<Home> {
               ),
               buildVSpacer(30),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 12.0),
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Row(
                   children: [
                     Text(
@@ -70,12 +69,12 @@ class _HomeState extends State<Home> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => AddNewCar(),
+                            builder: (context) => const AddNewCar(),
                           ),
                         );
                       },
@@ -87,7 +86,7 @@ class _HomeState extends State<Home> {
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             side:
-                                BorderSide(width: 1, color: Color(0xFF245196)),
+                                const BorderSide(width: 1, color: Color(0xFF245196)),
                             borderRadius: BorderRadius.circular(29),
                           ),
                         ),
@@ -99,7 +98,7 @@ class _HomeState extends State<Home> {
                             Text(
                               'Add Car List',
                               style: GoogleFonts.poppins(
-                                color: Color(0xFF245196),
+                                color: const Color(0xFF245196),
                                 fontSize: 13,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -116,7 +115,7 @@ class _HomeState extends State<Home> {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => CarDetailsScreen(),
+                      builder: (context) => const CarDetailsScreen(),
                     ),
                   );
                 },
@@ -151,7 +150,7 @@ class _HomeState extends State<Home> {
               ),
               buildVSpacer(10),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 12.0),
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Text(
                   'New Cars listings',
                   style: GoogleFonts.beVietnamPro(
@@ -164,17 +163,17 @@ class _HomeState extends State<Home> {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => CarDetailsScreen(),
+                      builder: (context) => const CarDetailsScreen(),
                     ),
                   );
                 },
-                child: Container(
+                child: SizedBox(
                   height:
                       400, // Set a specific height or use MediaQuery.of(context).size.height for full height
                   child: ListView.builder(
                     itemCount: 5,
                     itemBuilder: (BuildContext context, int index) {
-                      return Center(
+                      return const Center(
                         child: CustomCarListings(
                           text1: 'Ford Eco sport',
                           imagePath: 'assets/car_listing.png',
@@ -190,7 +189,7 @@ class _HomeState extends State<Home> {
               ),
               buildVSpacer(10),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 12.0),
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Text(
                   'Top Rating Cars',
                   style: GoogleFonts.beVietnamPro(

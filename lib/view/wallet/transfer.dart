@@ -1,16 +1,13 @@
-import 'dart:async';
-import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/language_selection/widget/custom_language.dart';
-import 'package:car_rental/view/splash/SplashScreen_2.dart';
 import 'package:car_rental/view/wallet/withdrawal3.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:car_rental/view/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 
 class TransferScreen extends StatefulWidget {
+  const TransferScreen({super.key});
+
   @override
   State createState() => _TransferScreenState();
 }
@@ -36,7 +33,7 @@ class _TransferScreenState extends State<TransferScreen>
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios,
                         size: 28,
                         color: Colors.black,
@@ -85,24 +82,24 @@ class _TransferScreenState extends State<TransferScreen>
                     buildVSpacer(50),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 50.0),
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => TransferScreen(),
+                                builder: (context) => const TransferScreen(),
                               ),
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xFF245196),
+                            backgroundColor: const Color(0xFF245196),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(12.0),
                             child: Text(
                               'Request for OTP',
                               style: TextStyle(
@@ -118,7 +115,7 @@ class _TransferScreenState extends State<TransferScreen>
                     buildVSpacer(60),
                     OTPTextField(
                         otpFieldStyle: OtpFieldStyle(
-                          backgroundColor: Color(0xFFDDDDDD),
+                          backgroundColor: const Color(0xFFDDDDDD),
                         ),
                         controller: otpController,
                         length: 4,
@@ -127,13 +124,13 @@ class _TransferScreenState extends State<TransferScreen>
                         fieldWidth: 50,
                         fieldStyle: FieldStyle.box,
                         outlineBorderRadius: 8,
-                        style: TextStyle(fontSize: 17),
+                        style: const TextStyle(fontSize: 17),
                         onChanged: (pin) {
                           otps = pin;
-                          print("Changed: " + otps);
+                          print("Changed: $otps");
                         },
                         onCompleted: (pin) {
-                          print("Completed: " + pin);
+                          print("Completed: $pin");
                         }),
                     Padding(
                       padding: const EdgeInsets.only(top: 18.0),
@@ -167,24 +164,24 @@ class _TransferScreenState extends State<TransferScreen>
                     buildVSpacer(120),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 50.0),
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => WithdrawalScreen3(),
+                                builder: (context) => const WithdrawalScreen3(),
                               ),
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xFF245196),
+                            backgroundColor: const Color(0xFF245196),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(12.0),
                             child: Text(
                               'Confirm',
                               style: TextStyle(

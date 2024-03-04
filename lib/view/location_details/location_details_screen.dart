@@ -1,12 +1,10 @@
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/location_details/confirm_location_screen.dart';
-import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class LocationDetailsScreen extends StatefulWidget {
+  const LocationDetailsScreen({super.key});
+
   @override
   _LocationDetailsScreenState createState() => _LocationDetailsScreenState();
 }
@@ -17,24 +15,24 @@ class _LocationDetailsScreenState extends State<LocationDetailsScreen> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => ConfirmLocationDetails(),
+                  builder: (context) => const ConfirmLocationDetails(),
                 ),
               );
             },
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFFEDB31B),
+              backgroundColor: const Color(0xFFEDB31B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'ADD NEW ADDRESS',
                 style: TextStyle(
@@ -61,7 +59,7 @@ class _LocationDetailsScreenState extends State<LocationDetailsScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,

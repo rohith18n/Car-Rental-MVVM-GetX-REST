@@ -1,11 +1,10 @@
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class AddressProofScreen extends StatefulWidget {
+  const AddressProofScreen({super.key});
+
   @override
   _AddressProofScreenState createState() => _AddressProofScreenState();
 }
@@ -14,18 +13,18 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
   void _showUploadBottomSheet() {
     showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(40.0)),
       ),
-      backgroundColor: Color(0xff245196),
+      backgroundColor: const Color(0xff245196),
       builder: (context) {
         return Container(
           height: 150,
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              const Text(
                 'Upload the documents',
                 style: TextStyle(
                   fontSize: 16,
@@ -33,7 +32,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -41,19 +40,19 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => AddressProofScreen(),
+                          builder: (context) => const AddressProofScreen(),
                         ),
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffEDB31B),
+                      backgroundColor: const Color(0xffEDB31B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/camera.png'),
                           color: Colors.white,
                         ),
@@ -69,19 +68,19 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => AddressProofScreen(),
+                          builder: (context) => const AddressProofScreen(),
                         ),
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffEDB31B),
+                      backgroundColor: const Color(0xffEDB31B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/gallery.png'),
                           color: Colors.white,
                         ),
@@ -119,7 +118,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -141,7 +140,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 1150,
               child: Column(
@@ -156,7 +155,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -189,7 +188,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -222,7 +221,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -255,7 +254,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -290,7 +289,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -322,7 +321,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -359,7 +358,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -391,7 +390,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Color(
+                              color: const Color(
                                   0xff245196), // Add your desired background color here
                               borderRadius: BorderRadius.circular(4),
                             ),
@@ -426,7 +425,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
-                          color: Color(
+                          color: const Color(
                               0xff245196), // Add your desired background color here
                           borderRadius: BorderRadius.circular(4),
                         ),
@@ -465,7 +464,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                       onTap: () {
                         _showUploadBottomSheet();
                       },
-                      child: Image(
+                      child: const Image(
                         image: AssetImage('assets/upload2.png'),
                       )),
                   Padding(
@@ -474,7 +473,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/info.png'),
                         ),
                         buildHSpacer(5),
@@ -507,7 +506,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                       onTap: () {
                         _showUploadBottomSheet();
                       },
-                      child: Image(
+                      child: const Image(
                         image: AssetImage('assets/upload2.png'),
                       )),
                   Padding(
@@ -516,7 +515,7 @@ class _AddressProofScreenState extends State<AddressProofScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/info.png'),
                         ),
                         buildHSpacer(5),

@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/share_car_rental/scrollable_clean_calendar.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
@@ -10,7 +9,7 @@ import 'package:scrollable_clean_calendar/utils/enums.dart';
 class ModifyListingScreen extends StatefulWidget {
   final int initialTabIndex;
 
-  ModifyListingScreen({required this.initialTabIndex});
+  const ModifyListingScreen({super.key, required this.initialTabIndex});
 
   @override
   _ModifyListingScreenState createState() => _ModifyListingScreenState();
@@ -45,7 +44,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
         height: 50.0,
         child: FloatingActionButton(
           onPressed: () {},
-          backgroundColor: Color(0xffEDB31B),
+          backgroundColor: const Color(0xffEDB31B),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
           ),
@@ -61,7 +60,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20, right: 10),
                 child: Row(
@@ -72,7 +71,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -122,7 +121,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
               ],
             ),
             isFirstButtonSelected
-                ? Container(
+                ? SizedBox(
                     width: 358,
                     height: 200,
                     child: Stack(
@@ -137,7 +136,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                               color: Colors.white,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(4)),
-                              shadows: [
+                              shadows: const [
                                 BoxShadow(
                                   color: Color(0x3F000000),
                                   blurRadius: 4,
@@ -148,7 +147,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 171,
                           top: 64,
                           child: Text(
@@ -163,7 +162,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 171,
                           top: 86,
                           child: Opacity(
@@ -199,7 +198,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                         //     ),
                         //   ),
                         // ),
-                        Positioned(
+                        const Positioned(
                           left: 292,
                           top: 86,
                           child: Opacity(
@@ -217,7 +216,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 266,
                           top: 64,
                           child: Text(
@@ -239,7 +238,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                             width: 81,
                             height: 65.21,
                             decoration: ShapeDecoration(
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage('assets/white_car.png'),
                                 fit: BoxFit.fill,
                               ),
@@ -254,7 +253,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                           child: Container(
                             width: 10,
                             height: 10,
-                            decoration: ShapeDecoration(
+                            decoration: const ShapeDecoration(
                               color: Color(0xFF258E00),
                               shape: OvalBorder(),
                             ),
@@ -266,7 +265,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                           child: Container(
                             width: 10,
                             height: 10,
-                            decoration: ShapeDecoration(
+                            decoration: const ShapeDecoration(
                               color: Color(0xFFFE5244),
                               shape: OvalBorder(),
                             ),
@@ -280,8 +279,8 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                             height: 20,
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 4),
-                            decoration: BoxDecoration(color: Color(0xFFF4F4F4)),
-                            child: Row(
+                            decoration: const BoxDecoration(color: Color(0xFFF4F4F4)),
+                            child: const Row(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -310,7 +309,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 8),
                             decoration: ShapeDecoration(
-                              color: Color(0xFFEDB31B),
+                              color: const Color(0xFFEDB31B),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(4)),
                             ),
@@ -324,12 +323,12 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            ModifyListingScreen(
+                                            const ModifyListingScreen(
                                                 initialTabIndex: 1),
                                       ),
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     'Modify Listing',
                                     style: TextStyle(
                                       color: Colors.black,
@@ -379,13 +378,13 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
                 : _buildText(title: content),
             // Display the selected content
             isSecondButtonSelected
-                ? Container(
+                ? SizedBox(
                     height: 500,
                     child: ScrollableCleanCalendar(
                       calendarController: calendarController,
                       layout: Layout.BEAUTY,
                       calendarCrossAxisSpacing: 0,
-                      daySelectedBackgroundColor: Color(0XFF258E00),
+                      daySelectedBackgroundColor: const Color(0XFF258E00),
                     ),
                   )
                 : _buildText(title: content),
@@ -430,7 +429,7 @@ class _ModifyListingScreenState extends State<ModifyListingScreen> {
           width: 160,
           height: 35, // Set the height as needed
           decoration: BoxDecoration(
-            color: isSelected ? Color(0xff245196) : Colors.white,
+            color: isSelected ? const Color(0xff245196) : Colors.white,
             borderRadius: BorderRadius.circular(30),
             border: Border.all(color: Colors.blue),
           ),

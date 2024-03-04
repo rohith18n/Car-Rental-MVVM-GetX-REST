@@ -1,5 +1,3 @@
-import 'dart:async';
-import 'package:car_rental/view/auth/signIn_screen.dart';
 import 'package:car_rental/view/language_selection/widget/custom_language.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:car_rental/view/widgets/custom_button.dart';
@@ -7,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LanguageSection extends StatefulWidget {
+  const LanguageSection({super.key});
+
   @override
   State createState() => _LanguageSectionState();
 }
@@ -38,7 +38,7 @@ class _LanguageSectionState extends State<LanguageSection>
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back,
                                 size: 28,
                                 color: Colors.black,
@@ -73,13 +73,13 @@ class _LanguageSectionState extends State<LanguageSection>
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CustomLanguage(
+                          const CustomLanguage(
                             title: 'English',
                             subtitle: 'ENGLISH',
                             text: 'A',
                           ),
                           buildHSpacer(10),
-                          CustomLanguage(
+                          const CustomLanguage(
                             title: 'हिंदी',
                             subtitle: 'HINDI',
                             text: 'आ',
@@ -93,13 +93,13 @@ class _LanguageSectionState extends State<LanguageSection>
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CustomLanguage(
+                          const CustomLanguage(
                             title: 'मराठी',
                             subtitle: 'MARATHI',
                             text: 'म',
                           ),
                           buildHSpacer(10),
-                          CustomLanguage(
+                          const CustomLanguage(
                             title: 'ਪੰਜਾਬੀ',
                             subtitle: 'PUNJABI',
                             text: 'ਪੰ',
@@ -113,13 +113,13 @@ class _LanguageSectionState extends State<LanguageSection>
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CustomLanguage(
+                          const CustomLanguage(
                             title: 'ಕನ್ನಡ',
                             subtitle: 'KANNAD',
                             text: 'ಕ',
                           ),
                           buildHSpacer(10),
-                          CustomLanguage(
+                          const CustomLanguage(
                             title: 'Others',
                             subtitle: 'OTHERS',
                             text: 'आ - A',

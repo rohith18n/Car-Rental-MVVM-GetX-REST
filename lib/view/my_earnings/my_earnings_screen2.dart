@@ -1,13 +1,11 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class MyEarningsScreen2 extends StatefulWidget {
+  const MyEarningsScreen2({super.key});
+
   @override
   _MyEarningsScreen2State createState() => _MyEarningsScreen2State();
 }
@@ -18,14 +16,14 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
   void _showUploadBottomSheet() {
     showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(5.0)),
       ),
       builder: (context) {
         return Container(
           color: Colors.white,
           height: 350,
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -103,14 +101,14 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 18.0),
                         child: Container(
-                          color: Color(0xffEDB31B),
+                          color: const Color(0xffEDB31B),
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xffEDB31B),
+                              backgroundColor: const Color(0xffEDB31B),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0),
-                                side: BorderSide(
+                                side: const BorderSide(
                                     color: Color(0xffEDB31B), width: 2.0),
                               ),
                             ),
@@ -135,7 +133,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF245196),
+                              backgroundColor: const Color(0xFF245196),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
@@ -186,7 +184,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -216,9 +214,9 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                 // width: 358,
                 height: 69,
                 decoration: ShapeDecoration(
-                  color: Color(0xFF245196),
+                  color: const Color(0xFF245196),
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                    side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                     borderRadius: BorderRadius.circular(4),
                   ),
                 ),
@@ -229,7 +227,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                         size: 17,
                         color: Colors.white,
                         fontWeight: FontWeight.w600),
-                    Spacer(),
+                    const Spacer(),
                     _buildText(
                         title: '3.5',
                         size: 17,
@@ -247,18 +245,18 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFEDB31B),
+                    backgroundColor: const Color(0xFFEDB31B),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Check monthly report',
                       style: TextStyle(
@@ -282,7 +280,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
@@ -346,7 +344,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Image.asset('assets/download.png')
                           ],
                         ),
@@ -370,7 +368,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
@@ -434,7 +432,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Image.asset('assets/download.png')
                           ],
                         ),
@@ -473,7 +471,7 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                       decoration: ShapeDecoration(
                         color: Colors.white,
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                          side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -483,8 +481,8 @@ class _MyEarningsScreen2State extends State<MyEarningsScreen2> {
                         child: Row(
                           children: [
                             _buildText(title: 'All Ratings'),
-                            Spacer(),
-                            Icon(Icons.arrow_drop_down),
+                            const Spacer(),
+                            const Icon(Icons.arrow_drop_down),
                           ],
                         ),
                       ),

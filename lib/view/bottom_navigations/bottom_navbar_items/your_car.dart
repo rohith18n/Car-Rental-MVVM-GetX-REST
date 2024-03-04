@@ -21,14 +21,14 @@ class CarScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(300),
+        preferredSize: const Size.fromHeight(300),
         child: AppBar(
           automaticallyImplyLeading: false,
           flexibleSpace: Container(
             child: Column(
               children: [
                 Container(
-                  color: Color(0xff245196),
+                  color: const Color(0xff245196),
                   child: Padding(
                     padding:
                         const EdgeInsets.only(top: 70, bottom: 20, left: 5),
@@ -47,7 +47,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => YourCarScreen(),
+                                builder: (context) => const YourCarScreen(),
                               ),
                             );
                           },
@@ -59,7 +59,7 @@ class CarScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                                 size: 15,
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.arrow_drop_down,
                                 color: Colors.white,
                               ),
@@ -111,7 +111,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => UploadYourCarImages(),
+                                builder: (context) => const UploadYourCarImages(),
                               ),
                             );
                           },
@@ -119,7 +119,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/card2.png'), // Set your desired height
                                 ),
@@ -140,7 +140,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -150,7 +150,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => AddBioScreen(),
+                                builder: (context) => const AddBioScreen(),
                               ),
                             );
                           },
@@ -158,7 +158,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/card1.png'), // Set your desired height
                                 ),
@@ -179,7 +179,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -189,7 +189,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => SetupDoorStepDelivery(),
+                                builder: (context) => const SetupDoorStepDelivery(),
                               ),
                             );
                           },
@@ -197,7 +197,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/home1.png'), // Set your desired height
                                 ),
@@ -218,7 +218,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -228,7 +228,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => FastagScreen(),
+                                builder: (context) => const FastagScreen(),
                               ),
                             );
                           },
@@ -236,7 +236,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/fastag1.png'), // Set your desired height
                                 ),
@@ -256,7 +256,7 @@ class CarScreen extends StatelessWidget {
                                           style: GoogleFonts.beVietnamPro(
                                               fontSize: 14,
                                               fontWeight: FontWeight.w500,
-                                              color: Color(0xff258E00)),
+                                              color: const Color(0xff258E00)),
                                         ),
                                       ],
                                     ),
@@ -268,7 +268,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -278,7 +278,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => CreateOffer1(),
+                                builder: (context) => const CreateOffer1(),
                               ),
                             );
                           },
@@ -286,7 +286,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/tag.png'), // Set your desired height
                                 ),
@@ -307,7 +307,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -322,7 +322,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => ListingLocationScreen(),
+                                builder: (context) => const ListingLocationScreen(),
                               ),
                             );
                           },
@@ -330,7 +330,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/car_pin.png'), // Set your desired height
                                 ),
@@ -351,7 +351,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -361,7 +361,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => ModifyListing(
+                                builder: (context) => const ModifyListing(
                                   initialTabIndex: 0,
                                 ),
                               ),
@@ -371,7 +371,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/cal.png'), // Set your desired height
                                 ),
@@ -391,7 +391,7 @@ class CarScreen extends StatelessWidget {
                                           style: GoogleFonts.beVietnamPro(
                                               fontSize: 14,
                                               fontWeight: FontWeight.w500,
-                                              color: Color(0xff258E00)),
+                                              color: const Color(0xff258E00)),
                                         ),
                                       ],
                                     ),
@@ -403,7 +403,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -413,7 +413,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => CarRatingScreen(),
+                                builder: (context) => const CarRatingScreen(),
                               ),
                             );
                           },
@@ -421,7 +421,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/star1.png'), // Set your desired height
                                 ),
@@ -442,7 +442,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),
@@ -452,7 +452,7 @@ class CarScreen extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => FulfilmentPolicyScreen(),
+                                builder: (context) => const FulfilmentPolicyScreen(),
                               ),
                             );
                           },
@@ -460,7 +460,7 @@ class CarScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage(
                                       'assets/check_book.png'), // Set your desired height
                                 ),
@@ -481,7 +481,7 @@ class CarScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                const Icon(Icons.arrow_forward_ios)
                               ],
                             ),
                           ),

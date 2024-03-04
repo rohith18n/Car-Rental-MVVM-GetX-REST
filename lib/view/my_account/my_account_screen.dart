@@ -1,8 +1,6 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/account_setting/account_setting_screen.dart';
 import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/car_setting/car_setting_screen.dart';
 import 'package:car_rental/view/edit_profile/edit_profile_screen.dart';
 import 'package:car_rental/view/host_offer/create_offer_screen.dart';
@@ -15,9 +13,10 @@ import 'package:car_rental/view/user_kyc/user_kyc_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class MyAccountScreen extends StatefulWidget {
+  const MyAccountScreen({super.key});
+
   @override
   _MyAccountScreenState createState() => _MyAccountScreenState();
 }
@@ -38,19 +37,19 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => EditProfileScreen(),
+                    builder: (context) => const EditProfileScreen(),
                   ),
                 );
               },
               child: Container(
-                color: Color(0xffEDB31B),
+                color: const Color(0xffEDB31B),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 70, bottom: 20),
                   child: Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                        child: Container(
+                        child: SizedBox(
                             width: 80,
                             height: 80,
                             child: Image.asset('assets/profile_pic.png')),
@@ -84,8 +83,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10.0),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 10.0),
                         child: Icon(
                           Icons.arrow_forward_ios,
                           size: 15,
@@ -101,7 +100,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => UserKycScreen(),
+                    builder: (context) => const UserKycScreen(),
                   ),
                 );
               },
@@ -115,8 +114,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Host KYC'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -127,7 +126,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -142,7 +141,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => CarKycScreen(),
+                    builder: (context) => const CarKycScreen(),
                   ),
                 );
               },
@@ -156,8 +155,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Car KYC'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -168,7 +167,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -183,7 +182,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => LocationDetailsScreen(),
+                    builder: (context) => const LocationDetailsScreen(),
                   ),
                 );
               },
@@ -197,8 +196,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Location Details'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -209,7 +208,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -224,7 +223,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => ProgramDetailsScreen(),
+                    builder: (context) => const ProgramDetailsScreen(),
                   ),
                 );
               },
@@ -238,8 +237,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Program Details'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -250,7 +249,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -265,7 +264,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => ReferAndEarnScreen(),
+                    builder: (context) => const ReferAndEarnScreen(),
                   ),
                 );
               },
@@ -279,8 +278,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Refer & Earn'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -291,7 +290,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -306,7 +305,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => IncomeSummaryScreen(),
+                    builder: (context) => const IncomeSummaryScreen(),
                   ),
                 );
               },
@@ -320,8 +319,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Income Summary'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -332,7 +331,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -359,8 +358,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'My Community'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -476,7 +475,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -491,7 +490,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => AccountSetingScreen(),
+                    builder: (context) => const AccountSetingScreen(),
                   ),
                 );
               },
@@ -505,8 +504,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Account Setting'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -517,7 +516,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -532,7 +531,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => PricingControlScreen(),
+                    builder: (context) => const PricingControlScreen(),
                   ),
                 );
               },
@@ -546,8 +545,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Pricing Control'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -558,7 +557,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -573,7 +572,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => CreateOfferScreen(),
+                    builder: (context) => const CreateOfferScreen(),
                   ),
                 );
               },
@@ -587,8 +586,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Host Offer'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )
@@ -599,7 +598,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
             buildVSpacer(10),
             Container(
               width: 340,
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
@@ -614,7 +613,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => CarSettingScreen(),
+                    builder: (context) => const CarSettingScreen(),
                   ),
                 );
               },
@@ -628,8 +627,8 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     ),
                     buildHSpacer(25),
                     _buildText(title: 'Car Setting'),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
                     )

@@ -1,14 +1,11 @@
-import 'package:car_rental/view/share_car_sharing/drop_off_screen.dart';
 import 'package:car_rental/view/share_car_sharing/passenger_screen6.dart';
-import 'package:car_rental/view/share_car_sharing/passengers_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
-import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
-import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class PassengerScreen5 extends StatefulWidget {
+  const PassengerScreen5({super.key});
+
   @override
   _PassengerScreen5State createState() => _PassengerScreen5State();
 }
@@ -18,26 +15,26 @@ class _PassengerScreen5State extends State<PassengerScreen5> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 70,
         width: 150,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Align(
             alignment: Alignment.center,
-            child: Container(
+            child: SizedBox(
               width: 250,
               height: 65,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => PassengerScreen6(),
+                      builder: (context) => const PassengerScreen6(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Publish',
@@ -65,14 +62,14 @@ class _PassengerScreen5State extends State<PassengerScreen5> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
@@ -88,7 +85,7 @@ class _PassengerScreen5State extends State<PassengerScreen5> {
                 height: 100,
                 padding: const EdgeInsets.all(10),
                 decoration: ShapeDecoration(
-                  color: Color(0xFFE8E8E8),
+                  color: const Color(0xFFE8E8E8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(31),
                   ),
@@ -99,7 +96,7 @@ class _PassengerScreen5State extends State<PassengerScreen5> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      child: Column(
+                      child: const Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,

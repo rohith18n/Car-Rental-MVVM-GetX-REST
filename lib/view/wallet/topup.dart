@@ -1,11 +1,11 @@
 import 'package:car_rental/view/wallet/payment_screen.dart';
-import 'package:car_rental/view/wallet/transfer.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class TopUpScreen extends StatefulWidget {
+  const TopUpScreen({super.key});
+
   @override
   _TopUpScreenState createState() => _TopUpScreenState();
 }
@@ -31,7 +31,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
-                            child: Icon(
+                            child: const Icon(
                               Icons.arrow_back,
                               size: 28,
                               color: Colors.black,
@@ -56,7 +56,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                   ),
                   Container(
                     height: 90,
-                    color: Color(0xff245196),
+                    color: const Color(0xff245196),
                   ),
                 ],
               ),
@@ -93,13 +93,13 @@ class _TopUpScreenState extends State<TopUpScreen> {
                                       fontWeight: FontWeight.w900,
                                       fontStyle: FontStyle
                                           .italic, // Add this line for italic text
-                                      color: Color(0xffED4132)),
+                                      color: const Color(0xffED4132)),
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Padding(
                           padding: const EdgeInsets.only(right: 10.0),
                           child: Image.asset('assets/colorwallet.png'),
@@ -125,7 +125,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                       borderRadius: BorderRadius.circular(
                           15.0), // Adjust the radius as needed
                       border: Border.all(
-                        color: Color(
+                        color: const Color(
                             0xff3CB449), // Choose your desired border color
                         width: 2.0, // Adjust the border width as needed
                       ),
@@ -153,7 +153,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                               style: GoogleFonts.roboto(
                                   fontSize: 17,
                                   fontWeight: FontWeight.w500,
-                                  color: Color(0xffED4132)),
+                                  color: const Color(0xffED4132)),
                             ),
                           ],
                         ),
@@ -251,29 +251,29 @@ class _TopUpScreenState extends State<TopUpScreen> {
                         buildVSpacer(20),
                         _buildText(
                             title: '100% Safe and Secure Transaction',
-                            color: Color(0xffED4132),
+                            color: const Color(0xffED4132),
                             size: 12),
                         buildVSpacer(10),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 50.0),
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (context) => PaymentScreen(),
+                                    builder: (context) => const PaymentScreen(),
                                   ),
                                 );
                               },
                               style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF245196),
+                                backgroundColor: const Color(0xFF245196),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(25.0),
                                 ),
                               ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(12.0),
+                              child: const Padding(
+                                padding: EdgeInsets.all(12.0),
                                 child: Text(
                                   'Proceed to add ₹1000',
                                   style: TextStyle(
@@ -313,7 +313,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                       borderRadius: BorderRadius.circular(
                           15.0), // Adjust the radius as needed
                       border: Border.all(
-                        color: Color(
+                        color: const Color(
                             0xff3CB449), // Choose your desired border color
                         width: 2.0, // Adjust the border width as needed
                       ),
@@ -331,7 +331,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                               style: GoogleFonts.roboto(
                                   fontSize: 17,
                                   fontWeight: FontWeight.w500,
-                                  color: Color(0xffED4132)),
+                                  color: const Color(0xffED4132)),
                             ),
                           ],
                         ),
@@ -351,7 +351,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                                       fontWeight: FontWeight.w400),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               _buildTextHeader(
                                   title: '+₹500.00', color: Colors.blueGrey),
                             ],
@@ -373,7 +373,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                                       fontWeight: FontWeight.w400),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               _buildTextHeader(
                                   title: '-₹150.00', color: Colors.redAccent),
                             ],
@@ -395,7 +395,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
                                       fontWeight: FontWeight.w400),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               _buildTextHeader(
                                   title: '-₹150.00', color: Colors.redAccent),
                             ],
@@ -403,18 +403,18 @@ class _TopUpScreenState extends State<TopUpScreen> {
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 50.0),
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF245196),
+                                backgroundColor: const Color(0xFF245196),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(25.0),
                                 ),
                               ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(12.0),
+                              child: const Padding(
+                                padding: EdgeInsets.all(12.0),
                                 child: Text(
                                   'View All',
                                   style: TextStyle(

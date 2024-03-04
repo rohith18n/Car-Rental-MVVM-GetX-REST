@@ -2,21 +2,11 @@ import 'package:car_rental/view/booking_details/booking_details_screen.dart';
 import 'package:car_rental/view/car_location/car_location_screen.dart';
 import 'package:car_rental/view/car_location/start_trip_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:car_rental/view/your_car/your_car_screen.dart';
-import 'package:car_rental/view/your_car_navigation_bar/add_bio_screen.dart';
-import 'package:car_rental/view/your_car_navigation_bar/car_rating_screen.dart';
-import 'package:car_rental/view/your_car_navigation_bar/create_offer1.dart';
-import 'package:car_rental/view/your_car_navigation_bar/fastag_screen.dart';
-import 'package:car_rental/view/your_car_navigation_bar/fulfilment_policy_screen.dart';
-import 'package:car_rental/view/your_car_navigation_bar/listing_loacation_screen.dart';
-import 'package:car_rental/view/your_car_navigation_bar/modify_listing.dart';
-import 'package:car_rental/view/your_car_navigation_bar/setup_doorstep_delivery_screen.dart';
-import 'package:car_rental/view/your_car_navigation_bar/upload_your_car_images.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BookingScreen extends StatelessWidget {
-  BookingScreen({super.key});
+  const BookingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +14,7 @@ class BookingScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(230),
+        preferredSize: const Size.fromHeight(230),
         child: AppBar(
           automaticallyImplyLeading: false,
           flexibleSpace: Container(
@@ -42,7 +32,7 @@ class BookingScreen extends StatelessWidget {
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
-                            child: Icon(
+                            child: const Icon(
                               Icons.arrow_back,
                               size: 28,
                               color: Colors.black,
@@ -68,7 +58,7 @@ class BookingScreen extends StatelessWidget {
                 buildVSpacer(20),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: Container(
+                  child: SizedBox(
                     width: 500,
                     child: Row(
                       children: [
@@ -83,7 +73,7 @@ class BookingScreen extends StatelessWidget {
                                 height: 40,
                                 decoration: ShapeDecoration(
                                   shape: RoundedRectangleBorder(
-                                    side: BorderSide(
+                                    side: const BorderSide(
                                         width: 1, color: Color(0xFFD9D9D9)),
                                     borderRadius: BorderRadius.circular(4),
                                   ),
@@ -94,27 +84,27 @@ class BookingScreen extends StatelessWidget {
                                   },
                                   itemBuilder: (BuildContext context) {
                                     return <PopupMenuEntry<String>>[
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'All',
                                         child: Text('All'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Upcoming',
                                         child: Text('Upcoming'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Ongoing',
                                         child: Text('Ongoing'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Completed',
                                         child: Text('Completed'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Cancelled',
                                         child: Text('Cancelled'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Not Serve',
                                         child: Text('Not Serve'),
                                       ),
@@ -123,7 +113,7 @@ class BookingScreen extends StatelessWidget {
                                   child: Row(
                                     children: [
                                       _buildTextHeader(title: 'All'),
-                                      Icon(Icons.arrow_drop_down),
+                                      const Icon(Icons.arrow_drop_down),
                                     ],
                                   ),
                                 ),
@@ -145,7 +135,7 @@ class BookingScreen extends StatelessWidget {
                                 height: 40,
                                 decoration: ShapeDecoration(
                                   shape: RoundedRectangleBorder(
-                                    side: BorderSide(
+                                    side: const BorderSide(
                                         width: 1, color: Color(0xFFD9D9D9)),
                                     borderRadius: BorderRadius.circular(4),
                                   ),
@@ -156,19 +146,19 @@ class BookingScreen extends StatelessWidget {
                                   },
                                   itemBuilder: (BuildContext context) {
                                     return <PopupMenuEntry<String>>[
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Last Week',
                                         child: Text('Last Week'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Last Month',
                                         child: Text('Last Month'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Till Date',
                                         child: Text('Till Date'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Custom',
                                         child: Text('Custom'),
                                       ),
@@ -178,7 +168,7 @@ class BookingScreen extends StatelessWidget {
                                     children: [
                                       _buildTextHeader(title: 'Till Date'),
                                       buildHSpacer(5),
-                                      Icon(Icons.arrow_drop_down),
+                                      const Icon(Icons.arrow_drop_down),
                                     ],
                                   ),
                                 ),
@@ -200,7 +190,7 @@ class BookingScreen extends StatelessWidget {
                                 height: 40,
                                 decoration: ShapeDecoration(
                                   shape: RoundedRectangleBorder(
-                                    side: BorderSide(
+                                    side: const BorderSide(
                                         width: 1, color: Color(0xFFD9D9D9)),
                                     borderRadius: BorderRadius.circular(4),
                                   ),
@@ -211,19 +201,19 @@ class BookingScreen extends StatelessWidget {
                                   },
                                   itemBuilder: (BuildContext context) {
                                     return <PopupMenuEntry<String>>[
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'All',
                                         child: Text('All'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Car 1',
                                         child: Text('Car 1'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Car 2',
                                         child: Text('Car 2'),
                                       ),
-                                      PopupMenuItem<String>(
+                                      const PopupMenuItem<String>(
                                         value: 'Car 3',
                                         child: Text('Car 3'),
                                       ),
@@ -233,7 +223,7 @@ class BookingScreen extends StatelessWidget {
                                     children: [
                                       _buildTextHeader(title: 'All'),
                                       buildHSpacer(5),
-                                      Icon(Icons.arrow_drop_down),
+                                      const Icon(Icons.arrow_drop_down),
                                     ],
                                   ),
                                 ),
@@ -276,11 +266,11 @@ class BookingScreen extends StatelessWidget {
                           width: 362,
                           height: 382,
                           decoration: ShapeDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: const Color(0xFFEEEEEE),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            shadows: [
+                            shadows: const [
                               BoxShadow(
                                 color: Color(0x3F000000),
                                 blurRadius: 14,
@@ -298,7 +288,7 @@ class BookingScreen extends StatelessWidget {
                                       title: 'Ford EcoSport 2023',
                                       size: 14,
                                       fontWeight: FontWeight.bold),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'Sedan',
                                       size: 14,
@@ -322,7 +312,7 @@ class BookingScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'ID: 78990AB',
                                       size: 14,
@@ -346,7 +336,7 @@ class BookingScreen extends StatelessWidget {
                                       children: [
                                         Image.asset('assets/star.png'),
                                         buildHSpacer(20),
-                                        Text(
+                                        const Text(
                                           '4.21 . Good . 21 Trips',
                                           style: TextStyle(
                                             color: Colors.black,
@@ -356,8 +346,8 @@ class BookingScreen extends StatelessWidget {
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
-                                        Spacer(),
-                                        Text(
+                                        const Spacer(),
+                                        const Text(
                                           '4 Reviews >',
                                           style: TextStyle(
                                             color: Colors.black,
@@ -377,13 +367,13 @@ class BookingScreen extends StatelessWidget {
                                   _buildText(
                                       title: '•5 Seater •Automatic •Diesel',
                                       size: 14),
-                                  Spacer(),
+                                  const Spacer(),
                                   GestureDetector(
                                     onTap: () {
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              CarLocationScreen(),
+                                              const CarLocationScreen(),
                                         ),
                                       );
                                     },
@@ -405,19 +395,19 @@ class BookingScreen extends StatelessWidget {
                                           Navigator.of(context).push(
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                                  StartTripScreen(),
+                                                  const StartTripScreen(),
                                             ),
                                           );
                                         },
                                         child:
                                             Image.asset('assets/confirm1.png')),
-                                    Spacer(),
+                                    const Spacer(),
                                     GestureDetector(
                                         onTap: () {
                                           Navigator.of(context).push(
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                                  BookingDetailsScreen(),
+                                                  const BookingDetailsScreen(),
                                             ),
                                           );
                                         },
@@ -438,11 +428,11 @@ class BookingScreen extends StatelessWidget {
                           width: 362,
                           height: 520,
                           decoration: ShapeDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: const Color(0xFFEEEEEE),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            shadows: [
+                            shadows: const [
                               BoxShadow(
                                 color: Color(0x3F000000),
                                 blurRadius: 14,
@@ -460,7 +450,7 @@ class BookingScreen extends StatelessWidget {
                                       title: 'Ford EcoSport 2023',
                                       size: 14,
                                       fontWeight: FontWeight.bold),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'Sedan',
                                       size: 14,
@@ -484,7 +474,7 @@ class BookingScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'ID: 78990AB',
                                       size: 14,
@@ -508,7 +498,7 @@ class BookingScreen extends StatelessWidget {
                                       children: [
                                         Image.asset('assets/star.png'),
                                         buildHSpacer(20),
-                                        Text(
+                                        const Text(
                                           '4.21 . Good . 21 Trips',
                                           style: TextStyle(
                                             color: Colors.black,
@@ -518,8 +508,8 @@ class BookingScreen extends StatelessWidget {
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
-                                        Spacer(),
-                                        Text(
+                                        const Spacer(),
+                                        const Text(
                                           '4 Reviews >',
                                           style: TextStyle(
                                             color: Colors.black,
@@ -551,13 +541,13 @@ class BookingScreen extends StatelessWidget {
                                           size: 14),
                                     ],
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   GestureDetector(
                                     onTap: () {
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              CarLocationScreen(),
+                                              const CarLocationScreen(),
                                         ),
                                       );
                                     },
@@ -581,10 +571,10 @@ class BookingScreen extends StatelessWidget {
                                   _buildText(
                                       title: '11-Nov-2023 to 11-Dec-2023',
                                       size: 14),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'Cleared',
-                                      color: Color(0xff258E00))
+                                      color: const Color(0xff258E00))
                                 ],
                               ),
                               buildVSpacer(5),
@@ -593,7 +583,7 @@ class BookingScreen extends StatelessWidget {
                                   _buildText(
                                       title: '11-Nov-2023 to 11-Dec-2023',
                                       size: 14),
-                                  Spacer(),
+                                  const Spacer(),
                                   Padding(
                                     padding: const EdgeInsets.only(right: 15.0),
                                     child: Image.asset('assets/pending.png'),
@@ -606,10 +596,10 @@ class BookingScreen extends StatelessWidget {
                                   _buildText(
                                       title: '11-Nov-2023 to 11-Dec-2023',
                                       size: 14),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'Upcoming',
-                                      color: Color(0xffD38200))
+                                      color: const Color(0xffD38200))
                                 ],
                               ),
                               Padding(
@@ -621,7 +611,7 @@ class BookingScreen extends StatelessWidget {
                                           Navigator.of(context).push(
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                                  StartTripScreen(),
+                                                  const StartTripScreen(),
                                             ),
                                           );
                                         },
@@ -633,7 +623,7 @@ class BookingScreen extends StatelessWidget {
                                           Navigator.of(context).push(
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                                  BookingDetailsScreen(),
+                                                  const BookingDetailsScreen(),
                                             ),
                                           );
                                         },
@@ -655,11 +645,11 @@ class BookingScreen extends StatelessWidget {
                           width: 362,
                           height: 582,
                           decoration: ShapeDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: const Color(0xFFEEEEEE),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            shadows: [
+                            shadows: const [
                               BoxShadow(
                                 color: Color(0x3F000000),
                                 blurRadius: 14,
@@ -679,7 +669,7 @@ class BookingScreen extends StatelessWidget {
                                       title: 'Ford EcoSport 2023',
                                       size: 14,
                                       fontWeight: FontWeight.bold),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'Sedan',
                                       size: 14,
@@ -703,7 +693,7 @@ class BookingScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   _buildText(
                                       title: 'ID: 78990AB',
                                       size: 14,
@@ -727,19 +717,19 @@ class BookingScreen extends StatelessWidget {
                                             horizontal: 18.0),
                                         child: Row(
                                           children: [
-                                            Icon(
+                                            const Icon(
                                               Icons.check,
                                               color: Color(0xff258E00),
                                             ),
                                             _buildText(
                                                 title: 'Confirmed',
-                                                color: Color(0xff258E00)),
+                                                color: const Color(0xff258E00)),
                                           ],
                                         ),
                                       )
                                     ],
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   // Padding(
                                   //   padding: const EdgeInsets.only(top: 0.0, right: 10),
                                   //   child: Image.asset('assets/next_icon.png'),
@@ -761,13 +751,13 @@ class BookingScreen extends StatelessWidget {
                                       buildVSpacer(10),
                                     ],
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   GestureDetector(
                                     onTap: () {
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              CarLocationScreen(),
+                                              const CarLocationScreen(),
                                         ),
                                       );
                                     },
@@ -807,7 +797,7 @@ class BookingScreen extends StatelessWidget {
                                           Navigator.of(context).push(
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                                  StartTripScreen(),
+                                                  const StartTripScreen(),
                                             ),
                                           );
                                         },

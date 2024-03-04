@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../widgets/custom_checkBox_widget.dart';
 
 class AddCarFeatureScreen extends StatefulWidget {
+  const AddCarFeatureScreen({super.key});
+
   @override
   _AddCarFeatureScreenState createState() => _AddCarFeatureScreenState();
 }
@@ -65,7 +66,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
@@ -90,8 +91,8 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 20.0),
+                              const Padding(
+                                padding: EdgeInsets.only(right: 20.0),
                                 child: Text(
                                   'Your Car Feature has been\nSccessfully Added',
                                   textAlign: TextAlign.center,
@@ -116,9 +117,9 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                                       borderRadius: BorderRadius.circular(
                                           20.0), // Optional: Add border radius for a rounded background
                                     ),
-                                    padding: EdgeInsets.all(
+                                    padding: const EdgeInsets.all(
                                         8.0), // Optional: Add padding inside the container
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.close,
                                       size: 15,
                                       color: Colors.white, // Set the icon color
@@ -136,13 +137,13 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
               );
             },
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFFEDB31B),
+              backgroundColor: const Color(0xFFEDB31B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'Save',
                 style: TextStyle(
@@ -170,7 +171,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -198,7 +199,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/white_car.png'), // Set your desired height
                   ),
@@ -217,7 +218,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                           _buildTextHeader(
                               title: 'More car information here',
                               fontWeight: FontWeight.w400),
-                          Icon(
+                          const Icon(
                             Icons.arrow_drop_down,
                             color: Colors.yellow,
                             size: 20,
@@ -234,10 +235,10 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
             Row(
               children: [
                 _buildText(title: 'Total Airbags'),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 15.0),
-                  child: Container(
+                  child: SizedBox(
                     width: 100,
                     height: 27,
                     child: Stack(
@@ -250,7 +251,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                             height: 27,
                             decoration: ShapeDecoration(
                               shape: RoundedRectangleBorder(
-                                side: BorderSide(
+                                side: const BorderSide(
                                     width: 1, color: Color(0xFFEDB31B)),
                                 borderRadius: BorderRadius.circular(4),
                               ),
@@ -266,7 +267,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                               ..rotateZ(1.57),
                             child: Container(
                               width: 25,
-                              decoration: ShapeDecoration(
+                              decoration: const ShapeDecoration(
                                 shape: RoundedRectangleBorder(
                                   side: BorderSide(
                                     width: 1,
@@ -287,7 +288,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                               ..rotateZ(1.57),
                             child: Container(
                               width: 25,
-                              decoration: ShapeDecoration(
+                              decoration: const ShapeDecoration(
                                 shape: RoundedRectangleBorder(
                                   side: BorderSide(
                                     width: 1,
@@ -299,7 +300,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 46,
                           top: 6,
                           child: Text(
@@ -314,7 +315,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 83,
                           top: 6,
                           child: Text(
@@ -329,7 +330,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 11,
                           top: 6,
                           child: Text(
@@ -362,7 +363,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
               child: _buildTextHeader(
                 title:
                     'Tell your guests about your car and its uniqueness! This will help the guest to choose the car',
-                color: Color(0xff0D73C9),
+                color: const Color(0xff0D73C9),
               ),
             ),
             buildVSpacer(20),
@@ -375,7 +376,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
                       height: 198,
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Color(0xFFADADAD)),
+                          side: const BorderSide(width: 1, color: Color(0xFFADADAD)),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -390,7 +391,7 @@ class _AddCarFeatureScreenState extends State<AddCarFeatureScreen> {
             Container(
                 width: double.infinity,
                 height: 198,
-                color: Color(0xffFFF9E3),
+                color: const Color(0xffFFF9E3),
                 child: Column(
                   children: [
                     Padding(

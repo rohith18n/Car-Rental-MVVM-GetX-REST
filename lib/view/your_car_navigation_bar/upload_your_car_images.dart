@@ -1,13 +1,11 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class UploadYourCarImages extends StatefulWidget {
+  const UploadYourCarImages({super.key});
+
   @override
   _UploadYourCarImagesState createState() => _UploadYourCarImagesState();
 }
@@ -16,13 +14,13 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
   void _showUploadBottomSheet() {
     showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(5.0)),
       ),
       builder: (context) {
         return Container(
           height: 150,
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -32,14 +30,14 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/gallery.png'),
                           color: Colors.black,
                         ),
@@ -51,20 +49,20 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/camera2.png'),
                           color: Colors.black,
                         ),
@@ -95,7 +93,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -106,7 +104,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.white,
@@ -134,11 +132,11 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/white_car.png'), // Set your desired height
                   ),
-                  Spacer(),
+                  const Spacer(),
                   _buildText(title: 'Nexon MT DL05PQ1234')
                 ],
               ),
@@ -157,7 +155,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
                                 8.0), // Set your desired border radius
-                            color: Color(0xFFEDB31B),
+                            color: const Color(0xFFEDB31B),
                           ),
                           child: Column(
                             children: [
@@ -166,7 +164,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                     const EdgeInsets.only(left: 18.0, top: 20),
                                 child: Row(
                                   children: [
-                                    Image(
+                                    const Image(
                                         image: AssetImage('assets/sun.png'),
                                         color: Color(0xff444444)),
                                     buildHSpacer(10),
@@ -179,7 +177,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                           style: TextStyle(
                                               fontSize: screenWidth * 0.038,
                                               fontWeight: FontWeight.w600,
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                         Text(
                                           'Daylight is great for picture!',
@@ -188,7 +186,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                                   0.028, // Adjust the font size as needed
                                               fontWeight: FontWeight
                                                   .w500, // Adjust the font weight as needed
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                       ],
                                     ),
@@ -200,7 +198,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                 padding: const EdgeInsets.only(left: 18.0),
                                 child: Row(
                                   children: [
-                                    Image(
+                                    const Image(
                                         image: AssetImage('assets/camera2.png'),
                                         color: Color(0xff444444)),
                                     buildHSpacer(10),
@@ -213,7 +211,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                           style: TextStyle(
                                               fontSize: screenWidth * 0.038,
                                               fontWeight: FontWeight.w600,
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                         Text(
                                           'Avoid hazy/blur images of your car',
@@ -222,7 +220,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                                   0.028, // Adjust the font size as needed
                                               fontWeight: FontWeight
                                                   .w500, // Adjust the font weight as needed
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                       ],
                                     ),
@@ -234,7 +232,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                 padding: const EdgeInsets.only(left: 18.0),
                                 child: Row(
                                   children: [
-                                    Image(
+                                    const Image(
                                         image: AssetImage('assets/camera2.png'),
                                         color: Color(0xff444444)),
                                     buildHSpacer(10),
@@ -247,7 +245,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                           style: TextStyle(
                                               fontSize: screenWidth * 0.038,
                                               fontWeight: FontWeight.w600,
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                         Text(
                                           'Guest see photos in landscape mode only',
@@ -256,7 +254,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                                   0.028, // Adjust the font size as needed
                                               fontWeight: FontWeight
                                                   .w500, // Adjust the font weight as needed
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                       ],
                                     ),
@@ -268,7 +266,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                 padding: const EdgeInsets.only(left: 18.0),
                                 child: Row(
                                   children: [
-                                    Image(
+                                    const Image(
                                         image: AssetImage('assets/heart.png'),
                                         color: Color(0xff444444)),
                                     buildHSpacer(10),
@@ -281,7 +279,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                           style: TextStyle(
                                               fontSize: screenWidth * 0.038,
                                               fontWeight: FontWeight.w600,
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                         Text(
                                           'Make sure no objects come in front of the car',
@@ -290,7 +288,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                                                   0.028, // Adjust the font size as needed
                                               fontWeight: FontWeight
                                                   .w500, // Adjust the font weight as needed
-                                              color: Color(0xff444444)),
+                                              color: const Color(0xff444444)),
                                         ),
                                       ],
                                     ),
@@ -318,7 +316,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
               ),
             ),
             buildVSpacer(15),
-            Container(
+            SizedBox(
               height: 110, // Set the desired height of the horizontal list
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -330,7 +328,7 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                       width: 130,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(1.0),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage(
                               'assets/car_thumbnail.png'), // Replace with your image URLs
                           fit: BoxFit.cover,
@@ -348,8 +346,8 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
                 size: 14,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10),
+            const Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10),
               child: Image(
                 image: AssetImage(
                     'assets/Rectangle 3790.png'), // Set your desired height
@@ -358,20 +356,20 @@ class _UploadYourCarImagesState extends State<UploadYourCarImages> {
             buildVSpacer(20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
                     _showUploadBottomSheet();
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFEDB31B),
+                    backgroundColor: const Color(0xFFEDB31B),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(2.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Add Photos',
                       style: TextStyle(

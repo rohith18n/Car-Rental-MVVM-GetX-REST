@@ -1,13 +1,11 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/car_location/car_location_end.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class NavigateToPickUpScreen extends StatefulWidget {
+  const NavigateToPickUpScreen({super.key});
+
   @override
   _NavigateToPickUpScreenState createState() => _NavigateToPickUpScreenState();
 }
@@ -22,7 +20,7 @@ class _NavigateToPickUpScreenState extends State<NavigateToPickUpScreen> {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFF245196),
+              backgroundColor: const Color(0xFF245196),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
@@ -57,7 +55,7 @@ class _NavigateToPickUpScreenState extends State<NavigateToPickUpScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -70,13 +68,13 @@ class _NavigateToPickUpScreenState extends State<NavigateToPickUpScreen> {
                         width: 300,
                         height: 50,
                         color: Colors.white,
-                        margin: EdgeInsets.all(10.0),
+                        margin: const EdgeInsets.all(10.0),
                         child: Card(
                           color: Colors.white,
                           elevation: 5.0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5.0),
-                            side: BorderSide(color: Colors.white, width: 1.0),
+                            side: const BorderSide(color: Colors.white, width: 1.0),
                           ),
                           child: Container(
                               color: Colors.white,
@@ -84,7 +82,7 @@ class _NavigateToPickUpScreenState extends State<NavigateToPickUpScreen> {
                                 children: [
                                   _buildText(
                                       title: 'MG-Road , 17th Cross, B-M...'),
-                                  Spacer(),
+                                  const Spacer(),
                                   Padding(
                                     padding: const EdgeInsets.only(right: 12.0),
                                     child: Image.asset('assets/locate.png'),
@@ -98,7 +96,7 @@ class _NavigateToPickUpScreenState extends State<NavigateToPickUpScreen> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
                 width: double.infinity,
                 child: Image.asset('assets/basemap.png')),
             buildVSpacer(30),

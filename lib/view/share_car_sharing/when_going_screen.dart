@@ -1,4 +1,3 @@
-import 'package:car_rental/view/share_car_sharing/drop_off_screen.dart';
 import 'package:car_rental/view/share_car_sharing/timing_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +7,8 @@ import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
 import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class WhenGoingScreen extends StatefulWidget {
+  const WhenGoingScreen({super.key});
+
   @override
   _WhenGoingScreenState createState() => _WhenGoingScreenState();
 }
@@ -26,11 +27,11 @@ class _WhenGoingScreenState extends State<WhenGoingScreen> {
       rangeMode: false,
       onDayTapped: (selectedDate) {
         // Add a delay before navigating to the home screen
-        Future.delayed(Duration(milliseconds: 500), () {
+        Future.delayed(const Duration(milliseconds: 500), () {
           // Navigate to the home screen
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => TimingScreen(),
+              builder: (context) => const TimingScreen(),
             ),
           );
         });
@@ -56,14 +57,14 @@ class _WhenGoingScreenState extends State<WhenGoingScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
@@ -72,14 +73,14 @@ class _WhenGoingScreenState extends State<WhenGoingScreen> {
                 size: 18,
                 fontWeight: FontWeight.w600),
             buildVSpacer(15),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 600,
               child: ScrollableCleanCalendar(
                 calendarController: calendarController,
                 layout: Layout.BEAUTY,
                 calendarCrossAxisSpacing: 0,
-                daySelectedBackgroundColor: Color(0XFF245196),
+                daySelectedBackgroundColor: const Color(0XFF245196),
               ),
             ),
           ],

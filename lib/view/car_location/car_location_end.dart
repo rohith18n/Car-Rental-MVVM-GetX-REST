@@ -1,13 +1,12 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/car_location/start_trip_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class CarLocationEndScreen extends StatefulWidget {
+  const CarLocationEndScreen({super.key});
+
   @override
   _CarLocationEndScreenState createState() => _CarLocationEndScreenState();
 }
@@ -18,25 +17,25 @@ class _CarLocationEndScreenState extends State<CarLocationEndScreen> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 20),
-        child: Container(
+        child: SizedBox(
           height: 80,
           width: double.infinity,
           child: Column(
             children: [
               _buildTextHeader(title: 'Share Pin with User'),
               buildVSpacer(5),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => StartTripScreen(),
+                        builder: (context) => const StartTripScreen(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF245196),
+                    backgroundColor: const Color(0xFF245196),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
@@ -74,7 +73,7 @@ class _CarLocationEndScreenState extends State<CarLocationEndScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -87,13 +86,13 @@ class _CarLocationEndScreenState extends State<CarLocationEndScreen> {
                         width: 310,
                         height: 50,
                         color: Colors.white,
-                        margin: EdgeInsets.all(10.0),
+                        margin: const EdgeInsets.all(10.0),
                         child: Card(
                           color: Colors.white,
                           elevation: 5.0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5.0),
-                            side: BorderSide(color: Colors.white, width: 1.0),
+                            side: const BorderSide(color: Colors.white, width: 1.0),
                           ),
                           child: Container(
                               color: Colors.white,
@@ -101,7 +100,7 @@ class _CarLocationEndScreenState extends State<CarLocationEndScreen> {
                                 children: [
                                   _buildText(
                                       title: 'MG-Road , 17th Cross, B-M...'),
-                                  Spacer(),
+                                  const Spacer(),
                                   Padding(
                                     padding: const EdgeInsets.only(right: 12.0),
                                     child: Image.asset('assets/locate.png'),
@@ -115,7 +114,7 @@ class _CarLocationEndScreenState extends State<CarLocationEndScreen> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
                 width: double.infinity,
                 child: Image.asset('assets/basemap.png')),
             buildVSpacer(30),

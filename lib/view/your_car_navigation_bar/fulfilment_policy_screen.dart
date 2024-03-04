@@ -1,16 +1,11 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/host_offer/create_offer_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:car_rental/view/your_car_navigation_bar/create_offer2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class FulfilmentPolicyScreen extends StatefulWidget {
+  const FulfilmentPolicyScreen({super.key});
+
   @override
   _FulfilmentPolicyScreenState createState() => _FulfilmentPolicyScreenState();
 }
@@ -19,7 +14,7 @@ class _FulfilmentPolicyScreenState extends State<FulfilmentPolicyScreen> {
   void _showUploadBottomSheet() {
     showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
       ),
       builder: (context) {
@@ -27,7 +22,7 @@ class _FulfilmentPolicyScreenState extends State<FulfilmentPolicyScreen> {
           height: 550,
           width: double.infinity,
           color: Colors.white,
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             children: [
               Row(
@@ -42,8 +37,8 @@ class _FulfilmentPolicyScreenState extends State<FulfilmentPolicyScreen> {
                         borderRadius: BorderRadius.circular(
                             30.0), // Add border radius for rounded corners
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Icon(Icons.close,
                             color: Colors.white), // Set icon color to white
                       ),
@@ -73,7 +68,7 @@ class _FulfilmentPolicyScreenState extends State<FulfilmentPolicyScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -84,7 +79,7 @@ class _FulfilmentPolicyScreenState extends State<FulfilmentPolicyScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.white,
@@ -180,8 +175,8 @@ class _FulfilmentPolicyScreenState extends State<FulfilmentPolicyScreen> {
                                       fontWeight: FontWeight.w300),
                                 ],
                               ),
-                              Spacer(),
-                              Icon(Icons.arrow_forward_ios)
+                              const Spacer(),
+                              const Icon(Icons.arrow_forward_ios)
                             ],
                           ),
                         ),

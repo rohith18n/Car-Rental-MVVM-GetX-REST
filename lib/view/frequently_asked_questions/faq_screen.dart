@@ -1,17 +1,10 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/wallet/topup.dart';
-import 'package:car_rental/view/wallet/transfer1.dart';
-import 'package:car_rental/view/wallet/wallet1.dart';
-import 'package:car_rental/view/wallet/withdrawal.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class FAQScreen extends StatefulWidget {
+  const FAQScreen({super.key});
+
   @override
   _FAQScreenState createState() => _FAQScreenState();
 }
@@ -36,7 +29,7 @@ class _FAQScreenState extends State<FAQScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -66,7 +59,7 @@ class _FAQScreenState extends State<FAQScreen> {
                   height: 140,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -77,7 +70,7 @@ class _FAQScreenState extends State<FAQScreen> {
                           _buildTextHeader(
                               title:
                                   'Dorem ipsum dolor sit amet, consectetur \nadipiscing elit.'),
-                          Spacer(),
+                          const Spacer(),
                           Padding(
                             padding: const EdgeInsets.only(
                                 bottom: 10.0, right: 10, top: 10),
@@ -100,7 +93,7 @@ class _FAQScreenState extends State<FAQScreen> {
                   height: 66,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -109,7 +102,7 @@ class _FAQScreenState extends State<FAQScreen> {
                       _buildTextHeader(
                           title:
                               'Dorem ipsum dolor sit amet, consectetur \nadipiscing elit.'),
-                      Spacer(),
+                      const Spacer(),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10.0, right: 10),
                         child: Image.asset('assets/redplus.png'),
@@ -125,7 +118,7 @@ class _FAQScreenState extends State<FAQScreen> {
                   height: 66,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -134,7 +127,7 @@ class _FAQScreenState extends State<FAQScreen> {
                       _buildTextHeader(
                           title:
                               'Dorem ipsum dolor sit amet, consectetur \nadipiscing elit.'),
-                      Spacer(),
+                      const Spacer(),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10.0, right: 10),
                         child: Image.asset('assets/redplus.png'),
@@ -150,7 +143,7 @@ class _FAQScreenState extends State<FAQScreen> {
                   height: 66,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -159,7 +152,7 @@ class _FAQScreenState extends State<FAQScreen> {
                       _buildTextHeader(
                           title:
                               'Dorem ipsum dolor sit amet, consectetur \nadipiscing elit.'),
-                      Spacer(),
+                      const Spacer(),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10.0, right: 10),
                         child: Image.asset('assets/redplus.png'),
@@ -175,7 +168,7 @@ class _FAQScreenState extends State<FAQScreen> {
                   height: 66,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -184,7 +177,7 @@ class _FAQScreenState extends State<FAQScreen> {
                       _buildTextHeader(
                           title:
                               'Dorem ipsum dolor sit amet, consectetur \nadipiscing elit.'),
-                      Spacer(),
+                      const Spacer(),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10.0, right: 10),
                         child: Image.asset('assets/redplus.png'),
@@ -200,7 +193,7 @@ class _FAQScreenState extends State<FAQScreen> {
                   height: 66,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -209,7 +202,7 @@ class _FAQScreenState extends State<FAQScreen> {
                       _buildTextHeader(
                           title:
                               'Dorem ipsum dolor sit amet, consectetur \nadipiscing elit.'),
-                      Spacer(),
+                      const Spacer(),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10.0, right: 10),
                         child: Image.asset('assets/redplus.png'),

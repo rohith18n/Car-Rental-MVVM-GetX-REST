@@ -1,19 +1,18 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/car_location/car_location_start.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class CarLocationScreen extends StatefulWidget {
+  const CarLocationScreen({super.key});
+
   @override
   _CarLocationScreenState createState() => _CarLocationScreenState();
 }
 
 class _CarLocationScreenState extends State<CarLocationScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFF245196),
+              backgroundColor: const Color(0xFF245196),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
@@ -62,7 +61,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -93,7 +92,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
             buildVSpacer(40),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 height: 153,
                 child: Stack(
@@ -105,11 +104,11 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                         width: 357,
                         height: 153,
                         decoration: ShapeDecoration(
-                          color: Color(0xFFEBEBEB),
+                          color: const Color(0xFFEBEBEB),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          shadows: [
+                          shadows: const [
                             BoxShadow(
                               color: Color(0x3F000000),
                               blurRadius: 4,
@@ -120,7 +119,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 17,
                       top: 23,
                       child: SizedBox(
@@ -141,7 +140,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                     Positioned(
                       left: 17,
                       top: 74,
-                      child: Container(
+                      child: SizedBox(
                         width: 97,
                         height: 27,
                         child: Stack(
@@ -153,13 +152,13 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                                 width: 97,
                                 height: 27,
                                 decoration: ShapeDecoration(
-                                  color: Color(0xFF245196),
+                                  color: const Color(0xFF245196),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(4)),
                                 ),
                               ),
                             ),
-                            Positioned(
+                            const Positioned(
                               left: 25,
                               top: 5,
                               child: Text(
@@ -178,7 +177,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 17,
                       top: 116,
                       child: Text(
@@ -200,7 +199,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CarLocationStartScreen(),
+                              builder: (context) => const CarLocationStartScreen(),
                             ),
                           );
                         },
@@ -208,7 +207,7 @@ class _CarLocationScreenState extends State<CarLocationScreen> {
                           width: 110,
                           height: 119,
                           decoration: ShapeDecoration(
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage(
                                   'assets/east_map.png'), // Use AssetImage here
                               fit: BoxFit.cover,

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import '../language_selection/LanguageScreen.dart';
 
 class SplashScreen2 extends StatefulWidget {
+  const SplashScreen2({super.key});
+
   @override
   State createState() => _SplashScreen2State();
 }
@@ -13,14 +15,14 @@ class _SplashScreen2State extends State<SplashScreen2> with SingleTickerProvider
 
   @override
   void initState() {
-    animationController = new AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+    animationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
     animationController.forward();
     super.initState();
-    Timer(Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 4), () {
       // Navigate to the next screen using Navigator
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => LanguageScreen(), // Replace NextScreen with the actual screen you want to navigate to
+          builder: (context) => const LanguageScreen(), // Replace NextScreen with the actual screen you want to navigate to
         ),
       );
     });
@@ -34,7 +36,7 @@ class _SplashScreen2State extends State<SplashScreen2> with SingleTickerProvider
         child: Stack(
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 // color: AllCoustomTheme.getThemeData().primaryColor,
               ),
               constraints: BoxConstraints(minHeight: MediaQuery.of(context).size.height, minWidth: MediaQuery.of(context).size.width),

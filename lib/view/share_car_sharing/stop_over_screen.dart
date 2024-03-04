@@ -1,26 +1,21 @@
-import 'package:car_rental/view/share_car_rental/rental_screen.dart';
 import 'package:car_rental/view/share_car_sharing/stop_over_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
-import 'package:car_rental/view/share_car_rental/rental_screen.dart';
-import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 // Import statements remain unchanged
 
 class StopOverScreen extends StatefulWidget {
+  const StopOverScreen({super.key});
+
   @override
   _StopOverScreenState createState() => _StopOverScreenState();
 }
 
 class _StopOverScreenState extends State<StopOverScreen> {
-  bool _switchValue = false;
-  int _selectedRoute = 0; // Track the selected route
+  final bool _switchValue = false;
+  final int _selectedRoute = 0; // Track the selected route
   bool _isChecked = false; // Track the state of the checkbox
 
   @override
@@ -28,25 +23,25 @@ class _StopOverScreenState extends State<StopOverScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 60,
         child: Padding(
           padding: const EdgeInsets.only(bottom: 10.0, right: 10),
           child: Align(
             alignment: Alignment.bottomRight,
-            child: Container(
+            child: SizedBox(
               width: 120,
               height: 45,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => StopOverScreen2(),
+                      builder: (context) => const StopOverScreen2(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Go',
@@ -74,14 +69,14 @@ class _StopOverScreenState extends State<StopOverScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
@@ -93,7 +88,7 @@ class _StopOverScreenState extends State<StopOverScreen> {
             Row(
               children: [
                 _buildTextHeader(title: 'Kolar district'),
-                Spacer(),
+                const Spacer(),
                 Checkbox(
                   value: _isChecked,
                   onChanged: (value) {
@@ -108,7 +103,7 @@ class _StopOverScreenState extends State<StopOverScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: Container(
                 width: 396,
-                decoration: ShapeDecoration(
+                decoration: const ShapeDecoration(
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
                       width: 1,
@@ -120,8 +115,8 @@ class _StopOverScreenState extends State<StopOverScreen> {
               ),
             ),
             buildVSpacer(20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18.0),
               child: Text(
                 'Add City',
                 style: TextStyle(

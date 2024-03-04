@@ -1,13 +1,12 @@
 import 'package:car_rental/view/my_earnings/my_earnings_screen.dart';
 import 'package:car_rental/view/my_earnings/my_earnings_screen2.dart';
 import 'package:car_rental/view/wallet/topup.dart';
-import 'package:car_rental/view/wallet/wallet.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class EarningsScreen extends StatelessWidget {
-  EarningsScreen({super.key});
+  const EarningsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,13 +35,13 @@ class EarningsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       width: 151,
                       height: 40,
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                          side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -52,23 +51,23 @@ class EarningsScreen extends StatelessWidget {
                         },
                         itemBuilder: (BuildContext context) {
                           return <PopupMenuEntry<String>>[
-                            PopupMenuItem<String>(
+                            const PopupMenuItem<String>(
                               value: 'Monthly',
                               child: Text('Monthly'),
                             ),
-                            PopupMenuItem<String>(
+                            const PopupMenuItem<String>(
                               value: 'All',
                               child: Text('All'),
                             ),
-                            PopupMenuItem<String>(
+                            const PopupMenuItem<String>(
                               value: 'Car 1',
                               child: Text('Car 1'),
                             ),
-                            PopupMenuItem<String>(
+                            const PopupMenuItem<String>(
                               value: 'Car 2',
                               child: Text('Car 2'),
                             ),
-                            PopupMenuItem<String>(
+                            const PopupMenuItem<String>(
                               value: 'Car 3',
                               child: Text('Car 3'),
                             ),
@@ -78,7 +77,7 @@ class EarningsScreen extends StatelessWidget {
                           children: [
                             _buildTextHeader(title: 'Monthly'),
                             buildHSpacer(25),
-                            Icon(Icons.arrow_drop_down),
+                            const Icon(Icons.arrow_drop_down),
                           ],
                         ),
                       ),
@@ -90,7 +89,7 @@ class EarningsScreen extends StatelessWidget {
             Row(
               children: [
                 _buildText(title: 'Checkout my wallet'),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 12.0),
                   child: Container(
@@ -99,12 +98,12 @@ class EarningsScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => TopUpScreen(),
+                            builder: (context) => const TopUpScreen(),
                           ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF245196),
+                        backgroundColor: const Color(0xFF245196),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                         ),
@@ -142,7 +141,7 @@ class EarningsScreen extends StatelessWidget {
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             side:
-                                BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                                const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -152,19 +151,19 @@ class EarningsScreen extends StatelessWidget {
                           },
                           itemBuilder: (BuildContext context) {
                             return <PopupMenuEntry<String>>[
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'Till date',
                                 child: Text('Till date'),
                               ),
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'Last Week',
                                 child: Text('Last Week'),
                               ),
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'Last Month',
                                 child: Text('Last Month'),
                               ),
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'Custom',
                                 child: Text('Custom'),
                               ),
@@ -174,7 +173,7 @@ class EarningsScreen extends StatelessWidget {
                             children: [
                               _buildTextHeader(title: 'Till Date'),
                               buildHSpacer(25),
-                              Icon(Icons.arrow_drop_down),
+                              const Icon(Icons.arrow_drop_down),
                             ],
                           ),
                         ),
@@ -182,7 +181,7 @@ class EarningsScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -197,7 +196,7 @@ class EarningsScreen extends StatelessWidget {
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             side:
-                                BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                                const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -207,19 +206,19 @@ class EarningsScreen extends StatelessWidget {
                           },
                           itemBuilder: (BuildContext context) {
                             return <PopupMenuEntry<String>>[
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'All',
                                 child: Text('All'),
                               ),
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'Car 1',
                                 child: Text('Car 1'),
                               ),
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'Car 2',
                                 child: Text('Car 2'),
                               ),
-                              PopupMenuItem<String>(
+                              const PopupMenuItem<String>(
                                 value: 'Car 3',
                                 child: Text('Car 3'),
                               ),
@@ -229,7 +228,7 @@ class EarningsScreen extends StatelessWidget {
                             children: [
                               _buildTextHeader(title: 'All'),
                               buildHSpacer(55),
-                              Icon(Icons.arrow_drop_down),
+                              const Icon(Icons.arrow_drop_down),
                             ],
                           ),
                         ),
@@ -247,11 +246,11 @@ class EarningsScreen extends StatelessWidget {
                 elevation: 5.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0),
-                  side: BorderSide(color: Colors.white, width: 1.0),
+                  side: const BorderSide(color: Colors.white, width: 1.0),
                 ),
                 child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(25.0),
+                  padding: const EdgeInsets.all(25.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -270,7 +269,7 @@ class EarningsScreen extends StatelessWidget {
                               onTap: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (context) => MyEarningsScreen(),
+                                    builder: (context) => const MyEarningsScreen(),
                                   ),
                                 );
                               },
@@ -279,12 +278,12 @@ class EarningsScreen extends StatelessWidget {
                                 elevation: 5.0,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5.0),
-                                  side: BorderSide(
+                                  side: const BorderSide(
                                       color: Colors.white, width: 1.0),
                                 ),
                                 child: Container(
                                   color: Colors.white,
-                                  padding: EdgeInsets.all(25.0),
+                                  padding: const EdgeInsets.all(25.0),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -298,12 +297,12 @@ class EarningsScreen extends StatelessWidget {
                                               fontWeight: FontWeight.w400,
                                             ),
                                           ),
-                                          Spacer(),
-                                          Icon(Icons.arrow_forward_ios)
+                                          const Spacer(),
+                                          const Icon(Icons.arrow_forward_ios)
                                         ],
                                       ),
                                       buildVSpacer(10),
-                                      Text(
+                                      const Text(
                                         'This month earning till date',
                                         style: TextStyle(
                                           fontSize: 12,
@@ -323,11 +322,11 @@ class EarningsScreen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                                 side:
-                                    BorderSide(color: Colors.white, width: 1.0),
+                                    const BorderSide(color: Colors.white, width: 1.0),
                               ),
                               child: Container(
                                 color: Colors.white,
-                                padding: EdgeInsets.all(25.0),
+                                padding: const EdgeInsets.all(25.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -340,12 +339,12 @@ class EarningsScreen extends StatelessWidget {
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
-                                        Spacer(),
-                                        Icon(Icons.arrow_forward_ios)
+                                        const Spacer(),
+                                        const Icon(Icons.arrow_forward_ios)
                                       ],
                                     ),
                                     buildVSpacer(10),
-                                    Text(
+                                    const Text(
                                       'Total Monthly earning',
                                       style: TextStyle(
                                         fontSize: 12,
@@ -372,7 +371,7 @@ class EarningsScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => MyEarningsScreen2(),
+                      builder: (context) => const MyEarningsScreen2(),
                     ),
                   );
                 },
@@ -381,11 +380,11 @@ class EarningsScreen extends StatelessWidget {
                   elevation: 5.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0),
-                    side: BorderSide(color: Colors.white, width: 1.0),
+                    side: const BorderSide(color: Colors.white, width: 1.0),
                   ),
                   child: Container(
                     color: Colors.white,
-                    padding: EdgeInsets.all(25.0),
+                    padding: const EdgeInsets.all(25.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -404,8 +403,8 @@ class EarningsScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                             Image.asset('assets/star.png'),
-                            Spacer(),
-                            Icon(Icons.arrow_forward_ios)
+                            const Spacer(),
+                            const Icon(Icons.arrow_forward_ios)
                           ],
                         ),
                         buildVSpacer(20),
@@ -415,7 +414,7 @@ class EarningsScreen extends StatelessWidget {
                             height: 64,
                             padding: const EdgeInsets.all(8.5),
                             decoration: ShapeDecoration(
-                              color: Color(0xFFF4F4F4),
+                              color: const Color(0xFFF4F4F4),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(26),
                               ),
@@ -424,7 +423,7 @@ class EarningsScreen extends StatelessWidget {
                               children: [
                                 Image.asset('assets/grey_eye.png'),
                                 buildHSpacer(10),
-                                Text(
+                                const Text(
                                   'Higher rated cars appear higher on search,\nget more views and more earnings',
                                   style: TextStyle(
                                     color: Colors.black,

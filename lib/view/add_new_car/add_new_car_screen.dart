@@ -3,21 +3,22 @@ import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class AddNewCar extends StatefulWidget {
+  const AddNewCar({super.key});
+
   @override
   _AddNewCarState createState() => _AddNewCarState();
 }
 
 class _AddNewCarState extends State<AddNewCar> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
   bool isCheckboxChecked = false;
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double _sliderValue = 0.5; // Initial value for the slider
+    double sliderValue = 0.5; // Initial value for the slider
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -34,14 +35,14 @@ class _AddNewCarState extends State<AddNewCar> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                   Flexible(
                     child: Text(
                       'Add New Car',
@@ -55,17 +56,17 @@ class _AddNewCarState extends State<AddNewCar> {
             buildVSpacer(20),
             Container(
               color: Colors.white,
-              margin: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               child: Card(
                 color: Colors.white,
                 elevation: 5.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0),
-                  side: BorderSide(color: Colors.white, width: 1.0),
+                  side: const BorderSide(color: Colors.white, width: 1.0),
                 ),
                 child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -78,7 +79,7 @@ class _AddNewCarState extends State<AddNewCar> {
                       ),
                       buildCustomTextField1(
                         hintText: 'DL45PQ12345',
-                        suffixIcon: Icon(Icons.arrow_drop_down),
+                        suffixIcon: const Icon(Icons.arrow_drop_down),
                       ),
                       Text(
                         'Car Brand',
@@ -88,7 +89,7 @@ class _AddNewCarState extends State<AddNewCar> {
                         ),
                       ),
                       buildCustomTextField1(
-                        suffixIcon: Icon(Icons.arrow_drop_down),
+                        suffixIcon: const Icon(Icons.arrow_drop_down),
                       ),
                       Text(
                         'Car Model',
@@ -98,7 +99,7 @@ class _AddNewCarState extends State<AddNewCar> {
                         ),
                       ),
                       buildCustomTextField1(
-                        suffixIcon: Icon(Icons.arrow_drop_down),
+                        suffixIcon: const Icon(Icons.arrow_drop_down),
                       ),
                       Text(
                         'Car variant',
@@ -108,7 +109,7 @@ class _AddNewCarState extends State<AddNewCar> {
                         ),
                       ),
                       buildCustomTextField1(
-                        suffixIcon: Icon(Icons.arrow_drop_down),
+                        suffixIcon: const Icon(Icons.arrow_drop_down),
                       ),
                     ],
                   ),
@@ -129,7 +130,7 @@ class _AddNewCarState extends State<AddNewCar> {
                     ),
                   ),
                   buildCustomTextField1(
-                    suffixIcon: Icon(Icons.arrow_drop_down),
+                    suffixIcon: const Icon(Icons.arrow_drop_down),
                   ),
                 ],
               ),
@@ -148,7 +149,7 @@ class _AddNewCarState extends State<AddNewCar> {
                     ),
                   ),
                   buildCustomTextField1(
-                    suffixIcon: Icon(Icons.arrow_drop_down),
+                    suffixIcon: const Icon(Icons.arrow_drop_down),
                   ),
                 ],
               ),
@@ -168,7 +169,7 @@ class _AddNewCarState extends State<AddNewCar> {
                           horizontal: 16, vertical: 12),
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Color(0xFF444444)),
+                          side: const BorderSide(width: 1, color: Color(0xFF444444)),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -190,7 +191,7 @@ class _AddNewCarState extends State<AddNewCar> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 12),
                       decoration: BoxDecoration(
-                        color: Color(
+                        color: const Color(
                             0xff245196), // Add your desired background color here
                         borderRadius: BorderRadius.circular(4),
                       ),
@@ -215,7 +216,7 @@ class _AddNewCarState extends State<AddNewCar> {
                           horizontal: 16, vertical: 12),
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Color(0xFF444444)),
+                          side: const BorderSide(width: 1, color: Color(0xFF444444)),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -246,13 +247,13 @@ class _AddNewCarState extends State<AddNewCar> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 12),
                       decoration: BoxDecoration(
-                        color: Color(
+                        color: const Color(
                             0xff245196), // Add your desired background color here
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Column(
                         children: [
-                          Image(image: AssetImage('assets/automatic.png')),
+                          const Image(image: AssetImage('assets/automatic.png')),
                           Text(
                             'Automatic',
                             textAlign: TextAlign.center,
@@ -276,13 +277,13 @@ class _AddNewCarState extends State<AddNewCar> {
                           horizontal: 16, vertical: 12),
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
-                          side: BorderSide(width: 1, color: Color(0xFF444444)),
+                          side: const BorderSide(width: 1, color: Color(0xFF444444)),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       child: Column(
                         children: [
-                          Image(image: AssetImage('assets/manual.png')),
+                          const Image(image: AssetImage('assets/manual.png')),
                           Text(
                             'Manual',
                             textAlign: TextAlign.center,
@@ -310,7 +311,7 @@ class _AddNewCarState extends State<AddNewCar> {
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(width: 1, color: Color(0xFF245196)),
+                    side: const BorderSide(width: 1, color: Color(0xFF245196)),
                     borderRadius: BorderRadius.circular(29),
                   ),
                 ),
@@ -322,7 +323,7 @@ class _AddNewCarState extends State<AddNewCar> {
                     Text(
                       'Add Car List',
                       style: GoogleFonts.poppins(
-                        color: Color(0xFF245196),
+                        color: const Color(0xFF245196),
                         fontSize: 13,
                         fontWeight: FontWeight.w500,
                       ),
@@ -333,14 +334,14 @@ class _AddNewCarState extends State<AddNewCar> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
-              child: Container(
+              child: SizedBox(
                 height: 50,
                 width: double.infinity,
                 child: CupertinoSlider(
-                  value: _sliderValue,
+                  value: sliderValue,
                   onChanged: (double value) {
                     setState(() {
-                      _sliderValue = value;
+                      sliderValue = value;
                     });
                     // Handle slider value changes if needed
                   },
@@ -378,7 +379,7 @@ class _AddNewCarState extends State<AddNewCar> {
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             side:
-                                BorderSide(width: 1, color: Color(0xFF444444)),
+                                const BorderSide(width: 1, color: Color(0xFF444444)),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -403,7 +404,7 @@ class _AddNewCarState extends State<AddNewCar> {
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             side:
-                                BorderSide(width: 1, color: Color(0xFF444444)),
+                                const BorderSide(width: 1, color: Color(0xFF444444)),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -428,7 +429,7 @@ class _AddNewCarState extends State<AddNewCar> {
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             side:
-                                BorderSide(width: 1, color: Color(0xFF444444)),
+                                const BorderSide(width: 1, color: Color(0xFF444444)),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -453,7 +454,7 @@ class _AddNewCarState extends State<AddNewCar> {
                         decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                             side:
-                                BorderSide(width: 1, color: Color(0xFF444444)),
+                                const BorderSide(width: 1, color: Color(0xFF444444)),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
@@ -475,7 +476,7 @@ class _AddNewCarState extends State<AddNewCar> {
                 title: 'This field is optional', fontWeight: FontWeight.w400),
             buildVSpacer(15),
             CheckboxListTile(
-              title: Text('I accept terms & condition'),
+              title: const Text('I accept terms & condition'),
               value: isCheckboxChecked,
               checkColor: Colors.blue,
               onChanged: (value) {
@@ -488,24 +489,24 @@ class _AddNewCarState extends State<AddNewCar> {
             buildVSpacer(15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => CarAddedScreen(),
+                        builder: (context) => const CarAddedScreen(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFEDB31B),
+                    backgroundColor: const Color(0xFFEDB31B),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(2.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Submit & Next',
                       style: TextStyle(

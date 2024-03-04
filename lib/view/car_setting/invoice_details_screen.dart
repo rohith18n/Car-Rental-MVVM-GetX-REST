@@ -1,19 +1,18 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dash/flutter_dash.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class InvoiceDetailsScreen extends StatefulWidget {
+  const InvoiceDetailsScreen({super.key});
+
   @override
   _InvoiceDetailsScreenState createState() => _InvoiceDetailsScreenState();
 }
 
 class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +29,7 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
 
             },
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFF245196),
+              backgroundColor: const Color(0xFF245196),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
@@ -65,7 +64,7 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Color(0xff245196),
@@ -79,7 +78,7 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
                           'Invoice Details',
                           style: GoogleFonts.poppins(
                               fontSize: 16,
-                              color: Color(0xff245196),
+                              color: const Color(0xff245196),
                               fontWeight: FontWeight.w400),
                         ),
                       ),
@@ -104,11 +103,11 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      _buildText(title: 'User Details', color: Color(0xff245196), ),
+                      _buildText(title: 'User Details', color: const Color(0xff245196), ),
                       buildVSpacer(10),
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/profile_pic.png'), width: 70, height: 70,
                           ),
                           buildHSpacer(20),
@@ -116,12 +115,12 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              _buildText(title: 'Loren Epsom', color: Color(0xff245196), fontWeight: FontWeight.w600, size: 17 ),
+                              _buildText(title: 'Loren Epsom', color: const Color(0xff245196), fontWeight: FontWeight.w600, size: 17 ),
                               buildVSpacer(3),
-                              _buildText(title: '8956454646', color: Color(0xff245196),fontWeight: FontWeight.w600 , size: 16 ),
+                              _buildText(title: '8956454646', color: const Color(0xff245196),fontWeight: FontWeight.w600 , size: 16 ),
                               buildVSpacer(3),
                               _buildText(title: 'sector 66, lane no 2, mamura, noida\nutter pradesh',
-                                color: Color(0xff245196), fontWeight: FontWeight.w300 ),
+                                color: const Color(0xff245196), fontWeight: FontWeight.w300 ),
                             ],
                           ),
                         ],
@@ -147,11 +146,11 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      _buildText(title: 'Trip Details', color: Color(0xff245196), ),
+                      _buildText(title: 'Trip Details', color: const Color(0xff245196), ),
                       buildVSpacer(10),
                       Row(
                         children: [
-                          Column(
+                          const Column(
                             children: [
                               Image(
                                 image: AssetImage('assets/blue_location.png'),
@@ -172,20 +171,20 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              _buildText(title: 'Pick up point      10:30 AM', color: Color(0xff245196), fontWeight: FontWeight.w600, size: 17 ),
+                              _buildText(title: 'Pick up point      10:30 AM', color: const Color(0xff245196), fontWeight: FontWeight.w600, size: 17 ),
                               buildVSpacer(3),
                               Padding(
                                 padding: const EdgeInsets.only(left: 12.0),
                                 child: _buildText(title: 'sector 66, lane no 2, mamura, noida\nutter pradesh',size: 13,
-                                    color: Color(0xff245196), fontWeight: FontWeight.w300 ),
+                                    color: const Color(0xff245196), fontWeight: FontWeight.w300 ),
                               ),
                               buildVSpacer(15),
-                              _buildText(title: 'Dropping point', color: Color(0xff245196), fontWeight: FontWeight.w600, size: 17 ),
+                              _buildText(title: 'Dropping point', color: const Color(0xff245196), fontWeight: FontWeight.w600, size: 17 ),
                               buildVSpacer(3),
                               Padding(
                                 padding: const EdgeInsets.only(left: 12.0),
                                 child: _buildText(title: 'sector 66, lane no 2, mamura, noida\nutter pradesh',size: 13,
-                                    color: Color(0xff245196), fontWeight: FontWeight.w300 ),
+                                    color: const Color(0xff245196), fontWeight: FontWeight.w300 ),
                               ),
                             ],
                           ),
@@ -203,13 +202,13 @@ class _InvoiceDetailsScreenState extends State<InvoiceDetailsScreen> {
                 children: [
                   Row(
                     children: [
-                      _buildText(title: 'Total Fair',color: Color(0xff245196),),
-                      Spacer(),
-                      _buildTextHeader(title: '₹8900', size: 18,fontWeight: FontWeight.bold, color: Color(0xff245196),)
+                      _buildText(title: 'Total Fair',color: const Color(0xff245196),),
+                      const Spacer(),
+                      _buildTextHeader(title: '₹8900', size: 18,fontWeight: FontWeight.bold, color: const Color(0xff245196),)
                     ],
                   ),
                   buildVSpacer(10),
-                  _buildText(title: 'Paid via UPI ref no #121324234234', size: 13,fontWeight: FontWeight.w400, color: Color(0xff245196),),
+                  _buildText(title: 'Paid via UPI ref no #121324234234', size: 13,fontWeight: FontWeight.w400, color: const Color(0xff245196),),
                 ],
               ),
 

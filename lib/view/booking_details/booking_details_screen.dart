@@ -1,21 +1,19 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/booking_details/inspection_screen.dart';
 import 'package:car_rental/view/booking_details/navigate_to_pickup.dart';
-import 'package:car_rental/view/car_location/car_location_start.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class BookingDetailsScreen extends StatefulWidget {
+  const BookingDetailsScreen({super.key});
+
   @override
   _BookingDetailsScreenState createState() => _BookingDetailsScreenState();
 }
 
 class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -82,7 +80,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                       buildVSpacer(10),
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/profile_pic.png'),
                             width: 65,
                             height: 65,
@@ -140,7 +138,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                         children: [
                           Row(
                             children: [
-                              Image(
+                              const Image(
                                 image: AssetImage('assets/blue_location.png'),
                                 width: 65,
                                 height: 55,
@@ -179,7 +177,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => NavigateToPickUpScreen(),
+                    builder: (context) => const NavigateToPickUpScreen(),
                   ),
                 );
               },
@@ -202,7 +200,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                           children: [
                             Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage('assets/one.png'),
                                   width: 65,
                                   height: 55,
@@ -211,8 +209,8 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                                     title: 'Navigate to pickup Site',
                                     fontWeight: FontWeight.w600,
                                     size: 15),
-                                Spacer(),
-                                Image(
+                                const Spacer(),
+                                const Image(
                                   image: AssetImage('assets/navigate.png'),
                                   width: 65,
                                   height: 55,
@@ -241,7 +239,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => InspectionScreen(),
+                    builder: (context) => const InspectionScreen(),
                   ),
                 );
               },
@@ -264,7 +262,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                           children: [
                             Row(
                               children: [
-                                Image(
+                                const Image(
                                   image: AssetImage('assets/two.png'),
                                   width: 65,
                                   height: 55,
@@ -273,8 +271,8 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                                     title: 'Inspect and Go',
                                     fontWeight: FontWeight.w600,
                                     size: 15),
-                                Spacer(),
-                                Image(
+                                const Spacer(),
+                                const Image(
                                   image: AssetImage('assets/inspect.png'),
                                   width: 65,
                                   height: 55,

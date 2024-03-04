@@ -1,16 +1,11 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/host_offer/create_offer_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:car_rental/view/your_car_navigation_bar/create_offer2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class CarRatingScreen extends StatefulWidget {
+  const CarRatingScreen({super.key});
+
   @override
   _CarRatingScreenState createState() => _CarRatingScreenState();
 }
@@ -26,7 +21,7 @@ class _CarRatingScreenState extends State<CarRatingScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -37,7 +32,7 @@ class _CarRatingScreenState extends State<CarRatingScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.white,
@@ -118,7 +113,7 @@ class _CarRatingScreenState extends State<CarRatingScreen> {
                         fontWeight: FontWeight.w300),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 40.0),
                   child: Image.asset('assets/image 32.png'),
@@ -145,7 +140,7 @@ class _CarRatingScreenState extends State<CarRatingScreen> {
                         fontWeight: FontWeight.w300),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 40.0),
                   child: Image.asset('assets/image 33.png'),
@@ -172,7 +167,7 @@ class _CarRatingScreenState extends State<CarRatingScreen> {
                         fontWeight: FontWeight.w300),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 40.0),
                   child: Image.asset('assets/image 34.png'),

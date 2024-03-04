@@ -1,12 +1,12 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class FastagScreen extends StatefulWidget {
+  const FastagScreen({super.key});
+
   @override
   _FastagScreenState createState() => _FastagScreenState();
 }
@@ -35,7 +35,7 @@ class _FastagScreenState extends State<FastagScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -75,7 +75,7 @@ class _FastagScreenState extends State<FastagScreen> {
                       _buildTextHeader(title: '3x more Bookings')
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     children: [
                       Image.asset('assets/search_icon.png'),
@@ -103,7 +103,7 @@ class _FastagScreenState extends State<FastagScreen> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/white_car.png'),
                           ),
                           buildHSpacer(20),
@@ -124,15 +124,15 @@ class _FastagScreenState extends State<FastagScreen> {
                       Row(
                         children: [
                           _buildTextHeader(title: 'Switch ON if car has FASTag', size: 13),
-                          Spacer(),
+                          const Spacer(),
                           Transform.scale(
                             scale: 0.5, // Adjust the scale to modify the height
                             child: LiteRollingSwitch(
                               value: _switchValue,
                               textOn: '',
                               textOff: '',
-                              colorOn: Color(0XFF6750A4),
-                              colorOff: Color(0XFF6750A4),
+                              colorOn: const Color(0XFF6750A4),
+                              colorOff: const Color(0XFF6750A4),
                               iconOn: Icons.check,
                               iconOff: Icons.close,
                               textSize: 1.0,
@@ -170,7 +170,7 @@ class _FastagScreenState extends State<FastagScreen> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/white_car.png'),
                           ),
                           buildHSpacer(20),
@@ -191,15 +191,15 @@ class _FastagScreenState extends State<FastagScreen> {
                       Row(
                         children: [
                           _buildTextHeader(title: 'Switch ON if car has FASTag', size: 13),
-                          Spacer(),
+                          const Spacer(),
                           Transform.scale(
                             scale: 0.5, // Adjust the scale to modify the height
                             child: LiteRollingSwitch(
                               value: _switchValue,
                               textOn: '',
                               textOff: '',
-                              colorOn: Color(0XFF6750A4),
-                              colorOff: Color(0XFF6750A4),
+                              colorOn: const Color(0XFF6750A4),
+                              colorOff: const Color(0XFF6750A4),
                               iconOn: Icons.check,
                               iconOff: Icons.close,
                               textSize: 1.0,
@@ -237,7 +237,7 @@ class _FastagScreenState extends State<FastagScreen> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/white_car.png'),
                           ),
                           buildHSpacer(20),
@@ -258,15 +258,15 @@ class _FastagScreenState extends State<FastagScreen> {
                       Row(
                         children: [
                           _buildTextHeader(title: 'Switch ON if car has FASTag', size: 13),
-                          Spacer(),
+                          const Spacer(),
                           Transform.scale(
                             scale: 0.5, // Adjust the scale to modify the height
                             child: LiteRollingSwitch(
                               value: _switchValue,
                               textOn: '',
                               textOff: '',
-                              colorOn: Color(0XFF6750A4),
-                              colorOff: Color(0XFF6750A4),
+                              colorOn: const Color(0XFF6750A4),
+                              colorOff: const Color(0XFF6750A4),
                               iconOn: Icons.check,
                               iconOff: Icons.close,
                               textSize: 1.0,
@@ -304,7 +304,7 @@ class _FastagScreenState extends State<FastagScreen> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/white_car.png'),
                           ),
                           buildHSpacer(20),
@@ -325,15 +325,15 @@ class _FastagScreenState extends State<FastagScreen> {
                       Row(
                         children: [
                           _buildTextHeader(title: 'Switch ON if car has FASTag', size: 13),
-                          Spacer(),
+                          const Spacer(),
                           Transform.scale(
                             scale: 0.5, // Adjust the scale to modify the height
                             child: LiteRollingSwitch(
                               value: _switchValue,
                               textOn: '',
                               textOff: '',
-                              colorOn: Color(0XFF6750A4),
-                              colorOff: Color(0XFF6750A4),
+                              colorOn: const Color(0XFF6750A4),
+                              colorOff: const Color(0XFF6750A4),
                               iconOn: Icons.check,
                               iconOff: Icons.close,
                               textSize: 1.0,
@@ -371,7 +371,7 @@ class _FastagScreenState extends State<FastagScreen> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/white_car.png'),
                           ),
                           buildHSpacer(20),
@@ -392,15 +392,15 @@ class _FastagScreenState extends State<FastagScreen> {
                       Row(
                         children: [
                           _buildTextHeader(title: 'Switch ON if car has FASTag', size: 13),
-                          Spacer(),
+                          const Spacer(),
                           Transform.scale(
                             scale: 0.5, // Adjust the scale to modify the height
                             child: LiteRollingSwitch(
                               value: _switchValue,
                               textOn: '',
                               textOff: '',
-                              colorOn: Color(0XFF6750A4),
-                              colorOff: Color(0XFF6750A4),
+                              colorOn: const Color(0XFF6750A4),
+                              colorOff: const Color(0XFF6750A4),
                               iconOn: Icons.check,
                               iconOff: Icons.close,
                               textSize: 1.0,

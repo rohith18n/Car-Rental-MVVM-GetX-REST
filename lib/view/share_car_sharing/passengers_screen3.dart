@@ -1,14 +1,11 @@
-import 'package:car_rental/view/share_car_sharing/drop_off_screen.dart';
 import 'package:car_rental/view/share_car_sharing/passenger_screen4.dart';
-import 'package:car_rental/view/share_car_sharing/passengers_screen1.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
-import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
-import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class PassengerScreen3 extends StatefulWidget {
+  const PassengerScreen3({super.key});
+
   @override
   _PassengerScreen3State createState() => _PassengerScreen3State();
 }
@@ -18,25 +15,25 @@ class _PassengerScreen3State extends State<PassengerScreen3> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 60,
         child: Padding(
           padding: const EdgeInsets.only(bottom: 10.0, right: 10),
           child: Align(
             alignment: Alignment.bottomRight,
-            child: Container(
+            child: SizedBox(
               width: 120,
               height: 45,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => PassengerScreen4(),
+                      builder: (context) => const PassengerScreen4(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Go',
@@ -64,14 +61,14 @@ class _PassengerScreen3State extends State<PassengerScreen3> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
@@ -107,12 +104,12 @@ class _PassengerScreen3State extends State<PassengerScreen3> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: ShapeDecoration(
-                  color: Color(0xFF34B406),
+                  color: const Color(0xFF34B406),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -140,7 +137,7 @@ class _PassengerScreen3State extends State<PassengerScreen3> {
             Container(
               width: 420,
               height: 11,
-              decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+              decoration: const BoxDecoration(color: Color(0xFFD9D9D9)),
             ),
             buildVSpacer(15),
             Padding(
@@ -148,8 +145,8 @@ class _PassengerScreen3State extends State<PassengerScreen3> {
               child: Row(
                 children: [
                   _buildTextHeader(title: 'Stopover Prices', size: 14),
-                  Spacer(),
-                  Icon(Icons.arrow_right)
+                  const Spacer(),
+                  const Icon(Icons.arrow_right)
                 ],
               ),
             ),

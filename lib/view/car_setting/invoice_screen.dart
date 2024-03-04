@@ -1,20 +1,19 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/car_setting/invoice_details_screen.dart';
 import 'package:car_rental/view/widgets/custom_invoice_list.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class InvoiceScreen extends StatefulWidget {
+  const InvoiceScreen({super.key});
+
   @override
   _InvoiceScreenState createState() => _InvoiceScreenState();
 }
 
 class _InvoiceScreenState extends State<InvoiceScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -37,7 +36,7 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -65,17 +64,17 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => InvoiceDetailsScreen(),
+                    builder: (context) => const InvoiceDetailsScreen(),
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 height:
                     600, // Set a specific height or use MediaQuery.of(context).size.height for full height
                 child: ListView.builder(
                   itemCount: 2,
                   itemBuilder: (BuildContext context, int index) {
-                    return Center(
+                    return const Center(
                       child: CustomInvoice(
                         text1: 'Ford Eco sport',
                         imagePath: 'assets/car_listing.png',

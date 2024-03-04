@@ -1,12 +1,12 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class FastagSettingScreen extends StatefulWidget {
+  const FastagSettingScreen({super.key});
+
   @override
   _FastagSettingScreenState createState() => _FastagSettingScreenState();
 }
@@ -24,7 +24,7 @@ class _FastagSettingScreenState extends State<FastagSettingScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -35,7 +35,7 @@ class _FastagSettingScreenState extends State<FastagSettingScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -74,7 +74,7 @@ class _FastagSettingScreenState extends State<FastagSettingScreen> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/white_car.png'),
                           ),
                           buildHSpacer(20),
@@ -95,15 +95,15 @@ class _FastagSettingScreenState extends State<FastagSettingScreen> {
                       Row(
                         children: [
                           _buildTextHeader(title: 'Switch ON if car has FASTag', size: 13),
-                          Spacer(),
+                          const Spacer(),
                           Transform.scale(
                             scale: 0.5, // Adjust the scale to modify the height
                             child: LiteRollingSwitch(
                               value: _switchValue,
                               textOn: '',
                               textOff: '',
-                              colorOn: Color(0XFF6750A4),
-                              colorOff: Color(0XFF6750A4),
+                              colorOn: const Color(0XFF6750A4),
+                              colorOff: const Color(0XFF6750A4),
                               iconOn: Icons.check,
                               iconOff: Icons.close,
                               textSize: 1.0,

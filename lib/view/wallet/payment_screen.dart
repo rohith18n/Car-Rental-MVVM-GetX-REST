@@ -1,18 +1,11 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/wallet/add_bank_details.dart';
 import 'package:car_rental/view/wallet/payment_sucessfull_screen.dart';
-import 'package:car_rental/view/wallet/transfer.dart';
-import 'package:car_rental/view/wallet/wallet.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class PaymentScreen extends StatefulWidget {
+  const PaymentScreen({super.key});
+
   @override
   _PaymentScreenState createState() => _PaymentScreenState();
 }
@@ -38,7 +31,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -68,7 +61,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   Row(
                     children: [
                       _buildTextHeader(title: 'Amount to be paid', size: 16),
-                      Spacer(),
+                      const Spacer(),
                       _buildTextHeader(
                           title: '₹ 724.00',
                           size: 16,
@@ -86,8 +79,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   buildVSpacer(20),
                   _buildTextHeader(title: 'Suggested for you', size: 18),
                   ListTile(
-                    title: Text('Kotak Mahindra Bank UPI'),
-                    subtitle: Text('Account No.  xxxx xxxx 6746'),
+                    title: const Text('Kotak Mahindra Bank UPI'),
+                    subtitle: const Text('Account No.  xxxx xxxx 6746'),
                     leading: Radio(
                       value: 1,
                       groupValue: selectedRadio,
@@ -100,8 +93,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     trailing: Image.asset('assets/upi.png'),
                   ),
                   ListTile(
-                    title: Text('Google Pay UPI'),
-                    subtitle: Text('tejasaher67@gmail.com'),
+                    title: const Text('Google Pay UPI'),
+                    subtitle: const Text('tejasaher67@gmail.com'),
                     leading: Radio(
                       value: 1,
                       groupValue: selectedRadio,
@@ -122,7 +115,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   ),
                   _buildTextHeader(title: 'All other option'),
                   ListTile(
-                    title: Text('UPI'),
+                    title: const Text('UPI'),
                     leading: Radio(
                       value: 1,
                       groupValue: selectedRadio,
@@ -135,7 +128,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     trailing: Image.asset('assets/bhim.png'),
                   ),
                   ListTile(
-                    title: Text('Wallets'),
+                    title: const Text('Wallets'),
                     leading: Radio(
                       value: 1,
                       groupValue: selectedRadio,
@@ -148,7 +141,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     trailing: Image.asset('assets/wallet1.png'),
                   ),
                   ListTile(
-                    title: Text('Credit/ Debit/ ATM Card'),
+                    title: const Text('Credit/ Debit/ ATM Card'),
                     leading: Radio(
                       value: 1,
                       groupValue: selectedRadio,
@@ -166,7 +159,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             buildVSpacer(70),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () async {
@@ -174,18 +167,18 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PaymentSucessfullScreen(),
+                        builder: (context) => const PaymentSucessfullScreen(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF245196),
+                    backgroundColor: const Color(0xFF245196),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Payment',
                       style: TextStyle(

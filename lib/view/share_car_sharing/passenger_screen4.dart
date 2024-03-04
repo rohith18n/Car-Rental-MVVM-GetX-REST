@@ -1,14 +1,11 @@
-import 'package:car_rental/view/share_car_sharing/drop_off_screen.dart';
-import 'package:car_rental/view/share_car_sharing/passengers_screen1.dart';
 import 'package:car_rental/view/share_car_sharing/passengers_screen5.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
-import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
-import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class PassengerScreen4 extends StatefulWidget {
+  const PassengerScreen4({super.key});
+
   @override
   _PassengerScreen4State createState() => _PassengerScreen4State();
 }
@@ -32,14 +29,14 @@ class _PassengerScreen4State extends State<PassengerScreen4> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
@@ -59,7 +56,7 @@ class _PassengerScreen4State extends State<PassengerScreen4> {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => PassengerScreen5(),
+                        builder: (context) => const PassengerScreen5(),
                       ),
                     );
                   },
@@ -69,10 +66,10 @@ class _PassengerScreen4State extends State<PassengerScreen4> {
                       children: [
                         _buildTextHeader(
                           title: 'Yes , Sure !',
-                          color: Color(0xff245196),
+                          color: const Color(0xff245196),
                         ),
-                        Spacer(),
-                        Icon(Icons.arrow_right)
+                        const Spacer(),
+                        const Icon(Icons.arrow_right)
                       ],
                     ),
                   ),
@@ -80,7 +77,7 @@ class _PassengerScreen4State extends State<PassengerScreen4> {
                 buildVSpacer(5),
                 Container(
                   width: 358,
-                  decoration: ShapeDecoration(
+                  decoration: const ShapeDecoration(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                         width: 1,
@@ -98,8 +95,8 @@ class _PassengerScreen4State extends State<PassengerScreen4> {
                       _buildTextHeader(
                         title: 'No, I’ll squeeze in 3',
                       ),
-                      Spacer(),
-                      Icon(Icons.arrow_right)
+                      const Spacer(),
+                      const Icon(Icons.arrow_right)
                     ],
                   ),
                 ),

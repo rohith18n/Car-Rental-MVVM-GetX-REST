@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class CarDetailsScreen extends StatefulWidget {
+  const CarDetailsScreen({super.key});
+
   @override
   _CarDetailsScreenState createState() => _CarDetailsScreenState();
 }
@@ -30,14 +32,14 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                   Flexible(
                     child: Text(
                       'Car Details',
@@ -50,16 +52,16 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
             ),
             buildVSpacer(20),
             Container(
-              margin: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               child: Card(
                 color: Colors.white,
                 elevation: 2.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0),
-                  side: BorderSide(color: Colors.white, width: 1.0),
+                  side: const BorderSide(color: Colors.white, width: 1.0),
                 ),
                 child: Container(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Column(
                     children: [
                       Row(
@@ -75,7 +77,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(height: 9.0),
+                                const SizedBox(height: 9.0),
                                 Text(
                                   'DL45PQ12345',
                                   style: TextStyle(
@@ -83,7 +85,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                SizedBox(height: 10.0),
+                                const SizedBox(height: 10.0),
                               ],
                             ),
                           ),
@@ -98,7 +100,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(height: 9.0),
+                                const SizedBox(height: 9.0),
                                 Text(
                                   'Loren Epsom',
                                   style: TextStyle(
@@ -106,13 +108,13 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                SizedBox(height: 10.0),
+                                const SizedBox(height: 10.0),
                               ],
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       Row(
                         children: [
                           Expanded(
@@ -126,7 +128,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(height: 9.0),
+                                const SizedBox(height: 9.0),
                                 Text(
                                   'XM',
                                   style: TextStyle(
@@ -134,7 +136,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                SizedBox(height: 10.0),
+                                const SizedBox(height: 10.0),
                               ],
                             ),
                           ),
@@ -149,7 +151,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(height: 9.0),
+                                const SizedBox(height: 9.0),
                                 Text(
                                   'Loren Epsom',
                                   style: TextStyle(
@@ -157,7 +159,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                SizedBox(height: 10.0),
+                                const SizedBox(height: 10.0),
                               ],
                             ),
                           ),
@@ -170,16 +172,16 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
             ),
             buildVSpacer(10),
             Container(
-              margin: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               child: Card(
                 color: Colors.white,
                 elevation: 2.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0),
-                  side: BorderSide(color: Colors.white, width: 1.0),
+                  side: const BorderSide(color: Colors.white, width: 1.0),
                 ),
                 child: Container(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Column(
                     children: [
                       Row(
@@ -195,7 +197,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(height: 9.0),
+                                const SizedBox(height: 9.0),
                                 Text(
                                   'Petrol',
                                   style: TextStyle(
@@ -203,7 +205,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                SizedBox(height: 10.0),
+                                const SizedBox(height: 10.0),
                               ],
                             ),
                           ),
@@ -218,7 +220,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                SizedBox(height: 9.0),
+                                const SizedBox(height: 9.0),
                                 Text(
                                   'Manual',
                                   style: TextStyle(
@@ -226,7 +228,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                SizedBox(height: 10.0),
+                                const SizedBox(height: 10.0),
                               ],
                             ),
                           ),
@@ -244,15 +246,15 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                   title: 'Availability of car for booking',
                   size: 16,
                 ),
-                Spacer(),
+                const Spacer(),
                 Transform.scale(
                   scale: 0.6, // Adjust the scale to modify the height
                   child: LiteRollingSwitch(
                     value: _switchValue,
                     textOn: '',
                     textOff: '',
-                    colorOn: Color(0XFF6750A4),
-                    colorOff: Color(0XFF6750A4),
+                    colorOn: const Color(0XFF6750A4),
+                    colorOff: const Color(0XFF6750A4),
                     iconOn: Icons.check,
                     iconOff: Icons.close,
                     textSize: 1.0,
@@ -276,7 +278,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                     title: 'Kilometers Driven by user',
                     size: 16,
                     fontWeight: FontWeight.w400),
-                Spacer(),
+                const Spacer(),
                 _buildTextHeader(
                   title: '12,765 Km',
                   size: 16,
@@ -289,7 +291,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
               size: 16,
             ),
             buildVSpacer(15),
-            Container(
+            SizedBox(
               height: 110, // Set the desired height of the horizontal list
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -301,7 +303,7 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                       width: 130,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(1.0),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage(
                               'assets/car_thumbnail.png'), // Replace with your image URLs
                           fit: BoxFit.cover,

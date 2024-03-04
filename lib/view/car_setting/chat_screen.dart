@@ -1,19 +1,18 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/car_setting/calling_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key});
+
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class _ChatScreenState extends State<ChatScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -36,7 +35,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -66,12 +65,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     title: 'Connect with user',
                     size: 25,
                     fontWeight: FontWeight.w400),
-                Spacer(),
+                const Spacer(),
                 GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => CallingScreen(),
+                          builder: (context) => const CallingScreen(),
                         ),
                       );
                     },
@@ -82,7 +81,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ],
             ),
             buildVSpacer(30),
-            Container(
+            SizedBox(
               width: double.infinity,
               child: Image.asset('assets/chat_message.png'),
             ),

@@ -1,19 +1,17 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class MyEarningsScreen extends StatefulWidget {
+  const MyEarningsScreen({super.key});
+
   @override
   _MyEarningsScreenState createState() => _MyEarningsScreenState();
 }
 
 class _MyEarningsScreenState extends State<MyEarningsScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +34,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -66,9 +64,9 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                 // width: 358,
                 height: 69,
                 decoration: ShapeDecoration(
-                  color: Color(0xFF245196),
+                  color: const Color(0xFF245196),
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                    side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                     borderRadius: BorderRadius.circular(4),
                   ),
                 ),
@@ -79,7 +77,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                         size: 17,
                         color: Colors.white,
                         fontWeight: FontWeight.w600),
-                    Spacer(),
+                    const Spacer(),
                     _buildText(
                         title: '₹5,000',
                         size: 17,
@@ -92,18 +90,18 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFEDB31B),
+                    backgroundColor: const Color(0xFFEDB31B),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Check monthly report',
                       style: TextStyle(
@@ -126,7 +124,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
@@ -179,7 +177,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                                 _buildText(title: '₹1,000'),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Image.asset('assets/download.png')
                           ],
                         ),
@@ -200,7 +198,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                               style: GoogleFonts.roboto(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff2A5DEC),
+                                color: const Color(0xff2A5DEC),
                                 decoration: TextDecoration.underline,
                               ),
                             ),
@@ -220,7 +218,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
@@ -273,7 +271,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                                 _buildText(title: '₹1,000'),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Image.asset('assets/download.png')
                           ],
                         ),
@@ -294,7 +292,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                               style: GoogleFonts.roboto(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff2A5DEC),
+                                color: const Color(0xff2A5DEC),
                                 decoration: TextDecoration.underline,
                               ),
                             ),
@@ -314,7 +312,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFFD9D9D9)),
+                      side: const BorderSide(width: 1, color: Color(0xFFD9D9D9)),
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
@@ -367,7 +365,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                                 _buildText(title: '₹1,000'),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Image.asset('assets/download.png')
                           ],
                         ),
@@ -388,7 +386,7 @@ class _MyEarningsScreenState extends State<MyEarningsScreen> {
                               style: GoogleFonts.roboto(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff2A5DEC),
+                                color: const Color(0xff2A5DEC),
                                 decoration: TextDecoration.underline,
                               ),
                             ),

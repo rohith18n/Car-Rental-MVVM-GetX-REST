@@ -1,15 +1,13 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/host_offer/create_offer_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:car_rental/view/your_car_navigation_bar/create_offer2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class CreateOffer1 extends StatefulWidget {
+  const CreateOffer1({super.key});
+
   @override
   _CreateOffer1State createState() => _CreateOffer1State();
 }
@@ -25,7 +23,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -36,7 +34,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.white,
@@ -135,7 +133,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage(
                                 'assets/white_car.png'), // Set your desired height
                           ),
@@ -156,7 +154,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CreateOffer2(),
+                              builder: (context) => const CreateOffer2(),
                             ),
                           );
                         },
@@ -167,7 +165,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                             style: GoogleFonts.roboto(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xff2A5DEC),
+                              color: const Color(0xff2A5DEC),
                               decoration: TextDecoration.underline,
                             ),
                           ),
@@ -196,7 +194,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage(
                                 'assets/white_car.png'), // Set your desired height
                           ),
@@ -217,7 +215,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CreateOfferScreen2(),
+                              builder: (context) => const CreateOfferScreen2(),
                             ),
                           );
                         },
@@ -228,7 +226,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                             style: GoogleFonts.roboto(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xff2A5DEC),
+                              color: const Color(0xff2A5DEC),
                               decoration: TextDecoration.underline,
                             ),
                           ),
@@ -257,7 +255,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage(
                                 'assets/white_car.png'), // Set your desired height
                           ),
@@ -278,7 +276,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CreateOfferScreen2(),
+                              builder: (context) => const CreateOfferScreen2(),
                             ),
                           );
                         },
@@ -289,7 +287,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                             style: GoogleFonts.roboto(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xff2A5DEC),
+                              color: const Color(0xff2A5DEC),
                               decoration: TextDecoration.underline,
                             ),
                           ),
@@ -318,7 +316,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage(
                                 'assets/white_car.png'), // Set your desired height
                           ),
@@ -339,7 +337,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => CreateOfferScreen2(),
+                              builder: (context) => const CreateOfferScreen2(),
                             ),
                           );
                         },
@@ -350,7 +348,7 @@ class _CreateOffer1State extends State<CreateOffer1> {
                             style: GoogleFonts.roboto(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xff2A5DEC),
+                              color: const Color(0xff2A5DEC),
                               decoration: TextDecoration.underline,
                             ),
                           ),

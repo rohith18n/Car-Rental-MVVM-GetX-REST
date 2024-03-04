@@ -1,13 +1,10 @@
-import 'dart:ui';
-import 'package:car_rental/view/booking_details/navigate_to_pickup.dart';
-import 'package:car_rental/view/car_location/car_location_start.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class InspectionScreen extends StatefulWidget {
+  const InspectionScreen({super.key});
+
   @override
   _InspectionScreenState createState() => _InspectionScreenState();
 }
@@ -18,18 +15,18 @@ class _InspectionScreenState extends State<InspectionScreen> {
   void _showUploadBottomSheet() {
     showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(40.0)),
       ),
-      backgroundColor: Color(0xff245196),
+      backgroundColor: const Color(0xff245196),
       builder: (context) {
         return Container(
           height: 150,
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              const Text(
                 'Upload the documents',
                 style: TextStyle(
                   fontSize: 16,
@@ -37,7 +34,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -45,19 +42,19 @@ class _InspectionScreenState extends State<InspectionScreen> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => InspectionScreen(),
+                          builder: (context) => const InspectionScreen(),
                         ),
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffEDB31B),
+                      backgroundColor: const Color(0xffEDB31B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/camera.png'),
                           color: Colors.white,
                         ),
@@ -73,19 +70,19 @@ class _InspectionScreenState extends State<InspectionScreen> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => InspectionScreen(),
+                          builder: (context) => const InspectionScreen(),
                         ),
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffEDB31B),
+                      backgroundColor: const Color(0xffEDB31B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/gallery.png'),
                           color: Colors.white,
                         ),
@@ -116,7 +113,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFF245196),
+              backgroundColor: const Color(0xFF245196),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
@@ -185,7 +182,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
                     title: 'Add More',
                     fontWeight: FontWeight.w400,
                     size: 14,
-                    color: Color(0xff245196))),
+                    color: const Color(0xff245196))),
             buildVSpacer(30),
             _buildTextHeader(
                 title: 'Other Charges', fontWeight: FontWeight.bold, size: 17),
@@ -198,7 +195,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
                     title: 'Add More',
                     fontWeight: FontWeight.w400,
                     size: 14,
-                    color: Color(0xff245196))),
+                    color: const Color(0xff245196))),
             buildVSpacer(30),
           ],
         ),
@@ -218,7 +215,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
               },
               child: Container(
                 padding: const EdgeInsets.all(8),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back,
                   size: 28,
                   color: Colors.black,
@@ -254,7 +251,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
               title: section,
               size: 16,
             ),
-            Spacer(),
+            const Spacer(),
             _buildText(title: 'In Good Condition'),
           ],
         ),
@@ -271,7 +268,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
                   child: Image.asset('assets/upload_image.png'),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Column(
                 children: [
                   Row(
@@ -302,9 +299,9 @@ class _InspectionScreenState extends State<InspectionScreen> {
         height: 42,
         padding: const EdgeInsets.all(10),
         decoration: ShapeDecoration(
-          color: selectedOption == option ? Color(0xFF245196) : Colors.white,
-          shape: RoundedRectangleBorder(side: BorderSide(width: 1)),
-          shadows: [
+          color: selectedOption == option ? const Color(0xFF245196) : Colors.white,
+          shape: const RoundedRectangleBorder(side: BorderSide(width: 1)),
+          shadows: const [
             BoxShadow(
               color: Color(0x3F000000),
               blurRadius: 24,
@@ -317,7 +314,7 @@ class _InspectionScreenState extends State<InspectionScreen> {
           option,
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: selectedOption == option ? Colors.white : Color(0xFF121212),
+            color: selectedOption == option ? Colors.white : const Color(0xFF121212),
             fontSize: 12,
             fontFamily: 'Be Vietnam Pro',
             fontWeight: FontWeight.w500,

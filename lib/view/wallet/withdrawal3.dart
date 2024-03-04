@@ -1,17 +1,12 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/wallet/add_bank_details.dart';
-import 'package:car_rental/view/wallet/transfer.dart';
 import 'package:car_rental/view/wallet/wallet.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'package:lottie/lottie.dart';
 
 class WithdrawalScreen3 extends StatefulWidget {
+  const WithdrawalScreen3({super.key});
+
   @override
   _WithdrawalScreen3State createState() => _WithdrawalScreen3State();
 }
@@ -35,7 +30,7 @@ class _WithdrawalScreen3State extends State<WithdrawalScreen3> {
                   },
                   child: Container(
                     padding: const EdgeInsets.all(8),
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       size: 28,
                       color: Colors.black,
@@ -72,24 +67,24 @@ class _WithdrawalScreen3State extends State<WithdrawalScreen3> {
           buildVSpacer(120),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50.0),
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => WalletScreen1(),
+                      builder: (context) => const WalletScreen1(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xFF245196),
+                  backgroundColor: const Color(0xFF245196),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(12.0),
                   child: Text(
                     'Back',
                     style: TextStyle(

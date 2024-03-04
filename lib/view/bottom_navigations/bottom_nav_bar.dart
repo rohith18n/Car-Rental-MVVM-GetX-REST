@@ -23,10 +23,10 @@ class _AppBottomNavBarState extends State<AppBottomNavBar> {
 
   final List<Widget> _body = [
     const Home(),
-    BookingScreen(),
-    CarScreen(),
-    EarningsScreen(),
-    MyAccountScreen()
+    const BookingScreen(),
+    const CarScreen(),
+    const EarningsScreen(),
+    const MyAccountScreen()
   ];
   late int _selectedIndex;
 

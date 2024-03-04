@@ -1,13 +1,13 @@
 import 'package:car_rental/view/add_new_car/address_proof.dart';
 import 'package:car_rental/view/add_new_car/car_document_details.dart';
 import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class CarKycScreen extends StatefulWidget {
+  const CarKycScreen({super.key});
+
   @override
   _CarKycScreenState createState() => _CarKycScreenState();
 }
@@ -32,7 +32,7 @@ class _CarKycScreenState extends State<CarKycScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -59,7 +59,7 @@ class _CarKycScreenState extends State<CarKycScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image(
+                const Image(
                   image: AssetImage('assets/scanner.png'),
                   width: 200, // Set your desired width
                   height: 150, // Set your desired height
@@ -100,7 +100,7 @@ class _CarKycScreenState extends State<CarKycScreen> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 16, vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(
+                            color: const Color(
                                 0xff245196), // Add your desired background color here
                             borderRadius: BorderRadius.circular(4),
                           ),
@@ -108,7 +108,7 @@ class _CarKycScreenState extends State<CarKycScreen> {
                             children: [
                               Column(
                                 children: [
-                                  Image(
+                                  const Image(
                                       image:
                                           AssetImage('assets/Group 116.png')),
                                   Text(
@@ -122,10 +122,10 @@ class _CarKycScreenState extends State<CarKycScreen> {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Column(
                                 children: [
-                                  Image(
+                                  const Image(
                                       image:
                                           AssetImage('assets/Group 116.png')),
                                   Text(
@@ -139,10 +139,10 @@ class _CarKycScreenState extends State<CarKycScreen> {
                                   ),
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Column(
                                 children: [
-                                  Image(
+                                  const Image(
                                       image:
                                           AssetImage('assets/Group 116.png')),
                                   Text(
@@ -170,11 +170,11 @@ class _CarKycScreenState extends State<CarKycScreen> {
                     elevation: 5.0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                      side: BorderSide(color: Colors.white, width: 1.0),
+                      side: const BorderSide(color: Colors.white, width: 1.0),
                     ),
                     child: Container(
                       color: Colors.white,
-                      padding: EdgeInsets.all(25.0),
+                      padding: const EdgeInsets.all(25.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -183,13 +183,13 @@ class _CarKycScreenState extends State<CarKycScreen> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => CarDocumentDetails(),
+                                  builder: (context) => const CarDocumentDetails(),
                                 ),
                               );
                             },
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                     image: AssetImage('assets/Group 114.png')),
                                 buildHSpacer(10),
                                 Column(
@@ -215,8 +215,8 @@ class _CarKycScreenState extends State<CarKycScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15,
                                 )
@@ -228,13 +228,13 @@ class _CarKycScreenState extends State<CarKycScreen> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => DlCarDetails(),
+                                  builder: (context) => const DlCarDetails(),
                                 ),
                               );
                             },
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                     image: AssetImage('assets/Group 112.png')),
                                 buildHSpacer(10),
                                 Column(
@@ -260,8 +260,8 @@ class _CarKycScreenState extends State<CarKycScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15,
                                 )
@@ -273,13 +273,13 @@ class _CarKycScreenState extends State<CarKycScreen> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => AddressProof(),
+                                  builder: (context) => const AddressProof(),
                                 ),
                               );
                             },
                             child: Row(
                               children: [
-                                Image(
+                                const Image(
                                     image: AssetImage('assets/Group 115.png')),
                                 buildHSpacer(10),
                                 Column(
@@ -305,8 +305,8 @@ class _CarKycScreenState extends State<CarKycScreen> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15,
                                 )

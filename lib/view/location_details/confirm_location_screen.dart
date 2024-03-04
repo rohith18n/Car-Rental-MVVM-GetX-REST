@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ConfirmLocationDetails extends StatefulWidget {
+  const ConfirmLocationDetails({super.key});
+
   @override
   _ConfirmLocationDetailsState createState() => _ConfirmLocationDetailsState();
 }
 
 class _ConfirmLocationDetailsState extends State<ConfirmLocationDetails> {
-  TextEditingController _textFieldController = TextEditingController();
+  final TextEditingController _textFieldController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +29,14 @@ class _ConfirmLocationDetailsState extends State<ConfirmLocationDetails> {
               child: Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.arrow_back, color: Colors.black),
+                    icon: const Icon(Icons.arrow_back, color: Colors.black),
                     onPressed: () {
                       Navigator.pop(context);
                     },
                   ),
                   buildHSpacer(15),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     width: 300,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -42,7 +44,7 @@ class _ConfirmLocationDetailsState extends State<ConfirmLocationDetails> {
                     ),
                     child: TextField(
                       controller: _textFieldController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Set Location .......',
                       ),
@@ -58,7 +60,7 @@ class _ConfirmLocationDetailsState extends State<ConfirmLocationDetails> {
                 child: Container(
                   width: 200,
                   height: 200,
-                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8.0),
@@ -72,19 +74,19 @@ class _ConfirmLocationDetailsState extends State<ConfirmLocationDetails> {
                           _buildText(
                             title: 'Your Current Location',
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             width: 55,
                             height: 22,
                             decoration: ShapeDecoration(
-                              color: Color(0xFFC5161D),
+                              color: const Color(0xFFC5161D),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.93),
                               ),
                             ),
-                            child: Padding(
+                            child: const Padding(
                               padding:
-                                  const EdgeInsets.only(left: 13.0, top: 4),
+                                  EdgeInsets.only(left: 13.0, top: 4),
                               child: Text(
                                 'EDIT',
                                 style: TextStyle(
@@ -110,25 +112,25 @@ class _ConfirmLocationDetailsState extends State<ConfirmLocationDetails> {
                             padding: const EdgeInsets.symmetric(
                               horizontal: 18.0,
                             ),
-                            child: Container(
+                            child: SizedBox(
                               width: 250,
                               child: ElevatedButton(
                                 onPressed: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          LocationDetailsScreen2(),
+                                          const LocationDetailsScreen2(),
                                     ),
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFFEDB31B),
+                                  backgroundColor: const Color(0xFFEDB31B),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5.0),
                                   ),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(12.0),
                                   child: Text(
                                     'Confirm Location',
                                     style: TextStyle(

@@ -1,13 +1,11 @@
-import 'package:car_rental/view/share_car_sharing/drop_off_screen.dart';
 import 'package:car_rental/view/share_car_sharing/passengers_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
-import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
-import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class PassengerScreen extends StatefulWidget {
+  const PassengerScreen({super.key});
+
   @override
   _PassengerScreenState createState() => _PassengerScreenState();
 }
@@ -17,25 +15,25 @@ class _PassengerScreenState extends State<PassengerScreen> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 60,
         child: Padding(
           padding: const EdgeInsets.only(bottom: 10.0, right: 10),
           child: Align(
             alignment: Alignment.bottomRight,
-            child: Container(
+            child: SizedBox(
               width: 120,
               height: 45,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => PassengerScreen2(),
+                      builder: (context) => const PassengerScreen2(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Go',
@@ -63,14 +61,14 @@ class _PassengerScreenState extends State<PassengerScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),

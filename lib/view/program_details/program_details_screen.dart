@@ -1,10 +1,10 @@
-import 'dart:ui';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class ProgramDetailsScreen extends StatefulWidget {
+  const ProgramDetailsScreen({super.key});
+
   @override
   _ProgramDetailsScreenState createState() => _ProgramDetailsScreenState();
 }
@@ -20,7 +20,7 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -31,7 +31,7 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -59,7 +59,7 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/white_car.png'), // Set your desired height
                   ),
@@ -81,7 +81,7 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/bi_clock-fill.png'), // Set your desired height
                   ),
@@ -99,18 +99,18 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     height: 28,
                     padding:
                         const EdgeInsets.symmetric(horizontal: 7, vertical: 8),
                     decoration: ShapeDecoration(
-                      color: Color(0xFF16A583),
+                      color: const Color(0xFF16A583),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40),
                       ),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -134,7 +134,7 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/Group 10736.png'), // Set your desired height
                   ),
@@ -159,7 +159,7 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/Group 10737.png'), // Set your desired height
                   ),
@@ -184,7 +184,7 @@ class _ProgramDetailsScreenState extends State<ProgramDetailsScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/Group 10738.png'), // Set your desired height
                   ),

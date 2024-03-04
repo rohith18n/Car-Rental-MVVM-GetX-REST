@@ -1,19 +1,12 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/wallet/topup.dart';
-import 'package:car_rental/view/wallet/transfer1.dart';
-import 'package:car_rental/view/wallet/wallet1.dart';
-import 'package:car_rental/view/wallet/withdrawal.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
-import '../location_details/confirm_location_screen.dart';
 
 class PricingControlScreen extends StatefulWidget {
+  const PricingControlScreen({super.key});
+
   @override
   _PricingControlScreenState createState() => _PricingControlScreenState();
 }
@@ -25,24 +18,24 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
 
-    void _showUploadBottomSheet() {
+    void showUploadBottomSheet() {
       bool? isSelected = false; // Track the radio button state
 
       showModalBottomSheet(
         context: context,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(0.0)),
         ),
         backgroundColor: Colors.white,
         builder: (context) {
           return Container(
             height: 150,
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: Column(
               children: [
                 Row(
                   children: [
-                    Image(
+                    const Image(
                       image: AssetImage('assets/white_car.png'),
                       // Set your desired height
                     ),
@@ -68,18 +61,18 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFFEDB31B),
+              backgroundColor: const Color(0xFFEDB31B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'CHANGE PRICE RANGE',
                 style: TextStyle(
@@ -97,7 +90,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -108,7 +101,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -136,7 +129,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Row(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage(
                         'assets/white_car.png'), // Set your desired height
                   ),
@@ -150,12 +143,12 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                           title: '5 Seater', fontWeight: FontWeight.w400),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                       onTap: () {
-                        _showUploadBottomSheet();
+                        showUploadBottomSheet();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_drop_down_sharp,
                         size: 30,
                       ))
@@ -211,7 +204,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                     ],
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -266,7 +259,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                 width: double.infinity,
                 height: 222,
                 decoration: ShapeDecoration(
-                  color: Color(0xFFD6FFEB),
+                  color: const Color(0xFFD6FFEB),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                 ),
@@ -279,7 +272,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                           title: 'Your price will vary as below, and you will'
                               '\nearn 62% share of the price decided',
                           fontWeight: FontWeight.w500,
-                          color: Color(0xff2A5DEC),
+                          color: const Color(0xff2A5DEC),
                         ),
                         buildVSpacer(15),
                         Image.asset('assets/yellowline.png'),
@@ -288,7 +281,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                     Positioned(
                       left: 45,
                       top: 58,
-                      child: Container(
+                      child: SizedBox(
                         width: 20,
                         height: 20,
                         child: Stack(
@@ -313,12 +306,12 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                                 children: [
                                   _buildTextHeader(
                                       title: '₹185/hr',
-                                      color: Color(0xff2A5DEC),
+                                      color: const Color(0xff2A5DEC),
                                       fontWeight: FontWeight.bold,
                                       size: 17),
                                   _buildTextHeader(
                                       title: 'High demand \n& short\nBookings',
-                                      color: Color(0xff2A5DEC),
+                                      color: const Color(0xff2A5DEC),
                                       fontWeight: FontWeight.w600,
                                       size: 14),
                                 ],
@@ -330,12 +323,12 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                                 children: [
                                   _buildTextHeader(
                                       title: '₹79/hr',
-                                      color: Color(0xff2A5DEC),
+                                      color: const Color(0xff2A5DEC),
                                       fontWeight: FontWeight.bold,
                                       size: 17),
                                   _buildTextHeader(
                                       title: 'Low demand \n& short\nBookings',
-                                      color: Color(0xff2A5DEC),
+                                      color: const Color(0xff2A5DEC),
                                       fontWeight: FontWeight.w600,
                                       size: 14),
                                 ],
@@ -348,7 +341,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                     Positioned(
                       right: 85,
                       bottom: 12,
-                      child: Container(
+                      child: SizedBox(
                         width: 20,
                         height: 20,
                         child: Stack(
@@ -367,17 +360,17 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Container(
                 color: Colors.white,
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 child: Card(
                   color: Colors.white,
                   elevation: 5.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0),
-                    side: BorderSide(color: Colors.white, width: 1.0),
+                    side: const BorderSide(color: Colors.white, width: 1.0),
                   ),
                   child: Container(
                     color: Colors.white,
-                    padding: EdgeInsets.all(25.0),
+                    padding: const EdgeInsets.all(25.0),
                     child: Row(
                       children: [
                         Image.asset('assets/coins.png'),
@@ -401,15 +394,15 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                             ),
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Transform.scale(
                           scale: 0.6, // Adjust the scale to modify the height
                           child: LiteRollingSwitch(
                             value: _switchValue,
                             textOn: '',
                             textOff: '',
-                            colorOn: Color(0XFF6750A4),
-                            colorOff: Color(0XFF6750A4),
+                            colorOn: const Color(0XFF6750A4),
+                            colorOff: const Color(0XFF6750A4),
                             iconOn: Icons.check,
                             iconOff: Icons.close,
                             textSize: 1.0,
@@ -444,10 +437,10 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                       width: 1.0, // Set the border thickness here
                     ),
                   ),
-                  margin: EdgeInsets.all(10.0),
+                  margin: const EdgeInsets.all(10.0),
                   child: Column(
                     children: [
-                      TabBar(
+                      const TabBar(
                         indicatorColor: Color(0xFF000AFF),
                         labelColor: Color(
                             0xFF000AFF), // Set the text color of the selected tab
@@ -459,7 +452,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                         ],
                       ),
                       buildVSpacer(15),
-                      Container(
+                      SizedBox(
                         height: 200, // Adjust the height as needed
                         child: TabBarView(
                           children: [
@@ -505,7 +498,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
     }
 
     return Container(
-      padding: EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(20.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -518,10 +511,10 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
                 width: 30.0, // Adjust the width of the image as needed
                 height: 30.0, // Adjust the height of the image as needed
               ),
-              SizedBox(width: 8.0), // Add spacing between image and text
+              const SizedBox(width: 8.0), // Add spacing between image and text
               Text(
                 content,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
@@ -530,7 +523,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
             ],
           ),
           buildVSpacer(20),
-          Text(
+          const Text(
             'We also consider your car image to generate\nyour price.',
             style: TextStyle(
               fontSize: 15.0,
@@ -539,7 +532,7 @@ class _PricingControlScreenState extends State<PricingControlScreen> {
             ),
           ),
           buildVSpacer(5),
-          Text(
+          const Text(
             'Maintain rating above 4.8 and get better pricing\nrange.',
             style: TextStyle(
               fontSize: 15.0,

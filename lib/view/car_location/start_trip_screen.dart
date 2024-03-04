@@ -2,16 +2,16 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:car_rental/view/car_location/trip_sucessfull_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'package:lottie/lottie.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 import '../widgets/app_widgets.dart';
 
 class StartTripScreen extends StatefulWidget {
+  const StartTripScreen({super.key});
+
   @override
   _StartTripScreenState createState() => _StartTripScreenState();
 }
@@ -25,18 +25,18 @@ class _StartTripScreenState extends State<StartTripScreen> {
   void initState() {
     super.initState();
     // Delay for 5 seconds and then show the loading indicator
-    Timer(Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 5), () {
       setState(() {
         showLoading = true;
       });
       // Delay for additional 5 seconds after showing the loading indicator
-      Future.delayed(Duration(seconds: 5), () {
+      Future.delayed(const Duration(seconds: 5), () {
         // Navigate to the next screen here
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) =>
-                TripSucessfullScreen(), // Replace with the actual next screen
+                const TripSucessfullScreen(), // Replace with the actual next screen
           ),
         );
       });
@@ -58,7 +58,7 @@ class _StartTripScreenState extends State<StartTripScreen> {
   Widget _buildScreenContent() {
     return SingleChildScrollView(
       child: Container(
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Padding(
           padding: const EdgeInsets.only(top: 400.0),
           child: Column(
@@ -79,13 +79,13 @@ class _StartTripScreenState extends State<StartTripScreen> {
                 fieldWidth: 50,
                 fieldStyle: FieldStyle.box,
                 outlineBorderRadius: 8,
-                style: TextStyle(fontSize: 17),
+                style: const TextStyle(fontSize: 17),
                 onChanged: (pin) {
                   otps = pin;
-                  print("Changed: " + otps);
+                  print("Changed: $otps");
                 },
                 onCompleted: (pin) {
-                  print("Completed: " + pin);
+                  print("Completed: $pin");
                 },
               ),
             ],
@@ -102,7 +102,7 @@ class _StartTripScreenState extends State<StartTripScreen> {
       child: Center(
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-          child: Container(
+          child: SizedBox(
             width: 250,
             height: 600,
             child: Column(

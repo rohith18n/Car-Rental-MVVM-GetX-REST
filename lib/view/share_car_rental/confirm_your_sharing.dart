@@ -1,15 +1,14 @@
 // choose_sharing_details.dart
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
 import 'package:car_rental/view/share_car/share_car_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
-import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
-import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 import 'modify_listing_screen.dart';
 
 class ConfirmYourSharing extends StatefulWidget {
+  const ConfirmYourSharing({super.key});
+
   @override
   _ConfirmYourSharingState createState() => _ConfirmYourSharingState();
 }
@@ -27,7 +26,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
         double screenWidth = MediaQuery.of(context).size.width;
 
         return Dialog(
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.zero, // Set the border radius to 0
           ),
           child: Container(
@@ -39,7 +38,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 buildVSpacer(20),
-                Text(
+                const Text(
                   'Congratulations !',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -50,7 +49,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                   ),
                 ),
                 buildVSpacer(20),
-                Text(
+                const Text(
                   'You will start getting bookings soon,\nEnsure your car is clean.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -64,24 +63,24 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                 Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 18.0, vertical: 40),
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => ShareCarScreen(),
+                            builder: (context) => const ShareCarScreen(),
                           ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFEDB31B),
+                        backgroundColor: const Color(0xFFEDB31B),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(2.0),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(12.0),
                         child: Text(
                           'Back',
                           style: TextStyle(
@@ -112,7 +111,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -123,14 +122,14 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
                         ),
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
@@ -171,7 +170,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       children: [
                         Row(
                           children: [
-                            Image(image: AssetImage('assets/white_car.png')),
+                            const Image(image: AssetImage('assets/white_car.png')),
                             buildHSpacer(10),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -281,7 +280,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
             //   ),
             // ),
 
-            Container(
+            SizedBox(
               width: 358,
               height: 200,
               child: Stack(
@@ -296,7 +295,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                         color: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(4)),
-                        shadows: [
+                        shadows: const [
                           BoxShadow(
                             color: Color(0x3F000000),
                             blurRadius: 4,
@@ -307,7 +306,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 171,
                     top: 64,
                     child: Text(
@@ -322,7 +321,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 171,
                     top: 86,
                     child: Opacity(
@@ -340,7 +339,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 23,
                     top: 161,
                     child: Opacity(
@@ -358,7 +357,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 292,
                     top: 86,
                     child: Opacity(
@@ -376,7 +375,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 266,
                     top: 64,
                     child: Text(
@@ -398,7 +397,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       width: 81,
                       height: 65.21,
                       decoration: ShapeDecoration(
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage('assets/white_car.png'),
                           fit: BoxFit.fill,
                         ),
@@ -413,7 +412,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                     child: Container(
                       width: 10,
                       height: 10,
-                      decoration: ShapeDecoration(
+                      decoration: const ShapeDecoration(
                         color: Color(0xFF258E00),
                         shape: OvalBorder(),
                       ),
@@ -425,7 +424,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                     child: Container(
                       width: 10,
                       height: 10,
-                      decoration: ShapeDecoration(
+                      decoration: const ShapeDecoration(
                         color: Color(0xFFFE5244),
                         shape: OvalBorder(),
                       ),
@@ -439,8 +438,8 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       height: 20,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 4),
-                      decoration: BoxDecoration(color: Color(0xFFF4F4F4)),
-                      child: Row(
+                      decoration: const BoxDecoration(color: Color(0xFFF4F4F4)),
+                      child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -469,7 +468,7 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 8),
                       decoration: ShapeDecoration(
-                        color: Color(0xFF245196),
+                        color: const Color(0xFF245196),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(4)),
                       ),
@@ -482,13 +481,13 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => ModifyListingScreen(
+                                  builder: (context) => const ModifyListingScreen(
                                     initialTabIndex: 1,
                                   ),
                                 ),
                               );
                             },
-                            child: Text(
+                            child: const Text(
                               'Modify Listing',
                               style: TextStyle(
                                 color: Colors.white,
@@ -549,18 +548,18 @@ class _ConfirmYourSharingState extends State<ConfirmYourSharing> {
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 18.0, vertical: 40),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: _showCongratulationsDialog,
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF245196),
+                    backgroundColor: const Color(0xFF245196),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(2.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Confirm & Share',
                       style: TextStyle(

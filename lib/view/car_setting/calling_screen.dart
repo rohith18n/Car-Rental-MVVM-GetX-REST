@@ -1,19 +1,18 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/car_setting/chat_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class CallingScreen extends StatefulWidget {
+  const CallingScreen({super.key});
+
   @override
   _CallingScreenState createState() => _CallingScreenState();
 }
 
 class _CallingScreenState extends State<CallingScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class _CallingScreenState extends State<CallingScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -36,7 +35,7 @@ class _CallingScreenState extends State<CallingScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -66,14 +65,14 @@ class _CallingScreenState extends State<CallingScreen> {
                     title: 'Calling  to User',
                     size: 25,
                     fontWeight: FontWeight.w400),
-                Spacer(),
+                const Spacer(),
                 Image.asset('assets/call_small.png'),
                 buildHSpacer(15),
                 GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => ChatScreen(),
+                          builder: (context) => const ChatScreen(),
                         ),
                       );
                     },
@@ -84,7 +83,7 @@ class _CallingScreenState extends State<CallingScreen> {
             buildVSpacer(30),
             Container(
               height: 900,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xffEDB31B),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20.0),
@@ -102,12 +101,12 @@ class _CallingScreenState extends State<CallingScreen> {
                         height: 34,
                         padding: const EdgeInsets.all(8.5),
                         decoration: ShapeDecoration(
-                          color: Color(0xFF444444),
+                          color: const Color(0xFF444444),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(26),
                           ),
                         ),
-                        child: Text(
+                        child: const Text(
                           'Your call will be recorded for security purpose',
                           style: TextStyle(
                             color: Colors.white,

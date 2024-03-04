@@ -1,20 +1,15 @@
-import 'package:car_rental/view/share_car_rental/rental_screen.dart';
 import 'package:car_rental/view/share_car_sharing/when_going_screen.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
-import 'package:car_rental/view/share_car_rental/rental_screen.dart';
-import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 // Import statements remain unchanged
 
 class StopOverScreen2 extends StatefulWidget {
+  const StopOverScreen2({super.key});
+
   @override
   _StopOverScreen2State createState() => _StopOverScreen2State();
 }
@@ -25,25 +20,25 @@ class _StopOverScreen2State extends State<StopOverScreen2> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 60,
         child: Padding(
           padding: const EdgeInsets.only(bottom: 10.0, right: 10),
           child: Align(
             alignment: Alignment.bottomRight,
-            child: Container(
+            child: SizedBox(
               width: 120,
               height: 45,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => WhenGoingScreen(),
+                      builder: (context) => const WhenGoingScreen(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Go',
@@ -71,14 +66,14 @@ class _StopOverScreen2State extends State<StopOverScreen2> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
@@ -111,7 +106,7 @@ class _StopOverScreen2State extends State<StopOverScreen2> {
                     ),
                   ],
                 ),
-                Icon(Icons.arrow_right)
+                const Icon(Icons.arrow_right)
               ],
             ),
           ],
@@ -148,7 +143,7 @@ class _StopOverScreen2State extends State<StopOverScreen2> {
     bool isLast =
         false, // Add this parameter to check if it's the last timeline tile
   }) {
-    return Container(
+    return SizedBox(
       width: 330,
       child: TimelineTile(
         alignment: TimelineAlign.manual,
@@ -178,7 +173,7 @@ class _StopOverScreen2State extends State<StopOverScreen2> {
         // ),
         startChild: isFirst
             ? null
-            : Container(
+            : const SizedBox(
                 height: double.infinity,
                 width: 12, // Adjust the width to match the circle's width
               ),

@@ -1,12 +1,12 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import '../widgets/app_widgets.dart';
 
 class CreateOfferScreen2 extends StatefulWidget {
+  const CreateOfferScreen2({super.key});
+
   @override
   _CreateOfferScreen2State createState() => _CreateOfferScreen2State();
 }
@@ -14,7 +14,7 @@ class CreateOfferScreen2 extends StatefulWidget {
 class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
   bool _switchValue = false;
   bool _isKnowMoreVisible = true;
-  double _sliderValue = 0.5; // Initial value for the slider
+  final double _sliderValue = 0.5; // Initial value for the slider
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +25,19 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
 
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
             },
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFFEDB31B),
+              backgroundColor: const Color(0xFFEDB31B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'SAVE',
                 style: TextStyle(
@@ -56,7 +56,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              color: Color(0xffEDB31B),
+              color: const Color(0xffEDB31B),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -67,7 +67,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
@@ -107,7 +107,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                     children: [
                       Row(
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/white_car.png'),
                           ),
                           buildHSpacer(20),
@@ -139,15 +139,15 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                     children: [
                       Image.asset('assets/bluetickcar.png'),
                       _buildTextHeader(title: 'Long Duration Offers'),
-                      Spacer(),
+                      const Spacer(),
                       Transform.scale(
                         scale: 0.6,
                         child: LiteRollingSwitch(
                           value: _switchValue,
                           textOn: '',
                           textOff: '',
-                          colorOn: Color(0XFF6750A4),
-                          colorOff: Color(0XFF6750A4),
+                          colorOn: const Color(0XFF6750A4),
+                          colorOff: const Color(0XFF6750A4),
                           iconOn: Icons.check,
                           iconOff: Icons.close,
                           textSize: 1.0,
@@ -189,7 +189,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                 ),
                               ),
                               buildVSpacer(15),
-                              Container(
+                              SizedBox(
                                 width: 330,
                                 child: Row(
                                   children: [
@@ -198,12 +198,12 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       height: 34,
                                       padding: const EdgeInsets.all(8.5),
                                       decoration: ShapeDecoration(
-                                        color: Color(0xFF444444),
+                                        color: const Color(0xFF444444),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(26),
                                         ),
                                       ),
-                                      child: Text(
+                                      child: const Text(
                                         '2 days',
                                         style: TextStyle(
                                           color: Colors.white,
@@ -218,7 +218,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                         width: 20,
                                         height: 3,
                                         decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
+                                          color: const Color(0xFFD9D9D9),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(26),
                                           ),
@@ -247,7 +247,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -272,7 +272,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -297,7 +297,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -322,7 +322,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -360,7 +360,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                               style: GoogleFonts.roboto(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xffEDB31B),
+                                color: const Color(0xffEDB31B),
                                 decoration: TextDecoration.underline,
                               ),
                             ),
@@ -384,15 +384,15 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                     children: [
                       Image.asset('assets/bluetimer.png'),
                       _buildTextHeader(title: 'Early Bird Offer'),
-                      Spacer(),
+                      const Spacer(),
                       Transform.scale(
                         scale: 0.6,
                         child: LiteRollingSwitch(
                           value: _switchValue,
                           textOn: '',
                           textOff: '',
-                          colorOn: Color(0XFF6750A4),
-                          colorOff: Color(0XFF6750A4),
+                          colorOn: const Color(0XFF6750A4),
+                          colorOff: const Color(0XFF6750A4),
                           iconOn: Icons.check,
                           iconOff: Icons.close,
                           textSize: 1.0,
@@ -434,7 +434,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                 ),
                               ),
                               buildVSpacer(15),
-                              Container(
+                              SizedBox(
                                 width: 330,
                                 child: Row(
                                   children: [
@@ -443,12 +443,12 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       height: 34,
                                       padding: const EdgeInsets.all(8.5),
                                       decoration: ShapeDecoration(
-                                        color: Color(0xFF444444),
+                                        color: const Color(0xFF444444),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(26),
                                         ),
                                       ),
-                                      child: Text(
+                                      child: const Text(
                                         '2 days',
                                         style: TextStyle(
                                           color: Colors.white,
@@ -463,7 +463,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                         width: 20,
                                         height: 3,
                                         decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
+                                          color: const Color(0xFFD9D9D9),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(26),
                                           ),
@@ -492,7 +492,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -517,7 +517,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -542,7 +542,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -567,7 +567,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -605,7 +605,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                               style: GoogleFonts.roboto(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xffEDB31B),
+                                color: const Color(0xffEDB31B),
                                 decoration: TextDecoration.underline,
                               ),
                             ),
@@ -630,15 +630,15 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                     children: [
                       Image.asset('assets/react.png'),
                       _buildTextHeader(title: 'Raise the cost'),
-                      Spacer(),
+                      const Spacer(),
                       Transform.scale(
                         scale: 0.6,
                         child: LiteRollingSwitch(
                           value: _switchValue,
                           textOn: '',
                           textOff: '',
-                          colorOn: Color(0XFF6750A4),
-                          colorOff: Color(0XFF6750A4),
+                          colorOn: const Color(0XFF6750A4),
+                          colorOff: const Color(0XFF6750A4),
                           iconOn: Icons.check,
                           iconOff: Icons.close,
                           textSize: 1.0,
@@ -680,7 +680,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                 ),
                               ),
                               buildVSpacer(15),
-                              Container(
+                              SizedBox(
                                 width: 330,
                                 child: Row(
                                   children: [
@@ -689,12 +689,12 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       height: 34,
                                       padding: const EdgeInsets.all(8.5),
                                       decoration: ShapeDecoration(
-                                        color: Color(0xFF444444),
+                                        color: const Color(0xFF444444),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(26),
                                         ),
                                       ),
-                                      child: Text(
+                                      child: const Text(
                                         '2 days',
                                         style: TextStyle(
                                           color: Colors.white,
@@ -709,7 +709,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                         width: 20,
                                         height: 3,
                                         decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
+                                          color: const Color(0xFFD9D9D9),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(26),
                                           ),
@@ -738,7 +738,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -763,7 +763,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -788,7 +788,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -813,7 +813,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                                       color: Colors.white, // Set your desired background color
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(5),
-                                        side: BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
+                                        side: const BorderSide(color: Colors.grey, width: 2.0), // Set border color and width
                                       ),
                                     ),
                                     child:Padding(
@@ -851,7 +851,7 @@ class _CreateOfferScreen2State extends State<CreateOfferScreen2> {
                               style: GoogleFonts.roboto(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xffEDB31B),
+                                color: const Color(0xffEDB31B),
                                 decoration: TextDecoration.underline,
                               ),
                             ),

@@ -1,16 +1,12 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/host_offer/create_offer_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
-import 'package:car_rental/view/your_car_navigation_bar/create_offer2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class ListingLocationScreen extends StatefulWidget {
+  const ListingLocationScreen({super.key});
+
   @override
   _ListingLocationScreenState createState() => _ListingLocationScreenState();
 }
@@ -23,7 +19,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
         double screenWidth = MediaQuery.of(context).size.width;
 
         return Dialog(
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.zero, // Set the border radius to 0
           ),
           child: Container(
@@ -35,7 +31,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 buildVSpacer(20),
-                Text(
+                const Text(
                   'Congratulations !',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -46,7 +42,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                   ),
                 ),
                 buildVSpacer(20),
-                Text(
+                const Text(
                   'You will start getting bookings soon,\nEnsure your car is clean.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -60,7 +56,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 18.0, vertical: 40),
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
@@ -73,13 +69,13 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xff245196),
+                        backgroundColor: const Color(0xff245196),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(2.0),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(12.0),
                         child: Text(
                           'Back',
                           style: TextStyle(
@@ -107,20 +103,20 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
               _showCongratulationsDialog();
             },
             style: ElevatedButton.styleFrom(
-              primary: Color(0xff245196),
+              backgroundColor: const Color(0xff245196),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'Confirm & Share',
                 style: TextStyle(
@@ -138,7 +134,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -149,7 +145,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.white,
@@ -190,7 +186,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage(
                                   'assets/house.png'), // Set your desired height
                             ),
@@ -245,7 +241,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage(
                                   'assets/house.png'), // Set your desired height
                             ),
@@ -300,7 +296,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage(
                                   'assets/house.png'), // Set your desired height
                             ),
@@ -354,7 +350,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage(
                                   'assets/house.png'), // Set your desired height
                             ),
@@ -409,7 +405,7 @@ class _ListingLocationScreenState extends State<ListingLocationScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Image(
+                            const Image(
                               image: AssetImage(
                                   'assets/house.png'), // Set your desired height
                             ),

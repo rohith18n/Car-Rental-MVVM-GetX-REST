@@ -1,14 +1,11 @@
-import 'dart:ui';
 
-import 'package:car_rental/view/add_new_car/car_kyc.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/host_offer/create_offer_screen2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class SetupDoorStepDelivery extends StatefulWidget {
+  const SetupDoorStepDelivery({super.key});
+
   @override
   _SetupDoorStepDeliveryState createState() => _SetupDoorStepDeliveryState();
 }
@@ -35,7 +32,7 @@ class _SetupDoorStepDeliveryState extends State<SetupDoorStepDelivery> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,

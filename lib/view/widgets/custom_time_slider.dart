@@ -5,7 +5,7 @@ class TimeSlider extends StatefulWidget {
   final Color? sliderColor;
   final Color? labelColor;
 
-  TimeSlider({
+  const TimeSlider({super.key, 
     required this.onTimeSelected,
     this.sliderColor,
     this.labelColor,

@@ -1,20 +1,13 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
 import 'package:car_rental/view/bottom_navigations/bottom_nav_bar.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/wallet/topup.dart';
-import 'package:car_rental/view/wallet/transfer1.dart';
-import 'package:car_rental/view/wallet/wallet1.dart';
-import 'package:car_rental/view/wallet/withdrawal.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 
 class EditProfileScreen2 extends StatefulWidget {
+  const EditProfileScreen2({super.key});
+
   @override
   _EditProfileScreen2State createState() => _EditProfileScreen2State();
 }
@@ -26,13 +19,13 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
   void _showUploadBottomSheetFoREditImage() {
     showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(5.0)),
       ),
       builder: (context) {
         return Container(
           height: 150,
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -42,14 +35,14 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/gallery.png'),
                           color: Colors.black,
                         ),
@@ -61,20 +54,20 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                     child: Row(
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage('assets/camera2.png'),
                           color: Colors.black,
                         ),
@@ -98,13 +91,13 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
   void _showUploadBottomSheet() {
     showModalBottomSheet(
       context: context,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(5.0)),
       ),
       builder: (context) {
         return Container(
           height: 350,
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -125,20 +118,20 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
               buildVSpacer(30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50.0),
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () async {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFEDB31B),
+                      backgroundColor: const Color(0xFFEDB31B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(12.0),
                       child: Text(
                         'Change Password',
                         style: TextStyle(
@@ -165,18 +158,18 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
     return Scaffold(
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 10),
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFFEDB31B),
+              backgroundColor: const Color(0xFFEDB31B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Text(
                 'ADD NEW ADDRESS',
                 style: TextStyle(
@@ -210,7 +203,7 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -237,14 +230,14 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                     height: 100, child: Image.asset('assets/profile_pic1.png')),
                 GestureDetector(
                   onTap: () {
                     _showUploadBottomSheetFoREditImage();
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 70.0),
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 70.0),
                     child: Icon(Icons.edit),
                   ),
                 )
@@ -297,7 +290,7 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                                         OTPTextField(
                                             otpFieldStyle: OtpFieldStyle(
                                               backgroundColor:
-                                                  Color(0xFFDDDDDD),
+                                                  const Color(0xFFDDDDDD),
                                             ),
                                             controller: otpController,
                                             length: 4,
@@ -309,33 +302,33 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                                             fieldWidth: 50,
                                             fieldStyle: FieldStyle.box,
                                             outlineBorderRadius: 8,
-                                            style: TextStyle(fontSize: 17),
+                                            style: const TextStyle(fontSize: 17),
                                             onChanged: (pin) {
                                               otps = pin;
-                                              print("Changed: " + otps);
+                                              print("Changed: $otps");
                                             },
                                             onCompleted: (pin) {
-                                              print("Completed: " + pin);
+                                              print("Completed: $pin");
                                             }),
                                         buildVSpacer(30),
                                         Padding(
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 40.0),
-                                          child: Container(
+                                          child: SizedBox(
                                             width: double.infinity,
                                             child: ElevatedButton(
                                               onPressed: () async {},
                                               style: ElevatedButton.styleFrom(
-                                                primary: Color(0xFF245196),
+                                                backgroundColor: const Color(0xFF245196),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           20.0),
                                                 ),
                                               ),
-                                              child: Padding(
+                                              child: const Padding(
                                                 padding:
-                                                    const EdgeInsets.all(12.0),
+                                                    EdgeInsets.all(12.0),
                                                 child: Text(
                                                   'Verify',
                                                   style: TextStyle(
@@ -404,7 +397,7 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                                         OTPTextField(
                                             otpFieldStyle: OtpFieldStyle(
                                               backgroundColor:
-                                                  Color(0xFFDDDDDD),
+                                                  const Color(0xFFDDDDDD),
                                             ),
                                             controller: otpController,
                                             length: 4,
@@ -416,33 +409,33 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                                             fieldWidth: 50,
                                             fieldStyle: FieldStyle.box,
                                             outlineBorderRadius: 8,
-                                            style: TextStyle(fontSize: 17),
+                                            style: const TextStyle(fontSize: 17),
                                             onChanged: (pin) {
                                               otps = pin;
-                                              print("Changed: " + otps);
+                                              print("Changed: $otps");
                                             },
                                             onCompleted: (pin) {
-                                              print("Completed: " + pin);
+                                              print("Completed: $pin");
                                             }),
                                         buildVSpacer(30),
                                         Padding(
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 40.0),
-                                          child: Container(
+                                          child: SizedBox(
                                             width: double.infinity,
                                             child: ElevatedButton(
                                               onPressed: () async {},
                                               style: ElevatedButton.styleFrom(
-                                                primary: Color(0xFF245196),
+                                                backgroundColor: const Color(0xFF245196),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           20.0),
                                                 ),
                                               ),
-                                              child: Padding(
+                                              child: const Padding(
                                                 padding:
-                                                    const EdgeInsets.all(12.0),
+                                                    EdgeInsets.all(12.0),
                                                 child: Text(
                                                   'Verify',
                                                   style: TextStyle(
@@ -474,7 +467,7 @@ class _EditProfileScreen2State extends State<EditProfileScreen2> {
                       onTap: () {
                         _showUploadBottomSheet();
                       },
-                      child: Icon(Icons.edit))),
+                      child: const Icon(Icons.edit))),
             ),
             _buildTextHeader(title: 'Host Bio'),
             Padding(

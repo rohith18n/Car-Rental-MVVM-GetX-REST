@@ -42,7 +42,7 @@ class _AddBankScreenState extends State<AddBankScreen> {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffEDB31B),
+                      backgroundColor: Color(0xffEDB31B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
@@ -66,7 +66,7 @@ class _AddBankScreenState extends State<AddBankScreen> {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xffEDB31B),
+                      backgroundColor: Color(0xffEDB31B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
@@ -380,13 +380,13 @@ class _AddBankScreenState extends State<AddBankScreen> {
                                     Navigator.pop(context);
                                   },
                                   style: ElevatedButton.styleFrom(
-                                    primary: Color(0xFF245196),
+                                    backgroundColor: Color(0xFF245196),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(2.0),
                                     ),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(12.0),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(12.0),
                                     child: Text(
                                       'Save Details',
                                       style: TextStyle(

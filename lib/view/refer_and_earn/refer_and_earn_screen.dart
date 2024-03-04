@@ -1,8 +1,9 @@
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ReferAndEarnScreen extends StatelessWidget {
+  const ReferAndEarnScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,7 +12,7 @@ class ReferAndEarnScreen extends StatelessWidget {
           child: Center(
             child: Container(
               width: double.infinity,
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Column(
                 children: [
                   Padding(
@@ -26,7 +27,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
-                            child: Icon(
+                            child: const Icon(
                               Icons.arrow_back,
                               size: 28,
                               color: Colors.white,
@@ -82,7 +83,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                           ),
                           Container(
                             decoration: ShapeDecoration(
-                              color: Color(0xFFE1AD00),
+                              color: const Color(0xFFE1AD00),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(24),
                               ),
@@ -102,7 +103,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                         left: 130.0, right: 130, top: 20, bottom: 20),
                     child: Container(
                       decoration: ShapeDecoration(
-                        color: Color(0xFFE1AD00),
+                        color: const Color(0xFFE1AD00),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(0),
                         ),
@@ -121,9 +122,9 @@ class ReferAndEarnScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         Image.asset('assets/whatsapp.png'),
-                        Spacer(),
+                        const Spacer(),
                         Image.asset('assets/facebook.png'),
-                        Spacer(),
+                        const Spacer(),
                         Image.asset('assets/link.png')
                       ],
                     ),
@@ -131,7 +132,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                   buildVSpacer(20),
                   Container(
                     height: 330,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20.0),
@@ -150,8 +151,8 @@ class ReferAndEarnScreen extends StatelessWidget {
                                     title: 'Invite a friend',
                                     size: 22,
                                     fontWeight: FontWeight.w600),
-                                Spacer(),
-                                Icon(
+                                const Spacer(),
+                                const Icon(
                                   Icons.search,
                                   size: 28,
                                 )
@@ -180,7 +181,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(
@@ -221,7 +222,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(
@@ -262,7 +263,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(
@@ -303,7 +304,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(
@@ -344,7 +345,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(
@@ -385,7 +386,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(
@@ -426,7 +427,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(
@@ -467,7 +468,7 @@ class ReferAndEarnScreen extends StatelessWidget {
                                         fontWeight: FontWeight.w400),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   // padding: const EdgeInsets.symmetric(horizontal: 159, vertical: 23),
                                   decoration: ShapeDecoration(

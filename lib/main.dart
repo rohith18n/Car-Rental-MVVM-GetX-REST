@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       initialBinding: InitController(),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

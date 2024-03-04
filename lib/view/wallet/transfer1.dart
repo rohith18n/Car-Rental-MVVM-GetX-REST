@@ -1,17 +1,11 @@
-import 'package:car_rental/view/add_new_car/address_proof.dart';
-import 'package:car_rental/view/add_new_car/car_document_details.dart';
-import 'package:car_rental/view/add_new_car/dl_car_details.dart';
-import 'package:car_rental/view/bottom_navigations/bottom_navbar_items/home.dart';
-import 'package:car_rental/view/wallet/add_bank_details.dart';
 import 'package:car_rental/view/wallet/transfer.dart';
-import 'package:car_rental/view/wallet/wallet.dart';
-import 'package:car_rental/view/wallet/withdrawal2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class TransferScreen1 extends StatefulWidget {
+  const TransferScreen1({super.key});
+
   @override
   _TransferScreen1State createState() => _TransferScreen1State();
 }
@@ -45,7 +39,7 @@ class _TransferScreen1State extends State<TransferScreen1> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
@@ -123,24 +117,24 @@ class _TransferScreen1State extends State<TransferScreen1> {
             buildVSpacer(170),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => TransferScreen(),
+                        builder: (context) => const TransferScreen(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF245196),
+                    backgroundColor: const Color(0xFF245196),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                       'Next',
                       style: TextStyle(

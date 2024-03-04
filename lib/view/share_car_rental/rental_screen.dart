@@ -2,12 +2,13 @@ import 'package:car_rental/view/share_car_rental/choose_sharing_details2.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:car_rental/view/widgets/custom_time_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
 import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
 import 'package:scrollable_clean_calendar/utils/enums.dart';
 
 class RentalScreen extends StatefulWidget {
+  const RentalScreen({super.key});
+
   @override
   _RentalScreenState createState() => _RentalScreenState();
 }
@@ -33,7 +34,7 @@ class _RentalScreenState extends State<RentalScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20),
                 child: Row(
@@ -44,14 +45,14 @@ class _RentalScreenState extends State<RentalScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.black,
                         ),
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
@@ -69,7 +70,7 @@ class _RentalScreenState extends State<RentalScreen> {
               ),
             ),
             buildVSpacer(20),
-            Container(
+            SizedBox(
               height: 700,
               child: ScrollableCleanCalendar(
                 calendarController: calendarController,
@@ -95,7 +96,7 @@ class _RentalScreenState extends State<RentalScreen> {
             child: AlertDialog(
               content: Padding(
                 padding: const EdgeInsets.only(top: 15.0),
-                child: Container(
+                child: SizedBox(
                   height: 350,
                   child: Column(
                     children: [
@@ -116,12 +117,12 @@ class _RentalScreenState extends State<RentalScreen> {
                                   children: [
                                     _buildTextHeader(
                                         title: 'Mon,4th Oct\n4:30 PM'),
-                                    Spacer(),
-                                    Icon(
+                                    const Spacer(),
+                                    const Icon(
                                       Icons.arrow_right_alt,
                                       size: 30,
                                     ),
-                                    Spacer(),
+                                    const Spacer(),
                                     _buildTextHeader(
                                         title: 'Wed,7th Oct\n4:30 PM'),
                                   ],
@@ -140,7 +141,7 @@ class _RentalScreenState extends State<RentalScreen> {
                         title: 'Start Time',
                       ),
                       TimeSlider(
-                        sliderColor: Color(0xff258E00),
+                        sliderColor: const Color(0xff258E00),
                         onTimeSelected: (selectedTime) {
                           print('Selected Time: $selectedTime');
                         },
@@ -150,31 +151,31 @@ class _RentalScreenState extends State<RentalScreen> {
                         title: 'End Time',
                       ),
                       TimeSlider(
-                        sliderColor: Color(0xffF7B144),
+                        sliderColor: const Color(0xffF7B144),
                         onTimeSelected: (selectedTime) {
                           print('Selected Time: $selectedTime');
                         },
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                        child: Container(
+                        child: SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => ChooseSharingDetails(),
+                                  builder: (context) => const ChooseSharingDetails(),
                                 ),
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF245196),
+                              backgroundColor: const Color(0xFF245196),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(2.0),
                               ),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(12.0),
+                            child: const Padding(
+                              padding: EdgeInsets.all(12.0),
                               child: Text(
                                 'Set Time/Date',
                                 style: TextStyle(

@@ -1,17 +1,16 @@
-import 'package:car_rental/view/share_car_rental/rental_screen.dart';
 import 'package:car_rental/view/share_car_sharing/stop_over_screen.dart';
-import 'package:car_rental/view/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class RouteScreen extends StatefulWidget {
+  const RouteScreen({super.key});
+
   @override
   _RouteScreenState createState() => _RouteScreenState();
 }
 
 class _RouteScreenState extends State<RouteScreen> {
-  bool _switchValue = false;
+  final bool _switchValue = false;
   int _selectedRoute = 0; // Track the selected route
 
   @override
@@ -19,25 +18,25 @@ class _RouteScreenState extends State<RouteScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 60,
         child: Padding(
           padding: const EdgeInsets.only(bottom: 10.0, right: 10),
           child: Align(
             alignment: Alignment.bottomRight,
-            child: Container(
+            child: SizedBox(
               width: 120,
               height: 45,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => StopOverScreen(),
+                      builder: (context) => const StopOverScreen(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff245196), // Background color
+                  backgroundColor: const Color(0xff245196), // Background color
                 ),
                 child: Text(
                   'Go',
@@ -65,20 +64,20 @@ class _RouteScreenState extends State<RouteScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         size: 28,
                         color: Colors.black,
                       ),
                     ),
                   ),
-                  SizedBox(width: 24),
+                  const SizedBox(width: 24),
                 ],
               ),
             ),
             _buildTextHeader(
                 title: 'Route', size: 18, fontWeight: FontWeight.w600),
-            Container(
+            const SizedBox(
               width: double.infinity,
               child: Image(image: AssetImage('assets/routeMap.png')),
             ),
@@ -127,21 +126,21 @@ class _RouteScreenState extends State<RouteScreen> {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   subtitle,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                   ),
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Radio(
               value: value,
               groupValue: _selectedRoute,

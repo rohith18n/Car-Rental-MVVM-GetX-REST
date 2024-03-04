@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:car_rental/view/share_car_rental/scrollable_clean_calendar.dart';
 import 'package:car_rental/view/widgets/app_widgets.dart';
@@ -10,7 +9,7 @@ import 'package:scrollable_clean_calendar/utils/enums.dart';
 class ModifyListing extends StatefulWidget {
   final int initialTabIndex;
 
-  ModifyListing({required this.initialTabIndex});
+  const ModifyListing({super.key, required this.initialTabIndex});
 
   @override
   _ModifyListingState createState() => _ModifyListingState();
@@ -45,7 +44,7 @@ class _ModifyListingState extends State<ModifyListing> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Color(0xff245196),
+              color: const Color(0xff245196),
               child: Padding(
                 padding: const EdgeInsets.only(top: 70, bottom: 20, right: 10),
                 child: Row(
@@ -56,7 +55,7 @@ class _ModifyListingState extends State<ModifyListing> {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 28,
                           color: Colors.white,
@@ -108,7 +107,7 @@ class _ModifyListingState extends State<ModifyListing> {
               ],
             ),
             isFirstButtonSelected
-                ? Container(
+                ? SizedBox(
                     width: 358,
                     height: 200,
                     child: Stack(
@@ -123,7 +122,7 @@ class _ModifyListingState extends State<ModifyListing> {
                               color: Colors.white,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(4)),
-                              shadows: [
+                              shadows: const [
                                 BoxShadow(
                                   color: Color(0x3F000000),
                                   blurRadius: 4,
@@ -134,7 +133,7 @@ class _ModifyListingState extends State<ModifyListing> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 171,
                           top: 64,
                           child: Text(
@@ -149,7 +148,7 @@ class _ModifyListingState extends State<ModifyListing> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 171,
                           top: 86,
                           child: Opacity(
@@ -185,7 +184,7 @@ class _ModifyListingState extends State<ModifyListing> {
                         //     ),
                         //   ),
                         // ),
-                        Positioned(
+                        const Positioned(
                           left: 292,
                           top: 86,
                           child: Opacity(
@@ -203,7 +202,7 @@ class _ModifyListingState extends State<ModifyListing> {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 266,
                           top: 64,
                           child: Text(
@@ -225,7 +224,7 @@ class _ModifyListingState extends State<ModifyListing> {
                             width: 81,
                             height: 65.21,
                             decoration: ShapeDecoration(
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage('assets/white_car.png'),
                                 fit: BoxFit.fill,
                               ),
@@ -240,7 +239,7 @@ class _ModifyListingState extends State<ModifyListing> {
                           child: Container(
                             width: 10,
                             height: 10,
-                            decoration: ShapeDecoration(
+                            decoration: const ShapeDecoration(
                               color: Color(0xFF258E00),
                               shape: OvalBorder(),
                             ),
@@ -252,7 +251,7 @@ class _ModifyListingState extends State<ModifyListing> {
                           child: Container(
                             width: 10,
                             height: 10,
-                            decoration: ShapeDecoration(
+                            decoration: const ShapeDecoration(
                               color: Color(0xFFFE5244),
                               shape: OvalBorder(),
                             ),
@@ -266,8 +265,8 @@ class _ModifyListingState extends State<ModifyListing> {
                             height: 20,
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 4),
-                            decoration: BoxDecoration(color: Color(0xFFF4F4F4)),
-                            child: Row(
+                            decoration: const BoxDecoration(color: Color(0xFFF4F4F4)),
+                            child: const Row(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -309,7 +308,7 @@ class _ModifyListingState extends State<ModifyListing> {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            ModifyListing(initialTabIndex: 1),
+                                            const ModifyListing(initialTabIndex: 1),
                                       ),
                                     );
                                   },
@@ -318,12 +317,12 @@ class _ModifyListingState extends State<ModifyListing> {
                                     // height: 35,
                                     padding: const EdgeInsets.all(10),
                                     decoration: ShapeDecoration(
-                                      color: Color(0xff245196),
+                                      color: const Color(0xff245196),
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(4)),
                                     ),
-                                    child: Text(
+                                    child: const Text(
                                       'Modify Listing',
                                       style: TextStyle(
                                         color: Colors.white,
@@ -374,13 +373,13 @@ class _ModifyListingState extends State<ModifyListing> {
                 : _buildText(title: content),
             // Display the selected content
             isSecondButtonSelected
-                ? Container(
+                ? SizedBox(
                     height: 500,
                     child: ScrollableCleanCalendar(
                       calendarController: calendarController,
                       layout: Layout.BEAUTY,
                       calendarCrossAxisSpacing: 0,
-                      daySelectedBackgroundColor: Color(0XFF258E00),
+                      daySelectedBackgroundColor: const Color(0XFF258E00),
                     ),
                   )
                 : _buildText(title: content),
@@ -425,7 +424,7 @@ class _ModifyListingState extends State<ModifyListing> {
           width: 160,
           height: 35, // Set the height as needed
           decoration: BoxDecoration(
-            color: isSelected ? Color(0xff245196) : Colors.white,
+            color: isSelected ? const Color(0xff245196) : Colors.white,
             borderRadius: BorderRadius.circular(30),
             border: Border.all(color: Colors.blue),
           ),
